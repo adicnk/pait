@@ -1,2 +1,2 @@
-# pait
+# PAIT
 Web Pembelajaran dan Latihan
