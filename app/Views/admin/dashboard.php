@@ -1,6 +1,8 @@
 <?= $this->extend('template/dashboard-admin') ?>
 <?= $this->section('content') ?>
 
+<?php $db = \Config\Database::connect(); ?>
+
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
@@ -86,15 +88,33 @@
                 <canvas id="myPieChart"></canvas>
             </div>
             <div class="mt-4 text-center small">
-                <span class="mr-2">
-                    <i class="fas fa-circle text-primary"></i> Direct
-                </span>
-                <span class="mr-2">
-                    <i class="fas fa-circle text-success"></i> Social
-                </span>
-                <span class="mr-2">
-                    <i class="fas fa-circle text-info"></i> Referral
-                </span>
+                <?php
+                $query = $db->query("SELECT * FROM kategori_soal");
+                foreach ($query->getResult('array') as $qclb) :
+                ?>
+                    <?php switch ($qclb['id']) {
+                        case 1: ?>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-primary"></i><?= $qclb['name'] ?>
+                            </span>
+                        <?php break;
+                        case 2: ?>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-success"></i><?= $qclb['name'] ?>
+                            </span>
+                        <?php break;
+                        case 3: ?>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-info"></i><?= $qclb['name'] ?>
+                            </span>
+                        <?php break;
+                        case 4: ?>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-warning"></i><?= $qclb['name'] ?>
+                            </span>
+                            <?php break; ?>
+                    <?php } ?>
+                <?php endforeach ?>
             </div>
         </div>
     </div>

@@ -30,4 +30,22 @@ class ChartPieMDL extends Model
         return $data;
         // return '[15,26,36,47]';
     }
+
+    public function getLabelSoal()
+    {
+        $this->findAll();
+        $query = $this->get();
+        $index = 1;
+        $data = "['";
+        foreach ($query->getResult('array') as $cc) :
+            if ($index > 1) {
+                $data = $data . ",'";
+            }
+            $data = $data . $cc['name'] . "'";
+            $index++;
+        endforeach;
+        $data = $data . ']';
+        return $data;
+        // return '[15,26,36,47]';
+    }
 }

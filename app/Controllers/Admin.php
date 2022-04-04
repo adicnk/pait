@@ -18,7 +18,7 @@ class Admin extends BaseController
         $data = [
             'title'   => "Dashboard",
             'chartValueData' => $this->chartPieModel->getTotalSoal(),
-            'chartLabelData' => "['Direct', 'Referral', 'Social','Politic']"
+            'chartLabelData' => $this->chartPieModel->getLabelSoal()
         ];
         return view('admin/dashboard', $data);
     }
