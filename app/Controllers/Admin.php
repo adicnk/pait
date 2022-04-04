@@ -7,7 +7,7 @@ class Admin extends BaseController
     public function index()
     {
         $data = [
-            'school'   => "PPNI"
+            'title'   => "Dashboard"
         ];
         return view('admin/dashboard', $data);
     }

@@ -57,21 +57,21 @@
             <!-- Nav Item - Admin -->
             <li class="nav-item">
                 <a class="nav-link" href="">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-lock"></i>
                     <span>Admin</span></a>
             </li>
 
             <!-- Nav Item - Mahasiswa -->
             <li class="nav-item">
                 <a class="nav-link" href="">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-graduation-cap"></i>
                     <span>Mahasiswa</span></a>
             </li>
 
             <!-- Nav Item - Soal -->
             <li class="nav-item">
                 <a class="nav-link" href="">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-list"></i>
                     <span>Soal</span></a>
             </li>
 
@@ -86,7 +86,7 @@
             <!-- Nav Item - Sign Out -->
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-stop-circle"></i>
                     <span>Logout</span></a>
             </li>
 

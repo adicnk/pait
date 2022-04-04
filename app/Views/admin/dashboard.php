@@ -9,7 +9,7 @@
     </div>
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-2">
-        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+        <h1 class="h3 mb-0 text-gray-800"> <?= $title; ?></h1>
     </div>
 
     <div class="mt-3">
@@ -30,7 +30,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800">150</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <i class="fas fa-graduation-cap fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800">180</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            <i class="fas fa-list fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800">10</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            <i class="fas fa-lock fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
