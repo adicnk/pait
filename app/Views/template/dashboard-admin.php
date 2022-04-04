@@ -20,7 +20,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="pieChartData(<?= $chartValueData ?>,<?= $chartLabelData ?>)">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -43,7 +43,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span> <?= $title; ?></span></a>
             </li>
 
             <!-- Divider -->
@@ -146,7 +146,7 @@
 
     <!-- Page level custom scripts -->
     <!-- <script src="admin_assets/js/demo/chart-area-demo.js"></script> -->
-    <script src="admin_assets/js/chart-pie-demo.js"></script>
+    <script src="admin_assets/js/chart-pie-demo.php"></script>
 
 </body>
 

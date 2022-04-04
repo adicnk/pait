@@ -1,0 +1,16 @@
+CRITICAL - 2022-04-04 14:05:04 --> Unsupported operand types: string + string
+#0 C:\xampp\htdocs\pait\app\Controllers\Admin.php(20): App\Models\ChartPieMDL->getTotalSoal()
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Admin->index()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-04 14:06:42 --> Unsupported operand types: string + string
+#0 C:\xampp\htdocs\pait\app\Controllers\Admin.php(20): App\Models\ChartPieMDL->getTotalSoal()
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Admin->index()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
