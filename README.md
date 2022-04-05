@@ -29,7 +29,7 @@ Ada file yang harus dimofikasi antaranya **chart-pie-demo.php** dalam folder **p
 
 **chart-pie-demo.php** adalah script untuk men-generated grafik yang datanya ada di **Admin.php** dalam folder **Controllers** dengan variable **chartValueData** dan **chartLabelData** yang akan mewakili variable **labelData** dan **datasetData** dalam file **chart-pie-demo.php**.
 
-Jika terjadi penambahan fitur data yg ada di database field **kategori_soal** maka kolom **jumlah_soal** akan berubah pada variable **chartValueData** dan field **name** merubah variable **chartLabelData**.
+Jika terjadi penambahan fitur data yg ada di database field **kategori_soal** maka kolom **jumlah_soal** akan berubah pada variable **chartValueData** dan kolom **name** merubah variable **chartLabelData**.
 
 Yang perlu diperhatikan jika menambah data, otomatis akan menambah warna dan ini haru dilakukan pada file **chart-pie-demo.php** dan **dashboard**. Pada file **chart-pie-demo.php** dilakukan penambahan data warna dengan huruf hexadesimal untuk variabel **backgroundColor** dan **hoverBackgroundColor**. Pada file **dashboard** dilakukan perubahan pada baris berikut :
 
