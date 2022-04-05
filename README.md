@@ -1,4 +1,4 @@
-# CodeIgniter 4 Development
+# PAIT Development
 
 [![Build Status](https://github.com/codeigniter4/CodeIgniter4/workflows/PHPUnit/badge.svg)](https://github.com/codeigniter4/CodeIgniter4/actions?query=workflow%3A%22PHPUnit%22)
 [![Coverage Status](https://coveralls.io/repos/github/codeigniter4/CodeIgniter4/badge.svg?branch=develop)](https://coveralls.io/github/codeigniter4/CodeIgniter4?branch=develop)
@@ -67,6 +67,5 @@ Yang perlu diperhatikan jika menambah data, otomatis akan menambah warna dan ini
                     <?php } ?>
                 <?php endforeach ?>
             </div>
-
 
 Bagian baris **Case** yang harus ditambahkan nomornya sebanyak data di **chartValueData** dan **chartLabelData**.
