@@ -112,6 +112,11 @@
                             <span class="mr-2">
                                 <i class="fas fa-circle text-warning"></i><?= $qclb['name'] ?>
                             </span>
+                        <?php break;
+                        case 5: ?>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-danger"></i><?= $qclb['name'] ?>
+                            </span>
                             <?php break; ?>
                     <?php } ?>
                 <?php endforeach ?>

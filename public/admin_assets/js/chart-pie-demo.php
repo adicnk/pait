@@ -11,8 +11,8 @@ data: {
 labels: labelData,
 datasets: [{
 data: datasetData,
-backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#F9BB20'],
-hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf', '#E9CC83'],
+backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#F9BB20', '#CA1010'],
+hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf', '#E9CC83', '#E2A4A4'],
 hoverBorderColor: "rgba(234, 236, 244, 1, 200)",
 }],
 },

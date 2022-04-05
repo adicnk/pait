@@ -9,85 +9,64 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/codeigniter4/CodeIgniter4/pulls)
 <br>
 
-## What is CodeIgniter?
+## Apa itu PAIT (Physical Assesment Based On interactive Technology)
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+Pembelajaran praktek membutuhkan media pembelajaran yang efektif sehingga menimbulkansemangat dan ketertarikan mahasiswa dengan penggunaan teknologi yang lebih efektif dengan memperkecil faktor resiko.
 
-This repository holds the source code for CodeIgniter 4 only.
-Version 4 is a complete rewrite to bring the quality and the code into a more modern version,
-while still keeping as many of the things intact that has made people love the framework over the years.
+## Dokumentasi
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+Informasi lebih lanjut [official site](http://pait.devinc.website).
 
-### Documentation
+Dalam repositori ini hanya untuk pengembangan applikasi PAIT dengan menggunakan versi terbaru dari CodeIgniter. Kami berusaha memperbaiki tampilan dan fungsi sehingga lebih user friendly dan berfungsi seperti yang dibutuhkan.
 
-The [User Guide](https://codeigniter4.github.io/userguide/) is the primary documentation for CodeIgniter 4.
+Perkembangan **terakhir** dari applikasi ini dapat dilihat di [progress](http://pait.devinc.website).
 
-The current **in-progress** User Guide can be found [here](https://codeigniter4.github.io/CodeIgniter4/).
-As with the rest of the framework, it is a work in progress, and will see changes over time to structure, explanations, etc.
+## Perubahan yang terjadi pada modul-modul aplikasi
 
-You might also be interested in the [API documentation](https://codeigniter4.github.io/api/) for the framework components.
+**_Modul Grafik_**
 
-## Important Change with index.php
+Ada file yang harus dimofikasi antaranya **chart-pie-demo.php** dalam folder **public/admin_assets/js** dan **dashbord.php** dalam folder **view/admin**.
 
-index.php is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+**chart-pie-demo.php** adalah script untuk men-generated grafik yang datanya ada di **Admin.php** dalam folder **Controllers** dengan variable **chartValueData** dan **chartLabelData** yang akan mewakili variable **labelData** dan **datasetData** dalam file **chart-pie-demo.php**.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+Jika terjadi penambahan fitur data yg ada di databe field **kategori_soal** maka kolom **jumlah_soal** akan berubah pada variable **chartValueData** dan field **name** merubah variable **chartLabelData**.
 
-**Please** read the user guide for a better explanation of how CI4 works!
+Yang perlu diperhatikan jika menambah data, otomatis akan menambah warna dan ini haru dilakukan pada file **chart-pie-demo.php** dan **dashboard**. Pada file **chart-pie-demo.php** dilakukan penambahan data warna dengan huruf hexadesimal untuk variabel **backgroundColor** dan **hoverBackgroundColor**. Pada file **dashboard** dilakukan perubahan pada baris berikut :
 
-## Repository Management
-
-CodeIgniter is developed completely on a volunteer basis. As such, please give up to 7 days
-for your issues to be reviewed. If you haven't heard from one of the team in that time period,
-feel free to leave a comment on the issue so that it gets brought back to our attention.
-
-We use GitHub issues to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-If you raise an issue here that pertains to support or a feature request, it will
-be closed! If you are not sure if you have found a bug, raise a thread on the forum first -
-someone else may have encountered the same thing.
-
-Before raising a new GitHub issue, please check that your bug hasn't already
-been reported or fixed.
-
-We use pull requests (PRs) for CONTRIBUTIONS to the repository.
-We are looking for contributions that address one of the reported bugs or
-approved work packages.
-
-Do not use a PR as a form of feature request.
-Unsolicited contributions will only be considered if they fit nicely
-into the framework roadmap.
-Remember that some components that were part of CodeIgniter 3 are being moved
-to optional packages, with their own repository.
-
-## Contributing
-
-We **are** accepting contributions from the community!
-
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/contributing/README.md).
-
-## Server Requirements
-
-PHP version 7.3 or higher is required, with the following extensions installed:
+            <div class="mt-4 text-center small">
+                <?php
+                $query = $db->query("SELECT * FROM kategori_soal");
+                foreach ($query->getResult('array') as $qclb) :
+                ?>
+                    <?php switch ($qclb['id']) {
+                        case 1: ?>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-primary"></i><?= $qclb['name'] ?>
+                            </span>
+                        <?php break;
+                        case 2: ?>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-success"></i><?= $qclb['name'] ?>
+                            </span>
+                        <?php break;
+                        case 3: ?>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-info"></i><?= $qclb['name'] ?>
+                            </span>
+                        <?php break;
+                        case 4: ?>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-warning"></i><?= $qclb['name'] ?>
+                            </span>
+                        <?php break;
+                        case 5: ?>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-danger"></i><?= $qclb['name'] ?>
+                            </span>
+                            <?php break; ?>
+                    <?php } ?>
+                <?php endforeach ?>
+            </div>
 
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- xml (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-
-## Running CodeIgniter Tests
-
-Information on running the CodeIgniter test suite can be found in the [README.md](tests/README.md) file in the tests directory.
+Bagian baris **Case** yang harus ditambahkan nomornya sebanyak data di **chartValueData** dan **chartLabelData**.
