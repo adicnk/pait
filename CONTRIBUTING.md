@@ -1,6 +1,3 @@
-# Contributing to CodeIgniter4
+# Contributing to PAIT
 
-CodeIgniter is a community driven project and accepts contributions of
-code and documentation from the community.
-
-If you'd like to contribute, please read the [Contributing to CodeIgniter](./contributing/README.md).
+PAIT adalah project yang bs di remote sehinnga menerima anda yang akan menjadi kontributor daro komunitas ini [Contributing to PAIT](./contributing/README.md).
