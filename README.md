@@ -72,10 +72,71 @@ Bagian baris **Case** yang harus ditambahkan nomornya sebanyak data di **chartVa
 
 **_Modul Pager pd list_**
 
+[Tambahkan baris pada folder **Config\Pager**]
+
+    public $templates = [
+        'default_full'   => 'CodeIgniter\Pager\Views\default_full',
+        'default_simple' => 'CodeIgniter\Pager\Views\default_simple',
+        'default_head'   => 'CodeIgniter\Pager\Views\default_head',
+        'custom_pagination' => 'App\Views\Pagers\custom_pagination'
+    ];
+
+custom_pagination dibuatkan filenya di folder **Views\pagers**
+
+[Tambahkan baris di file **custom_pagination.php** folder **Views\pager**]
+
+    <?php $pager->setSurroundCount(2) ?>
+
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <?php if ($pager->hasPrevious()) : ?>
+                <li class="page-item">
+                    <a class="page-link" href="<?= $pager->getFirst() ?>" aria-label="<?= lang('Pager.first') ?>">
+                        <span aria-hidden="true"><?= lang('Pager.first') ?></span>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="<?= $pager->getPrevious() ?>" aria-label="<?= lang('Pager.previous') ?>">
+                        <span aria-hidden="true"><?= lang('Pager.previous') ?></span>
+                    </a>
+                </li>
+            <?php endif ?>
+
+            <?php foreach ($pager->links() as $link) : ?>
+                <li class="page-item <?= $link['active'] ? 'active' : '' ?>">
+                    <a class="page-link" href="<?= $link['uri'] ?>">
+                        <?= $link['title'] ?>
+                    </a>
+                </li>
+            <?php endforeach ?>
+
+            <?php if ($pager->hasNext()) : ?>
+                <li class="page-item">
+                    <a class="page-link" href="<?= $pager->getNext() ?>" aria-label="<?= lang('Pager.next') ?>">
+                        <span aria-hidden="true"><?= lang('Pager.next') ?></span>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="<?= $pager->getLast() ?>" aria-label="<?= lang('Pager.last') ?>">
+                        <span aria-hidden="true"><?= lang('Pager.last') ?></span>
+                    </a>
+                </li>
+            <?php endif ?>
+        </ul>
+    </nav>
+
 [Tambahkan baris di file **Admin.php** pd folder **Controller**]
 
-    'user' => $this->userModel->paginate(5, 'user'),
-    'pager' => $this->userModel->pager
+    $currentPage = $this->request->getVar('page_user') ? $this->request->getVar('page_user') : 1;
+    $data = [
+        'title' => "Daftar Admin",
+        'user'  => $this->userModel->paginate(5, 'user'),
+        'pager' => $this->userModel->pager,
+        'currentPage' => $currentPage
+    ];
+
+$currentPage digunakan untuk membuat urutan no data
+Angka 5 berati ada 5 data tiap halaman
 
 [Tambahkan baris di file **administrator** pada **Views/administrator.php** bagian tabel]
 
@@ -100,3 +161,5 @@ Bagian baris **Case** yang harus ditambahkan nomornya sebanyak data di **chartVa
             endforeach;
         ?>
     </tbody>
+
+Angka 5 harus sama dengan yang ada di file **Admin.php** pd folder **Controller**
