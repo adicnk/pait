@@ -25,18 +25,18 @@ class Admin extends BaseController
         return view('admin/dashboard', $data);
     }
 
-    public function memberAdmin()
+    public function user()
     {
 
-        d($this->request->getVar('keyword'));
+        // d($this->request->getVar('keyword'));
 
         // Search Block
         $keyword = $this->request->getVar('keyword');
         if ($keyword) {
-            $user = $this->userModel->search($keyword);
+            $user = $this->userModel->searchAdmin($keyword);
             $title = 'Admin Name Search : "' . $keyword . '"';
         } else {
-            $user = $this->userModel->search();
+            $user = $this->userModel->searchAdmin();
             $title = "Admin List : All";
         }
 
@@ -48,5 +48,55 @@ class Admin extends BaseController
             'currentPage' => $currentPage
         ];
         return view('admin/administrator', $data);
+    }
+
+    public function mahasiswa()
+    {
+
+        // d($this->request->getVar('keyword'));
+
+        // Search Block
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $user = $this->userModel->searchMahasiswa($keyword);
+            $title = 'Mahasiswa Name Search : "' . $keyword . '"';
+        } else {
+            $user = $this->userModel->searchMahasiswa();
+            $title = "Mahasiswa List : All";
+        }
+
+        $currentPage = $this->request->getVar('page_user') ? $this->request->getVar('page_user') : 1;
+        $data = [
+            'title' => $title,
+            'user'  => $this->userModel->paginate(5, 'user'),
+            'pager' => $this->userModel->pager,
+            'currentPage' => $currentPage
+        ];
+        return view('admin/administrator', $data);
+    }
+
+    public function soal()
+    {
+
+        // d($this->request->getVar('keyword'));
+
+        // Search Block
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $user = $this->userModel->searchMahasiswa($keyword);
+            $title = 'Mahasiswa Name Search : "' . $keyword . '"';
+        } else {
+            $user = $this->userModel->searchMahasiswa();
+            $title = "Mahasiswa List : All";
+        }
+
+        $currentPage = $this->request->getVar('page_user') ? $this->request->getVar('page_user') : 1;
+        $data = [
+            'title' => $title,
+            'user'  => $this->userModel->paginate(5, 'user'),
+            'pager' => $this->userModel->pager,
+            'currentPage' => $currentPage
+        ];
+        return view('admin/soal', $data);
     }
 }

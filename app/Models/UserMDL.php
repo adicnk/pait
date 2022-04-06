@@ -12,7 +12,7 @@ class UserMDL extends Model
     // Field yang boleh diisi waktu saving data ** harus didefinisikan dulu **
     protected $allowedFields = ['name', 'email', 'nip'];
 
-    public function search($keyword = false)
+    public function searchAdmin($keyword = false)
     {
         if ($keyword == false) {
             $this->table('user');
@@ -20,6 +20,17 @@ class UserMDL extends Model
         }
         $this->table('user');
         $this->where(['role_id' => 1]);
+        return  $this->like('name', $keyword);
+    }
+
+    public function searchMahasiswa($keyword = false)
+    {
+        if ($keyword == false) {
+            $this->table('user');
+            return $this->where(['role_id' => 2]); // User is Administrator
+        }
+        $this->table('user');
+        $this->where(['role_id' => 2]);
         return  $this->like('name', $keyword);
     }
 }

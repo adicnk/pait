@@ -77,3 +77,11 @@ CRITICAL - 2022-04-06 09:11:13 --> Unknown column 'nama' in 'where clause'
 #10 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #11 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #12 {main}
+CRITICAL - 2022-04-06 09:26:57 --> Call to undefined method App\Models\UserMDL::searchAdmin
+#0 C:\xampp\htdocs\pait\app\Controllers\Admin.php(36): CodeIgniter\Model->__call('searchAdmin', Array)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Admin->memberAdmin()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
