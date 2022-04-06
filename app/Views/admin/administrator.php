@@ -35,7 +35,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Nama</th>
                     <th scope="col">Email</th>
-                    <th scope="col">NIP</th>
+                    <th scope="col">NIP/NIM</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -49,7 +49,7 @@
                     <td><?= $index ?></td>
                     <td><?= $usr['name'] ?></td>
                     <td><?= $usr['email'] ?></td>
-                    <td><?= $usr['nip'] ?></td>
+                    <td><?= $usr['nip'] ? $usr['nip'] : $usr['nim'] ?></td>
                     <td>
                         <a href="/form/edit/administrator/<?= $usr['id'] ?>"><img src="../../icon/edit.png" class="mr-2" /></a>
                         <a href="/administrator/delete/<?= $usr['id'] ?>"><img src="../../icon/delete.png" /></a>

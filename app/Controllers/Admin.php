@@ -34,7 +34,7 @@ class Admin extends BaseController
         $keyword = $this->request->getVar('keyword');
         if ($keyword) {
             $user = $this->userModel->search($keyword);
-            $title = "Admin Search : " . $keyword;
+            $title = 'Admin Name Search : "' . $keyword . '"';
         } else {
             $user = $this->userModel->search();
             $title = "Admin List : All";
