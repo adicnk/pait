@@ -2,14 +2,16 @@
 
 namespace App\Controllers;
 
+use App\Models\UserMDL;
 use App\Models\ChartPieMDL;
 
 class Admin extends BaseController
 {
-    protected $chartPieModel;
+    protected $userModel, $chartPieModel;
 
     public function __construct()
     {
+        $this->userModel = new UserMDL();
         $this->chartPieModel = new ChartPieMDL();
     }
 
@@ -21,5 +23,17 @@ class Admin extends BaseController
             'chartLabelData' => $this->chartPieModel->getLabelSoal()
         ];
         return view('admin/dashboard', $data);
+    }
+
+    public function memberAdmin()
+    {
+        $currentPage = $this->request->getVar('page_user') ? $this->request->getVar('page_user') : 1;
+        $data = [
+            'title' => "Daftar Admin",
+            'user'  => $this->userModel->paginate(5, 'user'),
+            'pager' => $this->userModel->pager,
+            'currentPage' => $currentPage
+        ];
+        return view('admin/administrator', $data);
     }
 }
