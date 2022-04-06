@@ -69,3 +69,33 @@ Yang perlu diperhatikan jika menambah data, otomatis akan menambah warna dan ini
             </div>
 
 Bagian baris **Case** yang harus ditambahkan nomornya sebanyak data di **chartValueData** dan **chartLabelData**.
+
+**_Modul Pager pd list_**
+
+[Tambahkan baris di file **Admin.php** pd folder **Controller**]
+'user' => $this->userModel->paginate(5, 'user'),
+'pager' => $this->userModel->pager
+
+[Tambahkan baris di file **administrator** pada **Views/administrator.php** bagian tabel]
+
+<tbody>
+    <tr>
+        <?php
+        $index = 1 + (5 * ($currentPage - 1));
+        foreach ($user as $usr) :
+        ?>
+    <tr>
+        <td><?= $index ?></td>
+        <td><?= $usr['name'] ?></td>
+        <td><?= $usr['email'] ?></td>
+        <td><?= $usr['nip'] ?></td>
+        <td>
+            <a href=""><img src="../../icon/edit.png" class="mr-2" /></a>
+            <a href=""><img src="../../icon/delete.png" /></a>
+        </td>
+    </tr>
+    <?php
+        $index++;
+        endforeach;
+    ?>
+</tbody>

@@ -45,7 +45,7 @@
                         $index++;
                     endforeach;
             ?>
-            </tr>
+
             </tbody>
         </table>
     </div>
