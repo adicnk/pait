@@ -12,8 +12,14 @@ class UserMDL extends Model
     // Field yang boleh diisi waktu saving data ** harus didefinisikan dulu **
     protected $allowedFields = ['name', 'email', 'nip'];
 
-    public function getAll()
+    public function search($keyword = false)
     {
-        return $this->findAll();
+        if ($keyword == false) {
+            $this->table('user');
+            return $this->where(['role_id' => 1]); // User is Administrator
+        }
+        $this->table('user');
+        $this->where(['role_id' => 1]);
+        return  $this->like('name', $keyword);
     }
 }

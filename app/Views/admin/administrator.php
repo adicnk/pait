@@ -14,6 +14,20 @@
         <h1 class="h3 mb-0 text-gray-800"> <?= $title; ?></h1>
     </div>
 
+    <div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-4">
+                <form action="" method="post">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Masukkan Nama" name="keyword">
+                        <button class="btn btn-outline-secondary" type="submit" name="submit">Cari</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <div class="d-sm-flex align-items-center justify-content-between mb-2">
         <table class="table table-striped">
             <thead>
@@ -37,8 +51,8 @@
                     <td><?= $usr['email'] ?></td>
                     <td><?= $usr['nip'] ?></td>
                     <td>
-                        <a href=""><img src="../../icon/edit.png" class="mr-2" /></a>
-                        <a href=""><img src="../../icon/delete.png" /></a>
+                        <a href="/form/edit/administrator/<?= $usr['id'] ?>"><img src="../../icon/edit.png" class="mr-2" /></a>
+                        <a href="/administrator/delete/<?= $usr['id'] ?>"><img src="../../icon/delete.png" /></a>
                     </td>
                 </tr>
             <?php

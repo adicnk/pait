@@ -27,9 +27,22 @@ class Admin extends BaseController
 
     public function memberAdmin()
     {
+
+        d($this->request->getVar('keyword'));
+
+        // Search Block
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $user = $this->userModel->search($keyword);
+            $title = "Admin Search : " . $keyword;
+        } else {
+            $user = $this->userModel->search();
+            $title = "Admin List : All";
+        }
+
         $currentPage = $this->request->getVar('page_user') ? $this->request->getVar('page_user') : 1;
         $data = [
-            'title' => "Daftar Admin",
+            'title' => $title,
             'user'  => $this->userModel->paginate(5, 'user'),
             'pager' => $this->userModel->pager,
             'currentPage' => $currentPage
