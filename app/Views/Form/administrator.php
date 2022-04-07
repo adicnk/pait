@@ -31,7 +31,7 @@
                             <div class="col-7">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><strong>Nama</strong></div>
-                                    <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Masukkan Nama ......">
+                                    <input type="text" class="form-control" id="namaAdmin" placeholder="Masukkan Nama ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return alphaOnly(event);">
                                 </div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                             <div class="col-6">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><strong>Email</strong></div>
-                                    <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Masukkan Email ......">
+                                    <input type="email" class="form-control" id="emailAdmin" placeholder="Masukkan Email ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                             <div class="col-8">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><strong>Nomor Induk Pegawai / Mahasiswa</strong></div>
-                                    <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Masukkan NIP/NIM ......">
+                                    <input type="text" class="form-control" id="nimnikAdmin" placeholder="Masukkan NIP/NIM ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return numOnly(event);">
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                             <div class="col-5">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><strong>Username</strong></div>
-                                    <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Masukkan Username untuk Login ......">
+                                    <input type="text" class="form-control" id="usernameAdmin" placeholder="Masukkan Username untuk Login ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return alphaOnly(event);">
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                             <div class="col-5">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><strong>Password</strong></div>
-                                    <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Masukkan Password untuk Login ......">
+                                    <input type="password" class="form-control" id="passwordAdmin" placeholder="Masukkan Password untuk Login ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
                                 </div>
                             </div>
                         </div>
