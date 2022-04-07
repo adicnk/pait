@@ -29,7 +29,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../../admin">
                 <div class="sidebar-brand-text mx-3">
                     <img src="../../favicon.ico" alt="main_logo" style="width:20%">
                     PAIT Admin
@@ -41,7 +41,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="../../../admin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -60,8 +60,7 @@
                 </a>
                 <div id="collapseIndex" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="buttons.html">List</a>
-                        <a class="collapse-item" href="cards.html">Input</a>
+                        <a class="collapse-item" href="../admin/user">List</a>
                     </div>
                 </div>
             </li>
@@ -73,21 +72,21 @@
                 </a>
                 <div id="collapseMahasiswa" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="buttons.html">List</a>
-                        <a class="collapse-item" href="cards.html">Input</a>
+                        <a class="collapse-item" href="../admin/mahasiswa">List</a>
+                        <a class="collapse-item" href="#">Input</a>
                     </div>
                 </div>
             </li>
 
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSoal" aria-expanded="true" aria-controls="collapseSoal">
                     <i class="fas fa-fw fa-list"></i>
                     <span>Soal</span>
                 </a>
                 <div id="collapseSoal" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../../../admin">List</a>
-                        <a class="collapse-item" href="">Input</a>
+                        <a class="collapse-item" href="">../admin/soal</a>
+                        <a class="collapse-item" href="">#</a>
                     </div>
                 </div>
             </li>
