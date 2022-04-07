@@ -11,7 +11,7 @@
     </div>
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-2">
-        <h1 class="h3 mb-0 text-gray-800"> <?= $title; ?></h1>
+        <h1 class="h3 mb-0 text-gray-800"><strong><?= $title; ?></strong></h1>
     </div>
 
     <div class="mt-3">
@@ -30,15 +30,15 @@
                         <div class="form-row align-items-right">
                             <div class="col-7">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text">Nama </div>
+                                    <div class="input-group-text"><strong>Nama</strong></div>
                                     <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Masukkan Nama ......">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row align-items-right mt-3">
-                            <div class="col-5">
+                            <div class="col-6">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text">Email </div>
+                                    <div class="input-group-text"><strong>Email</strong></div>
                                     <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Masukkan Email ......">
                                 </div>
                             </div>
@@ -46,23 +46,23 @@
                         <div class="form-row align-items-right mt-3">
                             <div class="col-8">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text">Nomor Induk Pegawai / Mahasiswa </div>
+                                    <div class="input-group-text"><strong>Nomor Induk Pegawai / Mahasiswa</strong></div>
                                     <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Masukkan NIP/NIM ......">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row align-items-right mt-3">
-                            <div class="col-4">
+                            <div class="col-5">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text">Username </div>
+                                    <div class="input-group-text"><strong>Username</strong></div>
                                     <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Masukkan Username untuk Login ......">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row align-items-right mt-3">
-                            <div class="col-4">
+                            <div class="col-5">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text">Password </div>
+                                    <div class="input-group-text"><strong>Password</strong></div>
                                     <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Masukkan Password untuk Login ......">
                                 </div>
                             </div>
