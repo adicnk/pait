@@ -95,27 +95,27 @@
                     <?php switch ($qclb['id']) {
                         case 1: ?>
                             <span class="mr-2">
-                                <i class="fas fa-circle text-primary"></i><?= $qclb['name'] ?>
+                                <i class="fas fa-circle text-primary"></i><?= $qclb['kname'] ?>
                             </span>
                         <?php break;
                         case 2: ?>
                             <span class="mr-2">
-                                <i class="fas fa-circle text-success"></i><?= $qclb['name'] ?>
+                                <i class="fas fa-circle text-success"></i><?= $qclb['kname'] ?>
                             </span>
                         <?php break;
                         case 3: ?>
                             <span class="mr-2">
-                                <i class="fas fa-circle text-info"></i><?= $qclb['name'] ?>
+                                <i class="fas fa-circle text-info"></i><?= $qclb['kname'] ?>
                             </span>
                         <?php break;
                         case 4: ?>
                             <span class="mr-2">
-                                <i class="fas fa-circle text-warning"></i><?= $qclb['name'] ?>
+                                <i class="fas fa-circle text-warning"></i><?= $qclb['kname'] ?>
                             </span>
                         <?php break;
                         case 5: ?>
                             <span class="mr-2">
-                                <i class="fas fa-circle text-danger"></i><?= $qclb['name'] ?>
+                                <i class="fas fa-circle text-danger"></i><?= $qclb['kname'] ?>
                             </span>
                             <?php break; ?>
                     <?php } ?>

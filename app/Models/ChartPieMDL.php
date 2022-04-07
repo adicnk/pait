@@ -41,7 +41,7 @@ class ChartPieMDL extends Model
             if ($index > 1) {
                 $data = $data . ",'";
             }
-            $data = $data . $cc['name'] . "'";
+            $data = $data . $cc['kname'] . "'";
             $index++;
         endforeach;
         $data = $data . ']';
