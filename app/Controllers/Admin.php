@@ -3,15 +3,17 @@
 namespace App\Controllers;
 
 use App\Models\UserMDL;
+use App\Models\SoalMDL;
 use App\Models\ChartPieMDL;
 
 class Admin extends BaseController
 {
-    protected $userModel, $chartPieModel;
+    protected $userModel, $chartPieModel, $soalModel;
 
     public function __construct()
     {
         $this->userModel = new UserMDL();
+        $this->soalModel = new SoalMDL();
         $this->chartPieModel = new ChartPieMDL();
     }
 
@@ -72,7 +74,7 @@ class Admin extends BaseController
             'pager' => $this->userModel->pager,
             'currentPage' => $currentPage
         ];
-        return view('admin/administrator', $data);
+        return view('admin/mahasiswa', $data);
     }
 
     public function soal()
@@ -83,18 +85,18 @@ class Admin extends BaseController
         // Search Block
         $keyword = $this->request->getVar('keyword');
         if ($keyword) {
-            $user = $this->userModel->searchMahasiswa($keyword);
-            $title = 'Mahasiswa Name Search : "' . $keyword . '"';
+            $user = $this->soalModel->searchSoal($keyword);
+            $title = 'Soal Name Search : "' . $keyword . '"';
         } else {
-            $user = $this->userModel->searchMahasiswa();
-            $title = "Mahasiswa List : All";
+            $soal = $this->soalModel->searchSoal();
+            $title = "Soal List : All";
         }
 
-        $currentPage = $this->request->getVar('page_user') ? $this->request->getVar('page_user') : 1;
+        $currentPage = $this->request->getVar('page_soal') ? $this->request->getVar('page_soal') : 1;
         $data = [
             'title' => $title,
-            'user'  => $this->userModel->paginate(5, 'user'),
-            'pager' => $this->userModel->pager,
+            'soal'  => $this->soalModel->paginate(5, 'soal'),
+            'pager' => $this->soalModel->pager,
             'currentPage' => $currentPage
         ];
         return view('admin/soal', $data);

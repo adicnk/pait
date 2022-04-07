@@ -32,10 +32,10 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">NIP/NIM</th>
+                    <th scope="col" style="text-align: center">#</th>
+                    <th scope="col" width="600px">Nama</th>
+                    <th scope="col" width="300px" style="text-align: center">Email</th>
+                    <th scope="col" style="text-align: center">NIP/NIM</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -46,10 +46,10 @@
                     foreach ($user as $usr) :
                     ?>
                 <tr>
-                    <td><?= $index ?></td>
+                    <td style="text-align: center"><?= $index ?></td>
                     <td><?= $usr['name'] ?></td>
-                    <td><?= $usr['email'] ?></td>
-                    <td><?= $usr['nip'] ? $usr['nip'] : $usr['nim'] ?></td>
+                    <td style="text-align: center"><?= $usr['email'] == 1 ? $usr['email'] : '<img src="../../icon/not_available.png" class="mr-2" />' ?></td>
+                    <td style="text-align: center"><?= $usr['nip'] ? $usr['nip'] : $usr['nim'] ?></td>
                     <td>
                         <a href="/form/edit/administrator/<?= $usr['id'] ?>"><img src="../../icon/edit.png" class="mr-2" /></a>
                         <a href="/administrator/delete/<?= $usr['id'] ?>"><img src="../../icon/delete.png" /></a>

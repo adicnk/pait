@@ -1,4 +1,4 @@
-<?= $this->extend('template/member-soal') ?>
+<?= $this->extend('template/member-mahasiswa') ?>
 <?= $this->section('content') ?>
 
 <?php $db = \Config\Database::connect(); ?>
@@ -20,7 +20,7 @@
             <div class="col-4">
                 <form action="" method="post">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Masukkan Kategori" name="keyword">
+                        <input type="text" class="form-control" placeholder="Masukkan Nama" name="keyword">
                         <button class="btn btn-outline-secondary" type="submit" name="submit">Cari</button>
                     </div>
                 </form>
@@ -32,29 +32,27 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col" width="30px" style="text-align: center">#</th>
-                    <th scope="col" width="500px">Soal</th>
-                    <th scope="col" width="210px">Kategori</th>
-                    <th scope="col" width="3px" style="text-align: center">Gambar</th>
-                    <th scope="col" width="3px" style="text-align: center">Suara</th>
-                    <th scope="col" width="100px"></th>
+                    <th scope="col" style="text-align: center">#</th>
+                    <th scope="col" width="600px">Nama</th>
+                    <th scope="col" width="300px" style="text-align: center">Email</th>
+                    <th scope="col" style="text-align: center">NIP/NIM</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <?php
                     $index = 1 + (5 * ($currentPage - 1));
-                    foreach ($soal as $s) :
+                    foreach ($user as $usr) :
                     ?>
                 <tr>
                     <td style="text-align: center"><?= $index ?></td>
-                    <td><?= $s['name'] ?></td>
-                    <td><?= $s['kategori_soal_id'] ? $s['kname'] : '-' ?></td>
-                    <td style="text-align: center"><?= $s['is_picture'] == 1 ? '<img src="../../icon/check.png" class="mr-2" />' : '<img src="../../icon/not_available.png" class="mr-2" />' ?></td>
-                    <td style="text-align: center"> <?= $s['is_audio'] == 1 ? '<img src="../../icon/check.png" class="mr-2" />' : '<img src="../../icon/not_available.png" class="mr-2" />'; ?></td>
+                    <td><?= $usr['name'] ?></td>
+                    <td style="text-align: center"><?= $usr['email'] == 1 ? $usr['email'] : '<img src="../../icon/not_available.png" class="mr-2" />' ?></td>
+                    <td style="text-align: center"><?= $usr['nip'] ? $usr['nip'] : $usr['nim'] ?></td>
                     <td>
-                        <a href="/form/edit/administrator/<?= $s['id'] ?>"><img src="../../icon/edit.png" class="mr-2" /></a>
-                        <a href="/administrator/delete/<?= $s['id'] ?>"><img src="../../icon/delete.png" /></a>
+                        <a href="/form/edit/administrator/<?= $usr['id'] ?>"><img src="../../icon/edit.png" class="mr-2" /></a>
+                        <a href="/administrator/delete/<?= $usr['id'] ?>"><img src="../../icon/delete.png" /></a>
                     </td>
                 </tr>
             <?php
