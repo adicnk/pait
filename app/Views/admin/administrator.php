@@ -33,7 +33,7 @@
             <thead>
                 <tr>
                     <th scope="col" style="text-align: center">#</th>
-                    <th scope="col" width="600px">Nama</th>
+                    <th scope="col" width="500px">Nama</th>
                     <th scope="col" width="300px" style="text-align: center">Email</th>
                     <th scope="col" style="text-align: center">NIP/NIM</th>
                     <th scope="col"></th>

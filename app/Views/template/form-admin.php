@@ -53,7 +53,7 @@
             <div class="sidebar-heading">
                 Data
             </div>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseIndex" aria-expanded="true" aria-controls="collapseIndex">
                     <i class="fas fa-fw fa-lock"></i>
                     <span>Admin</span>

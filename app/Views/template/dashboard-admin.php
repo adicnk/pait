@@ -51,28 +51,45 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Data Input
+                Data
             </div>
-
-            <!-- Nav Item - Admin -->
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseIndex" aria-expanded="true" aria-controls="collapseIndex">
                     <i class="fas fa-fw fa-lock"></i>
-                    <span>Admin</span></a>
+                    <span>Admin</span>
+                </a>
+                <div id="collapseIndex" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="admin/user">List</a>
+                        <a class="collapse-item" href="form/admin">Input</a>
+                    </div>
+                </div>
             </li>
 
-            <!-- Nav Item - Mahasiswa -->
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMahasiswa" aria-expanded="true" aria-controls="collapseMahasiswa">
                     <i class="fas fa-fw fa-graduation-cap"></i>
-                    <span>Mahasiswa</span></a>
+                    <span>Mahasiswa</span>
+                </a>
+                <div id="collapseMahasiswa" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="../admin/mahasiswa">List</a>
+                        <a class="collapse-item" href="#">Input</a>
+                    </div>
+                </div>
             </li>
 
-            <!-- Nav Item - Soal -->
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSoal" aria-expanded="true" aria-controls="collapseSoal">
                     <i class="fas fa-fw fa-list"></i>
-                    <span>Soal</span></a>
+                    <span>Soal</span>
+                </a>
+                <div id="collapseSoal" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="">../admin/soal</a>
+                        <a class="collapse-item" href="">#</a>
+                    </div>
+                </div>
             </li>
 
             <!-- Divider -->

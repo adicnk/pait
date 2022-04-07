@@ -19,7 +19,7 @@
     </div>
 
     <!-- Nested Row within Card Body -->
-    <div class="card o-hidden border-0 mt-3">
+    <div class="card o-hidden border-0 mt-3 bg-light">
         <div class="card-block mt-3">
             <div class="card-text text-center">
 
