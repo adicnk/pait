@@ -23,15 +23,26 @@
         <div class="card-block mt-3">
             <div class="card-text text-center">
 
-                <form method="post" action="../submit/administrator">
+                <form method="post" action="../submit/admin">
                     <?= csrf_field() ?>
 
                     <div class="form-group">
                         <div class="form-row align-items-right">
+                            <div class="col-5">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><strong>Role</strong></div>
+                                    <select class="form-control" name="roleUser" id="roleUser" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
+                                        <option value=1>Admin</option>
+                                        <option value=2>Mahasiswa</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-right mt-3">
                             <div class="col-7">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><strong>Nama</strong></div>
-                                    <input type="text" class="form-control" id="namaAdmin" placeholder="Masukkan Nama ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return alphaOnly(event);">
+                                    <input type="text" name="namaUser" id="namaUser" class="form-control" placeholder="Masukkan Nama ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return alphaOnly(event);">
                                 </div>
                             </div>
                         </div>
@@ -39,7 +50,7 @@
                             <div class="col-6">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><strong>Email</strong></div>
-                                    <input type="email" class="form-control" id="emailAdmin" placeholder="Masukkan Email ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
+                                    <input type="email" name="emailUser" id="emailUser" class="form-control" placeholder="Masukkan Email ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
                                 </div>
                             </div>
                         </div>
@@ -47,7 +58,7 @@
                             <div class="col-8">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><strong>Nomor Induk Pegawai / Mahasiswa</strong></div>
-                                    <input type="text" class="form-control" id="nimnikAdmin" placeholder="Masukkan NIP/NIM ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return numOnly(event);">
+                                    <input type="text" name="nimnipUser" id="nimnipUser" class="form-control" placeholder="Masukkan NIP/NIM ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return numOnly(event);">
                                 </div>
                             </div>
                         </div>
@@ -55,7 +66,7 @@
                             <div class="col-5">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><strong>Username</strong></div>
-                                    <input type="text" class="form-control" id="usernameAdmin" placeholder="Masukkan Username untuk Login ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return alphaOnly(event);">
+                                    <input type="text" name="usernameUser" id="usernameUser" class="form-control" placeholder="Masukkan Username untuk Login ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return alphaOnly(event);">
                                 </div>
                             </div>
                         </div>
@@ -63,7 +74,7 @@
                             <div class="col-5">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><strong>Password</strong></div>
-                                    <input type="password" class="form-control" id="passwordAdmin" placeholder="Masukkan Password untuk Login ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
+                                    <input type="password" name="passwordUser" id="passwordUser" class="form-control" placeholder="Masukkan Password untuk Login ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
                                 </div>
                             </div>
                         </div>

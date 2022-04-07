@@ -38,6 +38,7 @@ $routes->get('admin/mahasiswa', 'Admin::mahasiswa');
 $routes->get('admin/soal', 'Admin::soal');
 
 $routes->get('form/admin', 'Form::admin');
+$routes->get('submit/admin', 'Form::admin');
 
 /*
  * --------------------------------------------------------------------

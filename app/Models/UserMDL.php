@@ -10,7 +10,7 @@ class UserMDL extends Model
     protected $useTimestamps = true;
 
     // Field yang boleh diisi waktu saving data ** harus didefinisikan dulu **
-    protected $allowedFields = ['name', 'email', 'nip'];
+    protected $allowedFields = ['name', 'slug', 'email', 'nip', 'nim', 'role_id', 'class_id'];
 
     public function searchAdmin($keyword = false)
     {
