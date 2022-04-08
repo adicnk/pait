@@ -16,8 +16,8 @@ class Form extends BaseController
     public function admin()
     {
         $data = [
-            'title'   => "Form Admin"
+            'title'   => "Form User Administrator / Mahasiswa"
         ];
-        return view('form/administrator', $data);
+        return view('form/user', $data);
     }
 }

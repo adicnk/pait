@@ -32,10 +32,7 @@ $routes->setAutoRoute(true);
 // For Exercise Route
 $routes->get('/', 'Exercise::index');
 
-$routes->get('/admin', 'Admin::index');
-$routes->get('admin/user', 'Admin::user');
-$routes->get('admin/mahasiswa', 'Admin::mahasiswa');
-$routes->get('admin/soal', 'Admin::soal');
+$routes->get('/admin/(:segment)', 'Admin::index/$1');
 
 $routes->get('form/admin', 'Form::admin');
 $routes->get('submit/admin', 'Form::admin');

@@ -1,4 +1,4 @@
-<?= $this->extend('template/form-admin') ?>
+<?= $this->extend('template/form-user') ?>
 <?= $this->section('content') ?>
 
 <?php $db = \Config\Database::connect(); ?>
@@ -30,10 +30,21 @@
                         <div class="form-row align-items-right">
                             <div class="col-5">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text"><strong>Role</strong></div>
+                                    <div class="input-group-text"><strong>Role Admin</strong></div>
                                     <select class="form-control" name="roleUser" id="roleUser" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
-                                        <option value=1>Admin</option>
-                                        <option value=2>Mahasiswa</option>
+                                        <option value=1>Administrator</option>
+                                        <option value=2>Member</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-right mt-3">
+                            <div class="col-5">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><strong>Status di Kampus</strong></div>
+                                    <select class="form-control" name="statusUser" id="statusUser" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
+                                        <option value=1>Mahasiswa</option>
+                                        <option value=2>Staff</option>
                                     </select>
                                 </div>
                             </div>

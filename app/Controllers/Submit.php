@@ -17,16 +17,18 @@ class Submit extends BaseController
 
     public function admin()
     {
-        d($this->request->getVar());
+        // dd($this->request->getVar());
 
         $roleID = $this->request->getVar('roleUser');
         $nimnip = $this->request->getVar('nimnipUser');
         $slug = url_title($this->request->getVar('namaUser'), '-', true);
+        $statusID = $this->request->getVar('statusUser');
 
         $this->userModel->save([
             'role_id' => $roleID,
             'name' => $this->request->getVar('namaUser'),
             'slug' => $slug,
+            'status_id' => $statusID,
             'email' => $this->request->getVar('emailUser')
         ]);
 
@@ -34,21 +36,41 @@ class Submit extends BaseController
         $db      = \Config\Database::connect();
         $lastID = $db->insertID();
 
-        if ($this->request->getVar('roleUser') == 1) {
-            $this->userModel->save([
-                'id' => $lastID,
-                'nip' => $this->request->getVar('nimnipUser')
-            ]);
-        }
-
-        if ($this->loginModel->search($lastID)) {
-            $this->loginModel->save([
-                'role_id' => $roleID,
-                'user_id' => $lastID,
-                'username' => $this->request->getVar('usernameUser'),
-                'password' => $this->request->getVar('passwordUser'),
-                'is_active' => 1
-            ]);
+        if ($roleID == 1) {
+            if ($statusID == 1) {
+                $this->userModel->save([
+                    'id' => $lastID,
+                    'nim' => $nimnip
+                ]);
+            } else {
+                $this->userModel->save([
+                    'id' => $lastID,
+                    'nip' => $nimnip
+                ]);
+            }
+            if ($this->loginModel->search($lastID)) {
+                $this->loginModel->save([
+                    'role_id' => $roleID,
+                    'user_id' => $lastID,
+                    'username' => $this->request->getVar('usernameUser'),
+                    'password' => $this->request->getVar('passwordUser'),
+                    'is_active' => 1
+                ]);
+                return redirect()->to('../admin/user');
+            }
+        } else {
+            if ($statusID = 1) {
+                $this->userModel->save([
+                    'id' => $lastID,
+                    'nim' => $this->request->getVar('nimnipUser')
+                ]);
+            } else {
+                $this->userModel->save([
+                    'id' => $lastID,
+                    'nip' => $this->request->getVar('nimnipUser')
+                ]);
+            }
+            return redirect()->to('../admin/mahasiswa');
         }
     }
 }

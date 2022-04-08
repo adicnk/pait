@@ -29,7 +29,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../admin">
                 <div class="sidebar-brand-text mx-3">
                     <img src="favicon.ico" alt="main_logo" style="width:20%">
                     PAIT Admin
@@ -41,7 +41,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="../admin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span> Dashboard</span></a>
             </li>
@@ -73,7 +73,7 @@
                 </a>
                 <div id="collapseMahasiswa" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../admin/mahasiswa">List</a>
+                        <a class="collapse-item" href="admin/mahasiswa">List</a>
                         <a class="collapse-item" href="#">Input</a>
                     </div>
                 </div>

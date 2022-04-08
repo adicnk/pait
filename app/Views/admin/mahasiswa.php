@@ -33,9 +33,9 @@
             <thead>
                 <tr>
                     <th scope="col" style="text-align: center">#</th>
-                    <th scope="col" width="600px">Nama</th>
+                    <th scope="col" width="350px">Nama</th>
                     <th scope="col" width="300px" style="text-align: center">Email</th>
-                    <th scope="col" style="text-align: center">NIP/NIM</th>
+                    <th scope="col" style="text-align: center">NIM</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -48,7 +48,7 @@
                 <tr>
                     <td style="text-align: center"><?= $index ?></td>
                     <td><?= $usr['name'] ?></td>
-                    <td style="text-align: center"><?= $usr['email'] == 1 ? $usr['email'] : '<img src="../../icon/not_available.png" class="mr-2" />' ?></td>
+                    <td style="text-align: center"><?= $usr['email'] ? $usr['email'] : '<img src="../../icon/not_available.png" class="mr-2" />' ?></td>
                     <td style="text-align: center"><?= $usr['nip'] ? $usr['nip'] : $usr['nim'] ?></td>
                     <td>
                         <a href="/form/edit/administrator/<?= $usr['id'] ?>"><img src="../../icon/edit.png" class="mr-2" /></a>
