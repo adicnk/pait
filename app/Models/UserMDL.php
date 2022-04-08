@@ -16,8 +16,8 @@ class UserMDL extends Model
     {
         if ($keyword == false) {
             $this->table('user');
-            return $this->join('status', 'status.id = user.status_id');
-            // return $this->where(['role_id' => 1]); // User is Administrator
+            $this->join('status', 'status.id = user.status_id');
+            return $this->where(['role_id' => 1]); // User is Administrator
             // dd($this->findall());
         }
         $this->table('user');
