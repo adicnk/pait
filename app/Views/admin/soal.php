@@ -33,8 +33,9 @@
             <thead>
                 <tr>
                     <th scope="col" width="30px" style="text-align: center">#</th>
-                    <th scope="col" width="500px">Soal</th>
-                    <th scope="col" width="210px">Kategori</th>
+                    <th scope="col" width="450px" style="text-align: center">Soal</th>
+                    <th scope="col" width="50px">Dipilih</th>
+                    <th scope="col" width="250px">Kategori</th>
                     <th scope="col" width="3px" style="text-align: center">Gambar</th>
                     <th scope="col" width="3px" style="text-align: center">Suara</th>
                     <th scope="col" width="100px"></th>
@@ -49,6 +50,7 @@
                 <tr>
                     <td style="text-align: center"><?= $index ?></td>
                     <td><?= $s['name'] ?></td>
+                    <td style="text-align: center"><input type="checkbox" <?= $s['is_choosen'] == 1 ? 'checked' : ''; ?>></td>
                     <td><?= $s['kategori_soal_id'] ? $s['kname'] : '-' ?></td>
                     <td style="text-align: center"><?= $s['is_picture'] == 1 ? '<img src="../../icon/check.png" class="mr-2" />' : '<img src="../../icon/not_available.png" class="mr-2" />' ?></td>
                     <td style="text-align: center"> <?= $s['is_audio'] == 1 ? '<img src="../../icon/check.png" class="mr-2" />' : '<img src="../../icon/not_available.png" class="mr-2" />'; ?></td>

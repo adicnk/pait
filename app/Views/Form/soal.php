@@ -31,7 +31,7 @@
                             <div class="col-5">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><strong>Kategori</strong></div>
-                                    <select class="form-control" name="roleUser" id="roleUser" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
+                                    <select class="form-control" name="kategoriSoal" id="kategoriSoal" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
                                         <option value=1>Pemeriksaan Ektrimitas</option>
                                         <option value=2>Pemeriksaan Kepala dan Leher</option>
                                         <option value=2>Dada</option>
@@ -53,8 +53,8 @@
                             <div class="col-2">
                                 <div class="input-group-prepend">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                                        <label class="form-check-label" for="gridCheck">
+                                        <input class="form-check-input" type="checkbox" name="isPicture" id="isPicture">
+                                        <label class="form-check-label" for="isPicture">
                                             Gambar
                                         </label>
                                     </div>
@@ -63,10 +63,9 @@
                         </div>
                         <div class="form-row align-items-right mt-3">
                             <div class="col-7">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text"><strong>File Gambar</strong></div>
-                                    <input type="text" name="namaUser" id="namaUser" class="form-control" placeholder="Masukkan File Gambar ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return alphaOnly(event);">
-                                    <button type="button" class="btn btn-secondary btn-sm">..</button>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" name="fileGambar" id="fileGambar">
+                                    <label class="custom-file-label" for="customFile">Pilih File Gambar</label>
                                 </div>
                             </div>
                         </div>
@@ -74,8 +73,8 @@
                             <div class="col-2">
                                 <div class="input-group-prepend">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                                        <label class="form-check-label" for="gridCheck">
+                                        <input class="form-check-input" type="checkbox" name="isAudio" id="isAudio">
+                                        <label class="form-check-label" for="isAudio">
                                             Audio
                                         </label>
                                     </div>
@@ -84,10 +83,9 @@
                         </div>
                         <div class="form-row align-items-right mt-3">
                             <div class="col-7">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text"><strong>File Audio</strong></div>
-                                    <input type="text" name="namaUser" id="namaUser" class="form-control" placeholder="Masukkan File Audio ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return alphaOnly(event);">
-                                    <button type="button" class="btn btn-secondary btn-sm">..</button>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" name="fileAudio" id="fileAudio">
+                                    <label class="custom-file-label" for="customFile">Pilih File Audio</label>
                                 </div>
                             </div>
                         </div>
@@ -95,8 +93,8 @@
                             <div class="col-4">
                                 <div class="input-group-prepend">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                                        <label class="form-check-label" for="gridCheck">
+                                        <input class="form-check-input" type="checkbox" name="isChoosen" id="isChoosen">
+                                        <label class="form-check-label" for="isChoosen">
                                             Soal ini dipilih masuk ke latihan ujian
                                         </label>
                                     </div>
