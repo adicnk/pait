@@ -30,63 +30,76 @@
                         <div class="form-row align-items-right">
                             <div class="col-5">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text"><strong>Role Admin</strong></div>
+                                    <div class="input-group-text"><strong>Kategori</strong></div>
                                     <select class="form-control" name="roleUser" id="roleUser" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
-                                        <option value=1>Administrator</option>
-                                        <option value=2>Member</option>
+                                        <option value=1>Pemeriksaan Ektrimitas</option>
+                                        <option value=2>Pemeriksaan Kepala dan Leher</option>
+                                        <option value=2>Dada</option>
+                                        <option value=2>Perut</option>
+                                        <option value=2>Genitalia dan Rectum</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row align-items-right mt-3">
-                            <div class="col-5">
+                            <div class="col-12">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text"><strong>Status di Kampus</strong></div>
-                                    <select class="form-control" name="statusUser" id="statusUser" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
-                                        <option value=1>Mahasiswa</option>
-                                        <option value=2>Staff</option>
-                                    </select>
+                                    <div class="input-group-text"><strong>Isi Soal</strong></div>
+                                    <textarea class="form-control" name="isiSoal" id="isiSoal" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-right mt-3">
+                            <div class="col-2">
+                                <div class="input-group-prepend">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Gambar
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row align-items-right mt-3">
                             <div class="col-7">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text"><strong>Nama</strong></div>
-                                    <input type="text" name="namaUser" id="namaUser" class="form-control" placeholder="Masukkan Nama ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return alphaOnly(event);">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-row align-items-right mt-3">
-                            <div class="col-6">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text"><strong>Email</strong></div>
-                                    <input type="email" name="emailUser" id="emailUser" class="form-control" placeholder="Masukkan Email ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
+                                    <div class="input-group-text"><strong>File Gambar</strong></div>
+                                    <input type="text" name="namaUser" id="namaUser" class="form-control" placeholder="Masukkan File Gambar ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return alphaOnly(event);">
+                                    <button type="button" class="btn btn-secondary btn-sm">..</button>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row align-items-right mt-3">
-                            <div class="col-8">
+                            <div class="col-2">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text"><strong>Nomor Induk Pegawai / Mahasiswa</strong></div>
-                                    <input type="text" name="nimnipUser" id="nimnipUser" class="form-control" placeholder="Masukkan NIP/NIM ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return numOnly(event);">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Audio
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row align-items-right mt-3">
-                            <div class="col-5">
+                            <div class="col-7">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text"><strong>Username</strong></div>
-                                    <input type="text" name="usernameUser" id="usernameUser" class="form-control" placeholder="Masukkan Username untuk Login ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return alphaOnly(event);">
+                                    <div class="input-group-text"><strong>File Audio</strong></div>
+                                    <input type="text" name="namaUser" id="namaUser" class="form-control" placeholder="Masukkan File Audio ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return alphaOnly(event);">
+                                    <button type="button" class="btn btn-secondary btn-sm">..</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-row align-items-right mt-3">
-                            <div class="col-5">
+                        <div class="form-row align-items-right mt-5">
+                            <div class="col-4">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text"><strong>Password</strong></div>
-                                    <input type="password" name="passwordUser" id="passwordUser" class="form-control" placeholder="Masukkan Password untuk Login ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Soal ini dipilih masuk ke latihan ujian
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
