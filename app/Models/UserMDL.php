@@ -10,18 +10,20 @@ class UserMDL extends Model
     protected $useTimestamps = true;
 
     // Field yang boleh diisi waktu saving data ** harus didefinisikan dulu **
-    protected $allowedFields = ['name', 'slug', 'status_id',  'email', 'nip', 'nim', 'role_id', 'class_id'];
+    protected $allowedFields = ['name', 'slug', 'status_id',  'email', 'nip', 'nim', 'role_id', 'jurusan_id'];
 
     public function searchAdmin($keyword = false)
     {
         if ($keyword == false) {
             $this->table('user');
             $this->join('status', 'status.id = user.status_id');
+            $this->join('jurusan', 'jurusan.id = user.jurusan_id', 'left');
             return $this->where(['role_id' => 1]); // User is Administrator
             // dd($this->findall());
         }
         $this->table('user');
         $this->join('status', 'status.id = user.status_id');
+        $this->join('jurusan', 'jurusan.id = user.jurusan_id');
         $this->where(['role_id' => 1]);
         return  $this->like('name', $keyword);
     }
@@ -30,11 +32,11 @@ class UserMDL extends Model
     {
         if ($keyword == false) {
             $this->table('user');
-            $this->where(['role_id' => 2]);
-            return  $this->where(['status_id' => 1]); // User is Administrator
+            $this->join('jurusan', 'jurusan.id = user.jurusan_id');
+            return  $this->where(['status_id' => 1]); // User is Mahasiswa
         }
         $this->table('user');
-        $this->where(['role_id' => 2]);
+        $this->join('jurusan', 'jurusan.id = user.jurusan_id');
         $this->where(['role_id' => 1]);
         return  $this->like('name', $keyword);
     }

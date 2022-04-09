@@ -1,4 +1,4 @@
-<?= $this->extend('template/form-user') ?>
+<?= $this->extend('template/form-soal') ?>
 <?= $this->section('content') ?>
 
 <?php $db = \Config\Database::connect(); ?>
@@ -57,17 +57,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-row align-items-right mt-3">
-                            <div class="col-5">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text"><strong>Jurusan</strong></div>
-                                    <select class="form-control" name="jurusanUser" id="jurusanUser" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
-                                        <option value=1>D3 Keperawatan</option>
-                                        <option value=2>S1 Profesi Ners</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="form-row align-items-right mt-3">
                             <div class="col-6">
                                 <div class="input-group-prepend">

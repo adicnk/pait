@@ -33,9 +33,10 @@
             <thead>
                 <tr>
                     <th scope="col" style="text-align: center">#</th>
-                    <th scope="col" width="400px">Nama</th>
+                    <th scope="col" width="300px">Nama</th>
+                    <th scope="col" style="text-align: center" width="150px">Jurusan</th>
                     <th scope="col" width="50px">Status</th>
-                    <th scope="col" width="300px" style="text-align: center">Email</th>
+                    <th scope="col" width="200px" style="text-align: center">Email</th>
                     <th scope="col" style="text-align: center">NIP/NIM</th>
                     <th scope="col"></th>
                 </tr>
@@ -49,7 +50,8 @@
                 <tr>
                     <td style="text-align: center"><?= $index ?></td>
                     <td><?= $usr['name'] ?></td>
-                    <td> <?= $usr['sname']; ?></td>
+                    <td style="text-align: center"><?= $usr['status_id'] == 1 ? $usr['jname'] : '<img src="../../icon/not_available.png" class="mr-2" />' ?></td>
+                    <td><?= $usr['sname']; ?></td>
                     <td style="text-align: center"><?= $usr['email'] ? $usr['email'] : '<img src="../../icon/not_available.png" class="mr-2" />' ?></td>
                     <td style="text-align: center"><?= $usr['nip'] ? $usr['nip'] : $usr['nim'] ?></td>
                     <td>

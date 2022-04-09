@@ -53,27 +53,40 @@
             <div class="sidebar-heading">
                 Data
             </div>
-            <li class="nav-item active">
+            <li class="nav-item             
+            <?= $url == 'admin' ? ' active' : '' ?>
+            ">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseIndex" aria-expanded="true" aria-controls="collapseIndex">
                     <i class="fas fa-fw fa-lock"></i>
                     <span>Admin</span>
                 </a>
                 <div id="collapseIndex" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../admin/user">List</a>
+                        <?php if ($url == 'admin') { ?>
+                            <a class="collapse-item" href="../admin/user">List</a>
+                        <?php } else { ?>
+                            <a class="collapse-item" href="../admin/user">List</a>
+                            <a class="collapse-item" href="../form/admin?url=mahasiswa">Input</a>
+                        <?php } ?>
                     </div>
                 </div>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item 
+            <?= $url == 'mahasiswa' ? ' active' : '' ?>
+            ">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMahasiswa" aria-expanded="true" aria-controls="collapseMahasiswa">
                     <i class="fas fa-fw fa-graduation-cap"></i>
                     <span>Mahasiswa</span>
                 </a>
                 <div id="collapseMahasiswa" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../admin/mahasiswa">List</a>
-                        <a class="collapse-item" href="#">Input</a>
+                        <?php if ($url == 'mahasiswa') { ?>
+                            <a class="collapse-item" href="../admin/mahasiswa">List</a>
+                        <?php } else { ?>
+                            <a class="collapse-item" href="../admin/mahasiswa">List</a>
+                            <a class="collapse-item" href="../form/admin?url=mahasiswa">Input</a>
+                        <?php } ?>
                     </div>
                 </div>
             </li>
@@ -85,8 +98,8 @@
                 </a>
                 <div id="collapseSoal" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="">../admin/soal</a>
-                        <a class="collapse-item" href="">#</a>
+                        <a class="collapse-item" href="../admin/soal">List</a>
+                        <a class="collapse-item" href="">Input</a>
                     </div>
                 </div>
             </li>

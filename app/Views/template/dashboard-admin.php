@@ -61,7 +61,7 @@
                 <div id="collapseIndex" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="admin/user">List</a>
-                        <a class="collapse-item" href="form/admin">Input</a>
+                        <a class="collapse-item" href="form/admin?url=admin">Input</a>
                     </div>
                 </div>
             </li>
@@ -74,7 +74,7 @@
                 <div id="collapseMahasiswa" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="admin/mahasiswa">List</a>
-                        <a class="collapse-item" href="#">Input</a>
+                        <a class="collapse-item" href="form/admin?url=mahasiswa">Input</a>
                     </div>
                 </div>
             </li>
@@ -86,8 +86,8 @@
                 </a>
                 <div id="collapseSoal" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="">../admin/soal</a>
-                        <a class="collapse-item" href="">#</a>
+                        <a class="collapse-item" href="admin/soal">List</a>
+                        <a class="collapse-item" href="form/soal">Input</a>
                     </div>
                 </div>
             </li>

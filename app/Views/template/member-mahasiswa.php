@@ -66,14 +66,14 @@
                 </div>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMahasiswa" aria-expanded="true" aria-controls="collapseMahasiswa">
                     <i class="fas fa-fw fa-graduation-cap"></i>
                     <span>Mahasiswa</span>
                 </a>
                 <div id="collapseMahasiswa" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../form/admin">Input</a>
+                        <a class="collapse-item" href="../form/admin?url=mahasiswa">Input</a>
                     </div>
                 </div>
             </li>
@@ -85,8 +85,8 @@
                 </a>
                 <div id="collapseSoal" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="">../admin/soal</a>
-                        <a class="collapse-item" href="">#</a>
+                        <a class="collapse-item" href="../admin/soal">List</a>
+                        <a class="collapse-item" href="../form/soal">Input</a>
                     </div>
                 </div>
             </li>

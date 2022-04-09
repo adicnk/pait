@@ -28,6 +28,7 @@ class Submit extends BaseController
             'role_id' => $roleID,
             'name' => $this->request->getVar('namaUser'),
             'slug' => $slug,
+            'jurusan_id' => $this->request->getVar('jurusanUser'),
             'status_id' => $statusID,
             'email' => $this->request->getVar('emailUser')
         ]);

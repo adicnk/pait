@@ -35,6 +35,8 @@ $routes->get('/', 'Exercise::index');
 $routes->get('/admin/(:segment)', 'Admin::index/$1');
 
 $routes->get('form/admin', 'Form::admin');
+$routes->get('form/soal', 'Form::soal');
+
 $routes->get('submit/admin', 'Form::admin');
 
 /*
