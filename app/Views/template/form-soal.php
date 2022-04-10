@@ -165,7 +165,34 @@
     <!-- <script src="admin_assets/js/demo/chart-area-demo.js"></script> -->
     <script src="../../admin_assets/js/chart-pie-demo.php"></script>
     <script src="../../admin_assets/js/keystroke.js"></script>
+    <script src="../../admin_assets/js/bs-custom-file-input.js"></script>
 
+    <script>
+        $(document).ready(function() {
+            bsCustomFileInput.init()
+        })
+
+        function myPicture() {
+            var checkBox = document.getElementById("isPicture");
+            var gambar = document.getElementById("fileGambar");
+            if (checkBox.checked == false) {
+                gambar.disabled = true;
+            } else {
+                gambar.disabled = false;
+            }
+
+        }
+
+        function myAudio() {
+            var checkBox = document.getElementById("isAudio");
+            var audio = document.getElementById("fileAudio");
+            if (checkBox.checked == false) {
+                audio.disabled = true;
+            } else {
+                audio.disabled = false;
+            }
+        }
+    </script>
 </body>
 
 </html>

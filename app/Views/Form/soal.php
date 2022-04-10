@@ -23,7 +23,7 @@
         <div class="card-block mt-3">
             <div class="card-text text-center">
 
-                <form method="post" action="../submit/admin">
+                <form method="post" action="../submit/soal">
                     <?= csrf_field() ?>
 
                     <div class="form-group">
@@ -41,17 +41,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion mt-3" id="accordion">
+                        <div class="accordion mt-5" id="accordion">
                             <div class="card">
                                 <div class="card-header" id="headingOne">
                                     <h2 class="mb-0">
-                                        <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                             Bagian Pertanyaan
                                         </button>
                                     </h2>
                                 </div>
 
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                     <div class="card-body">
                                         <div class="form-row align-items-right mt-3">
                                             <div class="col-12">
@@ -65,7 +65,7 @@
                                             <div class="col-2">
                                                 <div class="input-group-prepend">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" name="isPicture" id="isPicture">
+                                                        <input class="form-check-input" type="checkbox" name="isPicture" id="isPicture" onclick="myPicture()">
                                                         <label class="form-check-label" for="isPicture">
                                                             Gambar
                                                         </label>
@@ -76,8 +76,8 @@
                                         <div class="form-row align-items-right mt-3">
                                             <div class="col-7">
                                                 <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" name="fileGambar" id="fileGambar">
-                                                    <label class="custom-file-label" for="customFile">Pilih File Gambar</label>
+                                                    <input type="file" class="custom-file-input" name="fileGambar" id="fileGambar" disabled>
+                                                    <label class="custom-file-label" for="fileGambar">Pilih File Gambar</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -85,7 +85,7 @@
                                             <div class="col-2">
                                                 <div class="input-group-prepend">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" name="isAudio" id="isAudio">
+                                                        <input class="form-check-input" type="checkbox" name="isAudio" id="isAudio" onclick="myAudio()">
                                                         <label class="form-check-label" for="isAudio">
                                                             Audio
                                                         </label>
@@ -96,8 +96,8 @@
                                         <div class="form-row align-items-right mt-3">
                                             <div class="col-7">
                                                 <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" name="fileAudio" id="fileAudio">
-                                                    <label class="custom-file-label" for="customFile">Pilih File Audio</label>
+                                                    <input type="file" class="custom-file-input" name="fileAudio" id="fileAudio" disabled>
+                                                    <label class="custom-file-label" for="fileAudio">Pilih File Audio</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -120,7 +120,7 @@
                                         <div class="col-12">
                                             <div class="input-group-prepend">
                                                 <div class="input-group-text"><strong>JawabanA</strong></div>
-                                                <textarea class="form-control" name="A" id="A" rows="3"></textarea>
+                                                <textarea class="form-control" name="jawabanA" id="jawabanA" rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -186,7 +186,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <button class="btn btn-lg btn-primary btn-block mt-3 mb-4" type="submit">SIMPAN</button>
                 </form>

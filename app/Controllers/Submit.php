@@ -74,4 +74,11 @@ class Submit extends BaseController
             return redirect()->to('../admin/mahasiswa');
         }
     }
+
+    public function soal()
+    {
+        $isChoosen = $this->request->getVar('isChoosen');
+        dd($this->request->getVar());
+        return redirect()->to('../admin/soal');
+    }
 }
