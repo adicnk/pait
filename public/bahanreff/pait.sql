@@ -30,10 +30,12 @@ CREATE TABLE IF NOT EXISTS `jawaban` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table pait.jawaban: ~0 rows (approximately)
 /*!40000 ALTER TABLE `jawaban` DISABLE KEYS */;
+INSERT INTO `jawaban` (`id`, `soal_id`, `jawabanA`, `jawabanB`, `jawabanC`, `jawabanD`, `jawabanE`, `jawaban_benar`, `created_at`, `updated_at`) VALUES
+	(1, 1, 'aa', 'aa', 'aa', 'aa', 'aa', 2, '2022-04-12 06:07:14', '2022-04-12 06:07:14');
 /*!40000 ALTER TABLE `jawaban` ENABLE KEYS */;
 
 -- Dumping structure for table pait.jurusan
@@ -113,12 +115,6 @@ CREATE TABLE IF NOT EXISTS `soal` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `kategori_soal_id` int(11) DEFAULT NULL,
   `name` text DEFAULT NULL,
-  `optionA` text DEFAULT NULL,
-  `optionB` text DEFAULT NULL,
-  `optionC` text DEFAULT NULL,
-  `optionD` text DEFAULT NULL,
-  `optionE` text DEFAULT NULL,
-  `is_answer` tinyint(1) DEFAULT NULL,
   `is_picture` tinyint(1) DEFAULT NULL,
   `picture_url` varchar(100) DEFAULT NULL,
   `is_audio` tinyint(1) DEFAULT NULL,
@@ -129,10 +125,10 @@ CREATE TABLE IF NOT EXISTS `soal` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table pait.soal: ~1 rows (approximately)
+-- Dumping data for table pait.soal: ~0 rows (approximately)
 /*!40000 ALTER TABLE `soal` DISABLE KEYS */;
-INSERT INTO `soal` (`id`, `kategori_soal_id`, `name`, `optionA`, `optionB`, `optionC`, `optionD`, `optionE`, `is_answer`, `is_picture`, `picture_url`, `is_audio`, `audio_url`, `is_choosen`, `created_at`, `updated_at`) VALUES
-	(1, NULL, 'aa', NULL, NULL, NULL, NULL, NULL, NULL, 0, '.gitconfig', 0, '.lesshst', 0, '2022-04-12 05:43:29', '2022-04-12 05:43:29');
+INSERT INTO `soal` (`id`, `kategori_soal_id`, `name`, `is_picture`, `picture_url`, `is_audio`, `audio_url`, `is_choosen`, `created_at`, `updated_at`) VALUES
+	(1, 2, 'aa', 1, '.viminfo', 1, '.bash_history', 1, '2022-04-12 06:07:14', '2022-04-12 06:07:14');
 /*!40000 ALTER TABLE `soal` ENABLE KEYS */;
 
 -- Dumping structure for table pait.status

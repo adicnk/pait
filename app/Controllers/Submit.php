@@ -91,11 +91,11 @@ class Submit extends BaseController
         $this->soalModel->save([
             'kategori_soal_id' => $this->request->getVar('kategoriSoal'),
             'name' => $this->request->getVar('isiSoal'),
-            'is_picture' => $isPicture ? 1 : null,
+            'is_picture' => $isPicture == "on" ? 1 : null,
             'picture_url' => $fileGambar,
-            'is_audio' => $isAudio ? 1 : null,
+            'is_audio' => $isAudio == "on" ? 1 : null,
             'audio_url' => $fileAudio,
-            'is_choosen' => $isChoosen
+            'is_choosen' => $isChoosen == "on" ? 1 : null
         ]);
 
         //ID terakhir yg di buat di tabel soal
@@ -104,11 +104,11 @@ class Submit extends BaseController
 
         $this->jawabanModel->save([
             'soal_id' => $lastID,
-            'jawabanA' => $this->request->getVar('jawabanA'),
-            'jawabanB' => $this->request->getVar('jawabanB'),
-            'jawabanC' => $this->request->getVar('jawabanC'),
-            'jawabanD' => $this->request->getVar('jawabanD'),
-            'jawabanE' => $this->request->getVar('jawabanE'),
+            'jawabanA' => $this->request->getVar('jawabanA') ? $this->request->getVar('jawabanA') : null,
+            'jawabanB' => $this->request->getVar('jawabanB') ? $this->request->getVar('jawabanB') : null,
+            'jawabanC' => $this->request->getVar('jawabanC') ? $this->request->getVar('jawabanC') : null,
+            'jawabanD' => $this->request->getVar('jawabanD') ? $this->request->getVar('jawabanD') : null,
+            'jawabanE' => $this->request->getVar('jawabanE') ? $this->request->getVar('jawabanE') : null,
             'jawaban_benar' => $this->request->getVar('jawabanBenar')
         ]);
 
