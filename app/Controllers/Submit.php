@@ -91,9 +91,9 @@ class Submit extends BaseController
         $this->soalModel->save([
             'kategori_soal_id' => $this->request->getVar('kategoriSoal'),
             'name' => $this->request->getVar('isiSoal'),
-            'is_picture' => $isPicture ? 1 : 0,
+            'is_picture' => $isPicture ? 1 : null,
             'picture_url' => $fileGambar,
-            'is_audio' => $isAudio ? 1 : 0,
+            'is_audio' => $isAudio ? 1 : null,
             'audio_url' => $fileAudio,
             'is_choosen' => $isChoosen
         ]);
