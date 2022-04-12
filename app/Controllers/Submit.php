@@ -4,15 +4,19 @@ namespace App\Controllers;
 
 use App\Models\UserMDL;
 use App\Models\LoginMDL;
+use App\Models\SoalMDL;
+use App\Models\JawabanMDL;
 
 class Submit extends BaseController
 {
-    protected $userModel, $loginModel;
+    protected $userModel, $loginModel, $soalModel, $jawabanModel;
 
     public function __construct()
     {
         $this->userModel = new UserMDL();
         $this->loginModel = new LoginMDL();
+        $this->soalModel = new SoalMDL();
+        $this->jawabanModel = new JawabanMDL();
     }
 
     public function admin()
@@ -77,8 +81,37 @@ class Submit extends BaseController
 
     public function soal()
     {
+        $isPicture = $this->request->getVar('isPicture');
+        $fileGambar = $this->request->getVar('fileGambar');
+        $isAudio = $this->request->getVar('isAudio');
+        $fileAudio = $this->request->getVar('fileAudio');
         $isChoosen = $this->request->getVar('isChoosen');
-        dd($this->request->getVar());
+        // d($this->request->getVar());
+
+        $this->soalModel->save([
+            'kategori_soal_id' => $this->request->getVar('kategoriSoal'),
+            'name' => $this->request->getVar('isiSoal'),
+            'is_picture' => $isPicture ? 1 : 0,
+            'picture_url' => $fileGambar,
+            'is_audio' => $isAudio ? 1 : 0,
+            'audio_url' => $fileAudio,
+            'is_choosen' => $isChoosen
+        ]);
+
+        //ID terakhir yg di buat di tabel soal
+        $db      = \Config\Database::connect();
+        $lastID = $db->insertID();
+
+        $this->jawabanModel->save([
+            'soal_id' => $lastID,
+            'jawabanA' => $this->request->getVar('jawabanA'),
+            'jawabanB' => $this->request->getVar('jawabanB'),
+            'jawabanC' => $this->request->getVar('jawabanC'),
+            'jawabanD' => $this->request->getVar('jawabanD'),
+            'jawabanE' => $this->request->getVar('jawabanE'),
+            'jawaban_benar' => $this->request->getVar('jawabanBenar')
+        ]);
+
         return redirect()->to('../admin/soal');
     }
 }

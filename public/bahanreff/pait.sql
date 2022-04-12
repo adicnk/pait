@@ -17,6 +17,25 @@
 CREATE DATABASE IF NOT EXISTS `pait` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `pait`;
 
+-- Dumping structure for table pait.jawaban
+CREATE TABLE IF NOT EXISTS `jawaban` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `soal_id` int(11) DEFAULT NULL,
+  `jawabanA` text DEFAULT NULL,
+  `jawabanB` text DEFAULT NULL,
+  `jawabanC` text DEFAULT NULL,
+  `jawabanD` text DEFAULT NULL,
+  `jawabanE` text DEFAULT NULL,
+  `jawaban_benar` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table pait.jawaban: ~0 rows (approximately)
+/*!40000 ALTER TABLE `jawaban` DISABLE KEYS */;
+/*!40000 ALTER TABLE `jawaban` ENABLE KEYS */;
+
 -- Dumping structure for table pait.jurusan
 CREATE TABLE IF NOT EXISTS `jurusan` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -94,22 +113,26 @@ CREATE TABLE IF NOT EXISTS `soal` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `kategori_soal_id` int(11) DEFAULT NULL,
   `name` text DEFAULT NULL,
+  `optionA` text DEFAULT NULL,
+  `optionB` text DEFAULT NULL,
+  `optionC` text DEFAULT NULL,
+  `optionD` text DEFAULT NULL,
+  `optionE` text DEFAULT NULL,
+  `is_answer` tinyint(1) DEFAULT NULL,
   `is_picture` tinyint(1) DEFAULT NULL,
   `picture_url` varchar(100) DEFAULT NULL,
   `is_audio` tinyint(1) DEFAULT NULL,
   `audio_url` varchar(100) DEFAULT NULL,
-  `is_choosen` tinyint(4) DEFAULT NULL,
+  `is_choosen` tinyint(1) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table pait.soal: ~4 rows (approximately)
+-- Dumping data for table pait.soal: ~1 rows (approximately)
 /*!40000 ALTER TABLE `soal` DISABLE KEYS */;
-INSERT INTO `soal` (`id`, `kategori_soal_id`, `name`, `is_picture`, `picture_url`, `is_audio`, `audio_url`, `is_choosen`) VALUES
-	(1, 1, '1', 1, NULL, 1, NULL, 1),
-	(2, 2, '2', 1, NULL, NULL, NULL, NULL),
-	(3, 3, '3', NULL, NULL, 1, NULL, NULL),
-	(4, 4, '4', 1, NULL, 1, NULL, NULL),
-	(5, 5, '5', NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `soal` (`id`, `kategori_soal_id`, `name`, `optionA`, `optionB`, `optionC`, `optionD`, `optionE`, `is_answer`, `is_picture`, `picture_url`, `is_audio`, `audio_url`, `is_choosen`, `created_at`, `updated_at`) VALUES
+	(1, NULL, 'aa', NULL, NULL, NULL, NULL, NULL, NULL, 0, '.gitconfig', 0, '.lesshst', 0, '2022-04-12 05:43:29', '2022-04-12 05:43:29');
 /*!40000 ALTER TABLE `soal` ENABLE KEYS */;
 
 -- Dumping structure for table pait.status

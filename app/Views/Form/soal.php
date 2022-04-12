@@ -119,7 +119,7 @@
                                     <div class="form-row align-items-right mt-3">
                                         <div class="col-12">
                                             <div class="input-group-prepend">
-                                                <div class="input-group-text"><strong>JawabanA</strong></div>
+                                                <div class="input-group-text"><strong>Jawaban Option A</strong></div>
                                                 <textarea class="form-control" name="jawabanA" id="jawabanA" rows="3"></textarea>
                                             </div>
                                         </div>
@@ -127,7 +127,7 @@
                                     <div class="form-row align-items-right mt-3">
                                         <div class="col-12">
                                             <div class="input-group-prepend">
-                                                <div class="input-group-text"><strong>JawabanB</strong></div>
+                                                <div class="input-group-text"><strong>Jawaban Option B</strong></div>
                                                 <textarea class="form-control" name="jawabanB" id="jawabanB" rows="3"></textarea>
                                             </div>
                                         </div>
@@ -135,7 +135,7 @@
                                     <div class="form-row align-items-right mt-3">
                                         <div class="col-12">
                                             <div class="input-group-prepend">
-                                                <div class="input-group-text"><strong>JawabanC</strong></div>
+                                                <div class="input-group-text"><strong>Jawaban Option C</strong></div>
                                                 <textarea class="form-control" name="jawabanC" id="jawabanC" rows="3"></textarea>
                                             </div>
                                         </div>
@@ -143,7 +143,7 @@
                                     <div class="form-row align-items-right mt-3">
                                         <div class="col-12">
                                             <div class="input-group-prepend">
-                                                <div class="input-group-text"><strong>JawabanD</strong></div>
+                                                <div class="input-group-text"><strong>Jawaban Option D</strong></div>
                                                 <textarea class="form-control" name="jawabanD" id="jawabanD" rows="3"></textarea>
                                             </div>
                                         </div>
@@ -151,7 +151,7 @@
                                     <div class="form-row align-items-right mt-3">
                                         <div class="col-12">
                                             <div class="input-group-prepend">
-                                                <div class="input-group-text"><strong>JawabanE</strong></div>
+                                                <div class="input-group-text"><strong>Jawaban Optiion E</strong></div>
                                                 <textarea class="form-control" name="jawabanE" id="jawabanE" rows="3"></textarea>
                                             </div>
                                         </div>
@@ -160,7 +160,7 @@
                                         <div class="col-5">
                                             <div class="input-group-prepend">
                                                 <div class="input-group-text"><strong>Jawaban yg Benar</strong></div>
-                                                <select class="form-control" name="kategoriSoal" id="kategoriSoal" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
+                                                <select class="form-control" name="jawabanBenar" id="jawabanBenar" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
                                                     <option value=1>Option A</option>
                                                     <option value=2>Option B</option>
                                                     <option value=2>Option C</option>

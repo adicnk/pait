@@ -10,7 +10,7 @@ class SoalMDL extends Model
     protected $useTimestamps = true;
 
     // Field yang boleh diisi waktu saving data ** harus didefinisikan dulu **
-    protected $allowedFields = ['name', 'kategi_soal', 'is_picture', 'picture_url', 'is_audio', 'audio_url', 'is_choosen'];
+    protected $allowedFields = ['name', 'kategori_soal', 'is_picture', 'picture_url', 'is_audio', 'audio_url', 'is_choosen'];
 
     public function searchSoal($keyword = false)
     {
