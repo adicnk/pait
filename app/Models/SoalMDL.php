@@ -22,4 +22,10 @@ class SoalMDL extends Model
         $this->join('kategori_soal', 'soal.kategori_soal_id = kategori_soal.id');
         return  $this->like('kname', $keyword);
     }
+
+    public function searchSoalID($id)
+    {
+        $this->where(['id' => $id]);
+        return $this->findAll();
+    }
 }

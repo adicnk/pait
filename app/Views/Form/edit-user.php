@@ -43,7 +43,7 @@
                                 <div class="col-5">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text"><strong>Status di Kampus</strong></div>
-                                        <select class="form-control" name="statusUser" id="statusUser" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
+                                        <select class="form-control" name="statusUser" id="statusUser" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onchange="myStatusOption()">
                                             <option value=1 <?= $usr['status_id'] == 1 ? 'selected' : ''; ?>>Mahasiswa</option>
                                             <option value=2 <?= $usr['status_id'] == 2 ? 'selected' : ''; ?>>Staff</option>
                                         </select>

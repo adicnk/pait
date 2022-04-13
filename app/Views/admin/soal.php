@@ -55,7 +55,7 @@
                     <td style="text-align: center"><?= $s['is_picture'] == 1 ? '<img src="../../icon/check.png" class="mr-2" />' : '<img src="../../icon/not_available.png" class="mr-2" />' ?></td>
                     <td style="text-align: center"> <?= $s['is_audio'] == 1 ? '<img src="../../icon/check.png" class="mr-2" />' : '<img src="../../icon/not_available.png" class="mr-2" />'; ?></td>
                     <td>
-                        <a href="/form/edit/soal/<?= $s['idx'] ?>"><img src="../../icon/edit.png" class="mr-2" /></a>
+                        <a href="/edit/soal/<?= $s['idx'] ?>"><img src="../../icon/edit.png" class="mr-2" /></a>
                         <a href="/delete/soal/<?= $s['idx'] ?>"><img src="../../icon/delete.png" /></a>
                     </td>
                 </tr>

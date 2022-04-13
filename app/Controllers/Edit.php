@@ -34,7 +34,7 @@ class Edit extends BaseController
         $data = [
             'title'   => "Form Soal",
             'url' => $this->request->getVar('url'),
-            'user' => $this->soalModel->searchSoal($id)
+            'soal' => $this->soalModel->searchSoalID($id)
         ];
         return view('form/edit-soal', $data);
     }
