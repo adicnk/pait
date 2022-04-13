@@ -15,7 +15,7 @@ class Edit extends BaseController
         $this->loginModel = new LoginMDL();
     }
 
-    public function admin($id)
+    public function user($id)
     {
         // d($this->request->getVar('url'));
         $data = [
