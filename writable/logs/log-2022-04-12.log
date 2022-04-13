@@ -423,3 +423,35 @@ CRITICAL - 2022-04-12 21:01:57 --> Undefined array key "sname"
 #8 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #10 {main}
+CRITICAL - 2022-04-12 21:10:22 --> Undefined property: App\Controllers\Admin::$userSoal
+#0 C:\xampp\htdocs\pait\app\Controllers\Admin.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 141)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Admin->soal()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-12 21:11:44 --> Undefined variable $soal
+#0 C:\xampp\htdocs\pait\app\Views\admin\soal.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 48)
+#1 C:\xampp\htdocs\pait\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\pait\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\pait\system\Common.php(1089): CodeIgniter\View\View->render('admin/soal', Array, true)
+#4 C:\xampp\htdocs\pait\app\Controllers\Admin.php(154): view('admin/soal', Array)
+#5 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Admin->soal()
+#6 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-04-12 21:11:55 --> Undefined variable $soal
+#0 C:\xampp\htdocs\pait\app\Views\admin\soal.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 48)
+#1 C:\xampp\htdocs\pait\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\pait\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\pait\system\Common.php(1089): CodeIgniter\View\View->render('admin/soal', Array, true)
+#4 C:\xampp\htdocs\pait\app\Controllers\Admin.php(154): view('admin/soal', Array)
+#5 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Admin->soal()
+#6 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}

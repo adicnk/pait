@@ -134,4 +134,23 @@ class Admin extends BaseController
         ];
         return view('admin/mahasiswa', $data);
     }
+
+    public function soal()
+    {
+        $keyword = $this->request->getVar('keyword');
+        $user = $this->soalModel->searchSoal($keyword);
+        if ($keyword) {
+            $title = 'Soal Name Search : "' . $keyword . '"';
+        } else {
+            $title = 'Soal List : All';
+        }
+        $currentPage = $this->request->getVar('page_user') ? $this->request->getVar('page_user') : 1;
+        $data = [
+            'title' => $title,
+            'soal'  => $this->soalModel->paginate(5, 'user'),
+            'pager' => $this->soalModel->pager,
+            'currentPage' => $currentPage
+        ];
+        return view('admin/soal', $data);
+    }
 }
