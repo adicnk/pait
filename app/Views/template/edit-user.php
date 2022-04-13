@@ -66,7 +66,7 @@
                             <a class="collapse-item" href="../../admin/user">List</a>
                         <?php } else { ?>
                             <a class="collapse-item" href="../../admin/user">List</a>
-                            <a class="collapse-item" href="../../form/admin?url=mahasiswa">Input</a>
+                            <a class="collapse-item" href="../../form/admin?url=admin">Input</a>
                         <?php } ?>
                     </div>
                 </div>

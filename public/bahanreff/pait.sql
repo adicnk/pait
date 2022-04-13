@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `jawaban` (
 -- Dumping data for table pait.jawaban: ~0 rows (approximately)
 /*!40000 ALTER TABLE `jawaban` DISABLE KEYS */;
 INSERT INTO `jawaban` (`id`, `soal_id`, `jawabanA`, `jawabanB`, `jawabanC`, `jawabanD`, `jawabanE`, `jawaban_benar`, `created_at`, `updated_at`) VALUES
-	(1, 1, 'aa', 'aa', 'aa', 'aa', 'aa', 2, '2022-04-12 06:07:14', '2022-04-12 06:07:14');
+	(1, 1, 'aa', 'aa', 'aa', 'aa', 'aa', 1, '2022-04-12 21:10:13', '2022-04-12 21:10:13');
 /*!40000 ALTER TABLE `jawaban` ENABLE KEYS */;
 
 -- Dumping structure for table pait.jurusan
@@ -86,14 +86,13 @@ CREATE TABLE IF NOT EXISTS `login` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table pait.login: ~2 rows (approximately)
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
 INSERT INTO `login` (`id`, `role_id`, `user_id`, `username`, `password`, `is_active`, `is_start`, `created_at`, `updated_at`) VALUES
-	(1, 1, 1, 'a', 'a', 1, NULL, '2022-04-08 05:48:21', '2022-04-08 05:48:21'),
-	(2, 1, 2, 'b', 'b', 1, NULL, '2022-04-08 05:50:18', '2022-04-08 05:50:18'),
-	(3, 1, 5, 'ff', 'ff', 1, NULL, '2022-04-09 00:06:03', '2022-04-09 00:06:03');
+	(1, 1, 1, 'aa', 'cc', 1, NULL, '2022-04-13 11:31:47', '2022-04-13 11:34:08'),
+	(2, 1, 2, 'bb', 'dd', 1, NULL, '2022-04-13 11:33:09', '2022-04-13 11:34:30');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 
 -- Dumping structure for table pait.role
@@ -128,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `soal` (
 -- Dumping data for table pait.soal: ~0 rows (approximately)
 /*!40000 ALTER TABLE `soal` DISABLE KEYS */;
 INSERT INTO `soal` (`id`, `kategori_soal_id`, `name`, `is_picture`, `picture_url`, `is_audio`, `audio_url`, `is_choosen`, `created_at`, `updated_at`) VALUES
-	(1, 2, 'aa', 1, '.viminfo', 1, '.bash_history', 1, '2022-04-12 06:07:14', '2022-04-12 06:07:14');
+	(1, 1, 'aa', NULL, NULL, NULL, NULL, 1, '2022-04-12 21:10:13', '2022-04-12 21:10:13');
 /*!40000 ALTER TABLE `soal` ENABLE KEYS */;
 
 -- Dumping structure for table pait.status
@@ -150,6 +149,7 @@ INSERT INTO `status` (`id`, `sname`, `created_at`, `updated_at`) VALUES
 -- Dumping structure for table pait.user
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idx` int(11) DEFAULT NULL,
   `role_id` int(11) DEFAULT NULL,
   `status_id` int(11) DEFAULT NULL,
   `jurusan_id` int(11) DEFAULT NULL,
@@ -161,18 +161,13 @@ CREATE TABLE IF NOT EXISTS `user` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table pait.user: ~7 rows (approximately)
+-- Dumping data for table pait.user: ~2 rows (approximately)
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` (`id`, `role_id`, `status_id`, `jurusan_id`, `name`, `slug`, `email`, `nim`, `nip`, `created_at`, `updated_at`) VALUES
-	(1, 1, 1, 1, 'a', 'a', 'a@a', '12345', NULL, '2022-04-08 05:48:21', '2022-04-08 05:48:21'),
-	(2, 1, 2, NULL, 'b', 'b', 'b@b', NULL, '56789', '2022-04-08 05:50:17', '2022-04-08 05:50:17'),
-	(3, 2, 1, 2, 'cc', 'cc', NULL, '0809809809', NULL, '2022-04-08 06:31:32', '2022-04-08 06:31:33'),
-	(4, 2, 2, NULL, 'dd', 'dd', 'dd@dd', '0809809809', NULL, '2022-04-08 06:32:36', '2022-04-08 06:32:36'),
-	(5, 1, 1, 2, 'ff', 'ff', 'ff@ff', '34534', NULL, '2022-04-09 00:06:03', '2022-04-09 00:06:03'),
-	(6, 2, 1, 1, 'gg', 'gg', 'gg@gg', '6585765', NULL, '2022-04-09 01:03:36', '2022-04-09 01:03:36'),
-	(7, 2, 1, 2, 'hh', 'hh', 'hh@hh', '23424', NULL, '2022-04-09 01:08:07', '2022-04-09 01:08:07');
+INSERT INTO `user` (`id`, `idx`, `role_id`, `status_id`, `jurusan_id`, `name`, `slug`, `email`, `nim`, `nip`, `created_at`, `updated_at`) VALUES
+	(1, 1, 1, 1, 1, 'aa', 'aa', '', '', '', '2022-04-13 11:31:46', '2022-04-13 11:34:08'),
+	(2, 2, 1, 1, 1, 'bb', 'bb', '', '', '', '2022-04-13 11:33:09', '2022-04-13 11:34:30');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

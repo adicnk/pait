@@ -41,8 +41,9 @@ class SubmitEdit extends BaseController
             'nip' => $nimnip
         ]);
 
-        if ($this->loginModel->search($id)) {
+        if ($this->loginModel->searchID($id)) {
             $this->loginModel->save([
+                'id' => $this->loginModel->searchID($id),
                 'role_id' => $roleID,
                 'user_id' => $id,
                 'username' => $this->request->getVar('usernameUser'),
@@ -50,7 +51,7 @@ class SubmitEdit extends BaseController
                 'is_active' => 1
             ]);
         }
-
+        // dd($url);
         if ($url == 'admin') {
             return redirect()->to('../../admin/user');
         } else {

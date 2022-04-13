@@ -26,4 +26,13 @@ class LoginMDL extends Model
         $this->where(['user_id' => $id]);
         $this->delete();
     }
+
+    public function searchID($id)
+    {
+        $this->where(['user_id' => $id]);
+        $login =  $this->findAll();
+        foreach ($login as $lg) :
+            return $lg['id'];
+        endforeach;
+    }
 }

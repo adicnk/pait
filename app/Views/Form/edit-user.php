@@ -23,10 +23,10 @@
         <div class="card-block mt-3">
             <div class="card-text text-center">
 
-                <form method="post" action="../../submitedit/admin">
-                    <?= csrf_field() ?>
+                <?php foreach ($user as $usr) : ?>
+                    <form method="post" action="../../submitedit/admin/<?= $usr['idx'] ?>?url=<?= $url ?>">
+                        <?= csrf_field() ?>
 
-                    <?php foreach ($user as $usr) : ?>
                         <div class="form-group">
                             <div class="form-row align-items-right">
                                 <div class="col-5">
@@ -62,7 +62,7 @@
                                 <div class="col-5">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text"><strong>Jurusan</strong></div>
-                                        <select class="form-control" name="jurusanUser" id="jurusanUser" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
+                                        <select class="form-control" name="jurusanUser" id="jurusanUser" onfocusin="yellowin(this);" onfocusout="whiteout(this)" <?= $usr['status_id'] == 2 ? 'disabled' : '' ?>>
                                             <option value=1 <?= $usr['jurusan_id'] == 1 ? 'selected' : ''; ?>>D3 Keperawatan</option>
                                             <option value=2 <?= $usr['jurusan_id'] == 2 ? 'selected' : ''; ?>>S1 Profesi Ners</option>
                                         </select>
@@ -86,7 +86,7 @@
                                 </div>
                             </div>
 
-                            <?php $queryClass = $db->table('login')->getWhere(['user_id' => $usr['id']]);
+                            <?php $queryClass = $db->table('login')->getWhere(['user_id' => $usr['idx']]);
                             foreach ($queryClass->getResult('array') as $qcls) : ?>
 
                                 <div class="form-row align-items-right mt-3">
@@ -111,8 +111,8 @@
 
                     <button class="btn btn-lg btn-primary btn-block mt-3 mb-4" type="submit">SIMPAN</button>
 
+                    </form>
                 <?php endforeach ?>
-                </form>
                 <a href=<?= $url == 'admin' ? '../../admin/user' : '../../admin/mahasiswa' ?> class="btn btn-lg btn-danger btn-block mt-3 mb-4">CANCEL</a>
             </div>
         </div>
