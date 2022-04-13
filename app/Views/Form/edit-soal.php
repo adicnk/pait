@@ -167,9 +167,9 @@
                                                         <select class="form-control" name="jawabanBenar" id="jawabanBenar" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
                                                             <option value=1 <?= $qc['jawaban_benar'] == 1 ? 'selected' : '' ?>>Option A</option>
                                                             <option value=2 <?= $qc['jawaban_benar'] == 2 ? 'selected' : '' ?>>Option B</option>
-                                                            <option value=2 <?= $qc['jawaban_benar'] == 3 ? 'selected' : '' ?>>Option C</option>
-                                                            <option value=2 <?= $qc['jawaban_benar'] == 4 ? 'selected' : '' ?>>Option D</option>
-                                                            <option value=2 <?= $qc['jawaban_benar'] == 5 ? 'selected' : '' ?>>Option E</option>
+                                                            <option value=3 <?= $qc['jawaban_benar'] == 3 ? 'selected' : '' ?>>Option C</option>
+                                                            <option value=4 <?= $qc['jawaban_benar'] == 4 ? 'selected' : '' ?>>Option D</option>
+                                                            <option value=5 <?= $qc['jawaban_benar'] == 5 ? 'selected' : '' ?>>Option E</option>
                                                         </select>
                                                     </div>
                                                 </div>

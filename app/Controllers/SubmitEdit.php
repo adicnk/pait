@@ -21,7 +21,7 @@ class SubmitEdit extends BaseController
 
     public function admin($id)
     {
-        // dd($this->request->getVar());
+        //dd($this->request->getVar());
         $url = $this->request->getVar('url');
         $roleID = $this->request->getVar('roleUser');
         $nimnip = $this->request->getVar('nimnipUser');
@@ -61,12 +61,12 @@ class SubmitEdit extends BaseController
 
     public function soal($id)
     {
+        //dd($this->request->getVar());
         $isPicture = $this->request->getVar('isPicture');
         $fileGambar = $this->request->getVar('fileGambar');
         $isAudio = $this->request->getVar('isAudio');
         $fileAudio = $this->request->getVar('fileAudio');
         $isChoosen = $this->request->getVar('isChoosen');
-        // d($this->request->getVar());
 
         $this->soalModel->save([
             'id' => $id,

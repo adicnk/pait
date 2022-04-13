@@ -163,9 +163,9 @@
                                                 <select class="form-control" name="jawabanBenar" id="jawabanBenar" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
                                                     <option value=1>Option A</option>
                                                     <option value=2>Option B</option>
-                                                    <option value=2>Option C</option>
-                                                    <option value=2>Option D</option>
-                                                    <option value=2>Option E</option>
+                                                    <option value=3>Option C</option>
+                                                    <option value=4>Option D</option>
+                                                    <option value=5>Option E</option>
                                                 </select>
                                             </div>
                                         </div>

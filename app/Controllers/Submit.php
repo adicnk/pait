@@ -94,7 +94,8 @@ class Submit extends BaseController
         $isAudio = $this->request->getVar('isAudio');
         $fileAudio = $this->request->getVar('fileAudio');
         $isChoosen = $this->request->getVar('isChoosen');
-        // d($this->request->getVar());
+
+        //dd($fileGambar . '  ' . $fileAudio);
 
         $this->soalModel->save([
             'kategori_soal_id' => $this->request->getVar('kategoriSoal'),
