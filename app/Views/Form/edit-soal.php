@@ -24,7 +24,7 @@
             <div class="card-text text-center">
 
                 <?php foreach ($soal as $s) : ?>
-                    <form method="post" action="../submit/soal">
+                    <form method="post" action="../../submitedit/soal/<?= $s['idx'] ?>">
                         <?= csrf_field() ?>
 
                         <div class="form-group">

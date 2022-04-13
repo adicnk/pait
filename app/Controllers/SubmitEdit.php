@@ -59,7 +59,7 @@ class SubmitEdit extends BaseController
         }
     }
 
-    public function soal()
+    public function soal($id)
     {
         $isPicture = $this->request->getVar('isPicture');
         $fileGambar = $this->request->getVar('fileGambar');
@@ -69,6 +69,7 @@ class SubmitEdit extends BaseController
         // d($this->request->getVar());
 
         $this->soalModel->save([
+            'id' => $id,
             'kategori_soal_id' => $this->request->getVar('kategoriSoal'),
             'name' => $this->request->getVar('isiSoal'),
             'is_picture' => $isPicture == "on" ? 1 : null,
@@ -78,12 +79,9 @@ class SubmitEdit extends BaseController
             'is_choosen' => $isChoosen == "on" ? 1 : null
         ]);
 
-        //ID terakhir yg di buat di tabel soal
-        $db      = \Config\Database::connect();
-        $lastID = $db->insertID();
-
         $this->jawabanModel->save([
-            'soal_id' => $lastID,
+            'id' => $this->jawabanModel->searchID($id),
+            'soal_id' => $id,
             'jawabanA' => $this->request->getVar('jawabanA') ? $this->request->getVar('jawabanA') : null,
             'jawabanB' => $this->request->getVar('jawabanB') ? $this->request->getVar('jawabanB') : null,
             'jawabanC' => $this->request->getVar('jawabanC') ? $this->request->getVar('jawabanC') : null,
@@ -92,6 +90,6 @@ class SubmitEdit extends BaseController
             'jawaban_benar' => $this->request->getVar('jawabanBenar')
         ]);
 
-        return redirect()->to('../admin/soal');
+        return redirect()->to('../../admin/soal');
     }
 }
