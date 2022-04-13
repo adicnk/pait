@@ -18,8 +18,8 @@ class UserMDL extends Model
             $this->table('user');
             $this->join('status', 'status.id = user.status_id');
             $this->join('jurusan', 'jurusan.id = user.jurusan_id', 'left');
-            return $this->where(['role_id' => 1]); // User is Administrator
             // dd($this->findall());
+            return $this->where(['role_id' => 1]); // User is Administrator
         }
         $this->table('user');
         $this->join('status', 'status.id = user.status_id');

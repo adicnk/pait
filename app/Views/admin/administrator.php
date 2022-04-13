@@ -55,8 +55,8 @@
                     <td style="text-align: center"><?= $usr['email'] ? $usr['email'] : '<img src="../../icon/not_available.png" class="mr-2" />' ?></td>
                     <td style="text-align: center"><?= $usr['nip'] ? $usr['nip'] : $usr['nim'] ?></td>
                     <td>
-                        <a href="/form/edit/administrator/<?= $usr['id'] ?>"><img src="../../icon/edit.png" class="mr-2" /></a>
-                        <a href="/administrator/delete/<?= $usr['id'] ?>"><img src="../../icon/delete.png" /></a>
+                        <a href="/edit/admin/<?= $usr['id'] ?>"><img src="../../icon/edit.png" class="mr-2" /></a>
+                        <a href="/delete/admin/<?= $usr['id'] ?>"><img src="../../icon/delete.png" /></a>
                     </td>
                 </tr>
             <?php
