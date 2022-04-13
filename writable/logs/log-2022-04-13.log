@@ -168,3 +168,14 @@ CRITICAL - 2022-04-13 11:06:30 --> Too few arguments to function App\Controllers
 #3 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #4 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #5 {main}
+CRITICAL - 2022-04-13 11:58:04 --> There is no data to update.
+#0 C:\xampp\htdocs\pait\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\pait\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\xampp\htdocs\pait\system\BaseModel.php(656): CodeIgniter\Model->update(1, Array)
+#3 C:\xampp\htdocs\pait\app\Controllers\Submit.php(115): CodeIgniter\BaseModel->save(Array)
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#5 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#6 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}

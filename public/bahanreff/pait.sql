@@ -30,12 +30,17 @@ CREATE TABLE IF NOT EXISTS `jawaban` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table pait.jawaban: ~0 rows (approximately)
 /*!40000 ALTER TABLE `jawaban` DISABLE KEYS */;
 INSERT INTO `jawaban` (`id`, `soal_id`, `jawabanA`, `jawabanB`, `jawabanC`, `jawabanD`, `jawabanE`, `jawaban_benar`, `created_at`, `updated_at`) VALUES
-	(1, 1, 'aa', 'aa', 'aa', 'aa', 'aa', 1, '2022-04-12 21:10:13', '2022-04-12 21:10:13');
+	(1, 1, 'aa', 'aa', 'aa', 'aa', 'aa', 1, '2022-04-12 21:10:13', '2022-04-12 21:10:13'),
+	(2, 2, NULL, NULL, NULL, NULL, NULL, 1, '2022-04-13 12:01:05', '2022-04-13 12:01:05'),
+	(3, 1, NULL, NULL, NULL, NULL, NULL, 1, '2022-04-13 12:01:36', '2022-04-13 12:01:36'),
+	(4, 2, NULL, NULL, NULL, NULL, NULL, 1, '2022-04-13 12:01:52', '2022-04-13 12:01:52'),
+	(5, 1, NULL, NULL, NULL, NULL, NULL, 1, '2022-04-13 12:04:41', '2022-04-13 12:04:41'),
+	(6, 2, NULL, NULL, NULL, NULL, NULL, 1, '2022-04-13 12:05:06', '2022-04-13 12:05:06');
 /*!40000 ALTER TABLE `jawaban` ENABLE KEYS */;
 
 -- Dumping structure for table pait.jurusan
@@ -86,13 +91,12 @@ CREATE TABLE IF NOT EXISTS `login` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table pait.login: ~2 rows (approximately)
+-- Dumping data for table pait.login: ~1 rows (approximately)
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
 INSERT INTO `login` (`id`, `role_id`, `user_id`, `username`, `password`, `is_active`, `is_start`, `created_at`, `updated_at`) VALUES
-	(1, 1, 1, 'aa', 'cc', 1, NULL, '2022-04-13 11:31:47', '2022-04-13 11:34:08'),
-	(2, 1, 2, 'bb', 'dd', 1, NULL, '2022-04-13 11:33:09', '2022-04-13 11:34:30');
+	(3, 1, 3, '', '', 1, NULL, '2022-04-13 11:43:43', '2022-04-13 11:43:43');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 
 -- Dumping structure for table pait.role
@@ -112,6 +116,7 @@ INSERT INTO `role` (`id`, `name`) VALUES
 -- Dumping structure for table pait.soal
 CREATE TABLE IF NOT EXISTS `soal` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idx` int(11) DEFAULT NULL,
   `kategori_soal_id` int(11) DEFAULT NULL,
   `name` text DEFAULT NULL,
   `is_picture` tinyint(1) DEFAULT NULL,
@@ -122,12 +127,13 @@ CREATE TABLE IF NOT EXISTS `soal` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table pait.soal: ~0 rows (approximately)
 /*!40000 ALTER TABLE `soal` DISABLE KEYS */;
-INSERT INTO `soal` (`id`, `kategori_soal_id`, `name`, `is_picture`, `picture_url`, `is_audio`, `audio_url`, `is_choosen`, `created_at`, `updated_at`) VALUES
-	(1, 1, 'aa', NULL, NULL, NULL, NULL, 1, '2022-04-12 21:10:13', '2022-04-12 21:10:13');
+INSERT INTO `soal` (`id`, `idx`, `kategori_soal_id`, `name`, `is_picture`, `picture_url`, `is_audio`, `audio_url`, `is_choosen`, `created_at`, `updated_at`) VALUES
+	(1, 1, 1, '', NULL, NULL, NULL, NULL, NULL, '2022-04-13 12:04:41', '2022-04-13 12:04:41'),
+	(2, 2, 3, '', NULL, NULL, NULL, NULL, NULL, '2022-04-13 12:05:06', '2022-04-13 12:05:06');
 /*!40000 ALTER TABLE `soal` ENABLE KEYS */;
 
 -- Dumping structure for table pait.status
@@ -161,13 +167,10 @@ CREATE TABLE IF NOT EXISTS `user` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table pait.user: ~2 rows (approximately)
+-- Dumping data for table pait.user: ~0 rows (approximately)
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` (`id`, `idx`, `role_id`, `status_id`, `jurusan_id`, `name`, `slug`, `email`, `nim`, `nip`, `created_at`, `updated_at`) VALUES
-	(1, 1, 1, 1, 1, 'aa', 'aa', '', '', '', '2022-04-13 11:31:46', '2022-04-13 11:34:08'),
-	(2, 2, 1, 1, 1, 'bb', 'bb', '', '', '', '2022-04-13 11:33:09', '2022-04-13 11:34:30');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

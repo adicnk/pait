@@ -110,6 +110,11 @@ class Submit extends BaseController
         $db      = \Config\Database::connect();
         $lastID = $db->insertID();
 
+        $this->soalModel->save([
+            'id' => $lastID,
+            'idx' => $lastID
+        ]);
+
         $this->jawabanModel->save([
             'soal_id' => $lastID,
             'jawabanA' => $this->request->getVar('jawabanA') ? $this->request->getVar('jawabanA') : null,
