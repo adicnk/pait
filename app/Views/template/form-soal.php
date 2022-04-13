@@ -61,7 +61,7 @@
                 <div id="collapseIndex" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="../admin/user">List</a>
-                        <a class="collapse-item" href="../form/admin?url=mahasiswa">Input</a>
+                        <a class="collapse-item" href="../form/admin?url=admin">Input</a>
                     </div>
                 </div>
             </li>

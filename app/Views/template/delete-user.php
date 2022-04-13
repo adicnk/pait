@@ -29,7 +29,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../../admin">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../../../admin">
                 <div class="sidebar-brand-text mx-3">
                     <img src="../../favicon.ico" alt="main_logo" style="width:20%">
                     PAIT Admin
@@ -41,7 +41,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="../../../admin">
+                <a class="nav-link" href="../../../../admin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -63,10 +63,10 @@
                 <div id="collapseIndex" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <?php if ($url == 'admin') { ?>
-                            <a class="collapse-item" href="../admin/user">List</a>
+                            <a class="collapse-item" href="../../admin/user">List</a>
                         <?php } else { ?>
-                            <a class="collapse-item" href="../admin/user">List</a>
-                            <a class="collapse-item" href="../form/admin?url=admin">Input</a>
+                            <a class="collapse-item" href="../../admin/user">List</a>
+                            <a class="collapse-item" href="../../form/admin?url=mahasiswa">Input</a>
                         <?php } ?>
                     </div>
                 </div>
@@ -84,8 +84,8 @@
                         <?php if ($url == 'mahasiswa') { ?>
                             <a class="collapse-item" href="../admin/mahasiswa">List</a>
                         <?php } else { ?>
-                            <a class="collapse-item" href="../admin/mahasiswa">List</a>
-                            <a class="collapse-item" href="../form/admin?url=mahasiswa">Input</a>
+                            <a class="collapse-item" href="../../admin/mahasiswa">List</a>
+                            <a class="collapse-item" href="../../form/admin?url=mahasiswa">Input</a>
                         <?php } ?>
                     </div>
                 </div>
@@ -98,8 +98,7 @@
                 </a>
                 <div id="collapseSoal" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../admin/soal">List</a>
-                        <a class="collapse-item" href="">Input</a>
+                        <a class="collapse-item" href="../../admin/soal">List</a>
                     </div>
                 </div>
             </li>

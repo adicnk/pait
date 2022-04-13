@@ -23,7 +23,7 @@
         <div class="card-block mt-3">
             <div class="card-text text-center">
 
-                <form method="post" action="../submit/admin">
+                <form method="post" action="../../submitedit/admin">
                     <?= csrf_field() ?>
 
                     <?php foreach ($user as $usr) : ?>

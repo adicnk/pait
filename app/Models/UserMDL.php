@@ -10,7 +10,7 @@ class UserMDL extends Model
     protected $useTimestamps = true;
 
     // Field yang boleh diisi waktu saving data ** harus didefinisikan dulu **
-    protected $allowedFields = ['name', 'slug', 'status_id',  'email', 'nip', 'nim', 'role_id', 'jurusan_id'];
+    protected $allowedFields = ['name', 'idx', 'slug', 'status_id',  'email', 'nip', 'nim', 'role_id', 'jurusan_id'];
 
     public function searchAdmin($keyword = false)
     {
@@ -47,5 +47,10 @@ class UserMDL extends Model
         $this->where(['id' => $id]);
         // dd($this->findAll());
         return  $this->findAll();
+    }
+
+    public function delUser($id)
+    {
+        $this->delete(['id' => $id]);
     }
 }

@@ -40,7 +40,9 @@ $routes->get('form/soal', 'Form::soal');
 $routes->get('edit/user/(:num)', 'Edit::user/$1');
 $routes->get('edit/soal/(:num)', 'Edit::soal/$1');
 
-$routes->get('submit/admin', 'Form::admin');
+$routes->get('submit/admin', 'Submit::admin');
+
+$routes->get('delete/admin/(:num)', 'Delete::user/$1');
 
 /*
  * --------------------------------------------------------------------

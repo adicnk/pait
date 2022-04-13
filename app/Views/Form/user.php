@@ -23,7 +23,7 @@
         <div class="card-block mt-3">
             <div class="card-text text-center">
 
-                <form method="post" action="../submit/admin">
+                <form method="post" action="../submit/admin?url=<?= $url ?>">
                     <?= csrf_field() ?>
 
                     <div class="form-group">

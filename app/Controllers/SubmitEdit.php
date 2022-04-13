@@ -7,7 +7,7 @@ use App\Models\LoginMDL;
 use App\Models\SoalMDL;
 use App\Models\JawabanMDL;
 
-class Submit extends BaseController
+class SubmitEdit extends BaseController
 {
     protected $userModel, $loginModel, $soalModel, $jawabanModel;
 
@@ -19,7 +19,7 @@ class Submit extends BaseController
         $this->jawabanModel = new JawabanMDL();
     }
 
-    public function admin()
+    public function admin($id)
     {
         // dd($this->request->getVar());
         $url = $this->request->getVar('url');
@@ -29,57 +29,28 @@ class Submit extends BaseController
         $statusID = $this->request->getVar('statusUser');
 
         $this->userModel->save([
+            'id' => $id,
+            'idx' => $id,
             'role_id' => $roleID,
             'name' => $this->request->getVar('namaUser'),
             'slug' => $slug,
             'jurusan_id' => $this->request->getVar('jurusanUser'),
             'status_id' => $statusID,
-            'email' => $this->request->getVar('emailUser')
+            'email' => $this->request->getVar('emailUser'),
+            'nim' => $nimnip,
+            'nip' => $nimnip
         ]);
 
-        //ID terakhir yg di buat di tabel user
-        $db      = \Config\Database::connect();
-        $lastID = $db->insertID();
-
-        if ($roleID == 1) {
-            if ($statusID == 1) {
-                $this->userModel->save([
-                    'id' => $lastID,
-                    'idx' => $lastID,
-                    'nim' => $nimnip
-                ]);
-            } else {
-                $this->userModel->save([
-                    'id' => $lastID,
-                    'idx' => $lastID,
-                    'nip' => $nimnip
-                ]);
-            }
-            if ($this->loginModel->search($lastID)) {
-                $this->loginModel->save([
-                    'role_id' => $roleID,
-                    'user_id' => $lastID,
-                    'username' => $this->request->getVar('usernameUser'),
-                    'password' => $this->request->getVar('passwordUser'),
-                    'is_active' => 1
-                ]);
-            }
-        } else {
-            if ($statusID == 1) {
-                $this->userModel->save([
-                    'id' => $lastID,
-                    'idx' => $lastID,
-                    'nim' => $this->request->getVar('nimnipUser')
-                ]);
-            } else {
-                $this->userModel->save([
-                    'id' => $lastID,
-                    'idx' => $lastID,
-                    'nip' => $this->request->getVar('nimnipUser')
-                ]);
-            }
+        if ($this->loginModel->search($id)) {
+            $this->loginModel->save([
+                'role_id' => $roleID,
+                'user_id' => $id,
+                'username' => $this->request->getVar('usernameUser'),
+                'password' => $this->request->getVar('passwordUser'),
+                'is_active' => 1
+            ]);
         }
-        // dd($url);
+
         if ($url == 'admin') {
             return redirect()->to('../../admin/user');
         } else {

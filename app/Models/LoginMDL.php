@@ -14,10 +14,16 @@ class LoginMDL extends Model
 
     public function search($userID)
     {
-        if ($this->where(['role' => $userID])) {
+        if ($this->where(['role_id' => $userID])) {
             return 1;
         } else {
             return 0;
         }
+    }
+
+    public function delAdmin($id)
+    {
+        $this->where(['user_id' => $id]);
+        $this->delete();
     }
 }
