@@ -26,14 +26,9 @@ class Delete extends BaseController
             $user = $this->userModel->searchAdmin();
             $currentPage = $this->request->getVar('page_user') ? $this->request->getVar('page_user') : 1;
             $data = [
-                'title' => "Admin List : All",
-                'user'  => $this->userModel->paginate(5, 'user'),
-                'pager' => $this->userModel->pager,
-                'currentPage' => $currentPage,
+                'title' => "Data " . $url . " berhasil di Delete",
                 'url' => $url
             ];
-
-            return view('admin/administrator', $data);
         } else {
             $this->userModel->delUser($id);
             if ($this->loginModel->search($id) == 1) { //search in login is admin?
@@ -44,7 +39,7 @@ class Delete extends BaseController
                 'title' => "Data " . $url . " berhasil di Delete",
                 'url' => $url
             ];
-            return view('form/delete-user', $data);
         }
+        return view('form/delete-user', $data);
     }
 }
