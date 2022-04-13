@@ -3,48 +3,26 @@
 namespace App\Controllers;
 
 use App\Models\UserMDL;
-use App\Models\SoalMDL;
+use App\Models\LoginMDL;
 
 class Edit extends BaseController
 {
-    protected $userModel, $soalModel;
+    protected $userModel, $login;
 
     public function __construct()
     {
         $this->userModel = new UserMDL();
-        $this->soalModel = new SoalMDL();
+        $this->loginModel = new LoginMDL();
     }
 
     public function admin($id)
     {
-        $user = $this->userModel->searchAdmin(1);
-        foreach ($user as $usr) :
-            dd($usr('name'));
-        endforeach;
+        // d($this->request->getVar('url'));
         $data = [
-            'title'   => "Edit Form User Administrator / Mahasiswa",
+            'title'   => "Form User Administrator / Mahasiswa",
             'url' => $this->request->getVar('url'),
-            'user' => $this->userModel->searchAdmin($id)
+            'user' => $this->userModel->searhAdminID($id)
         ];
-        return view('form/edit_user', $data);
-    }
-
-    public function mahasiswa($id)
-    {
-        // d($this->request->getVar('url'));
-        $data = [
-            'title'   => "Edit Form User Administrator / Mahasiswa",
-            'user' => $this->userModel->searchMahasiswa($id)
-        ];
-        return view('form/edit_user', $data);
-    }
-
-    public function soal($id)
-    {
-        // d($this->request->getVar('url'));
-        $data = [
-            'title'   => "Edit Form Soal"
-        ];
-        return view('form/edit_soal', $data);
+        return view('form/edit-user', $data);
     }
 }

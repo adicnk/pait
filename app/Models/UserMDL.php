@@ -40,4 +40,12 @@ class UserMDL extends Model
         $this->where(['role_id' => 1]);
         return  $this->like('name', $keyword);
     }
+
+    public function searhAdminID($id)
+    {
+        $this->table('user');
+        $this->where(['id' => $id]);
+        // dd($this->findAll());
+        return  $this->findAll();
+    }
 }
