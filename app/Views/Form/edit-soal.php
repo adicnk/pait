@@ -115,71 +115,75 @@
                                         </button>
                                     </h2>
                                 </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                    <div class="card-body">
-                                        <div class="form-row align-items-right mt-3">
-                                            <div class="col-12">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text"><strong>Jawaban Option A</strong></div>
-                                                    <textarea class="form-control" name="jawabanA" id="jawabanA" rows="3"></textarea>
+
+                                <?php $queryClass = $db->table('jawaban')->getWhere(['soal_id' => $s['idx']]);
+                                foreach ($queryClass->getResult('array') as $qc) : ?>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <div class="form-row align-items-right mt-3">
+                                                <div class="col-12">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text"><strong>Jawaban Option A</strong></div>
+                                                        <textarea class="form-control" name="jawabanA" id="jawabanA" rows="3"><?= $qc['jawabanA'] ?></textarea>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form-row align-items-right mt-3">
-                                            <div class="col-12">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text"><strong>Jawaban Option B</strong></div>
-                                                    <textarea class="form-control" name="jawabanB" id="jawabanB" rows="3"></textarea>
+                                            <div class="form-row align-items-right mt-3">
+                                                <div class="col-12">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text"><strong>Jawaban Option B</strong></div>
+                                                        <textarea class="form-control" name="jawabanB" id="jawabanB" rows="3"><?= $qc['jawabanB'] ?></textarea>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form-row align-items-right mt-3">
-                                            <div class="col-12">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text"><strong>Jawaban Option C</strong></div>
-                                                    <textarea class="form-control" name="jawabanC" id="jawabanC" rows="3"></textarea>
+                                            <div class="form-row align-items-right mt-3">
+                                                <div class="col-12">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text"><strong>Jawaban Option C</strong></div>
+                                                        <textarea class="form-control" name="jawabanC" id="jawabanC" rows="3"><?= $qc['jawabanC'] ?></textarea>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form-row align-items-right mt-3">
-                                            <div class="col-12">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text"><strong>Jawaban Option D</strong></div>
-                                                    <textarea class="form-control" name="jawabanD" id="jawabanD" rows="3"></textarea>
+                                            <div class="form-row align-items-right mt-3">
+                                                <div class="col-12">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text"><strong>Jawaban Option D</strong></div>
+                                                        <textarea class="form-control" name="jawabanD" id="jawabanD" rows="3"><?= $qc['jawabanD'] ?></textarea>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form-row align-items-right mt-3">
-                                            <div class="col-12">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text"><strong>Jawaban Optiion E</strong></div>
-                                                    <textarea class="form-control" name="jawabanE" id="jawabanE" rows="3"></textarea>
+                                            <div class="form-row align-items-right mt-3">
+                                                <div class="col-12">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text"><strong>Jawaban Optiion E</strong></div>
+                                                        <textarea class="form-control" name="jawabanE" id="jawabanE" rows="3"><?= $qc['jawabanE'] ?></textarea>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form-row align-items-right mt-3">
-                                            <div class="col-5">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text"><strong>Jawaban yg Benar</strong></div>
-                                                    <select class="form-control" name="jawabanBenar" id="jawabanBenar" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
-                                                        <option value=1>Option A</option>
-                                                        <option value=2>Option B</option>
-                                                        <option value=2>Option C</option>
-                                                        <option value=2>Option D</option>
-                                                        <option value=2>Option E</option>
-                                                    </select>
+                                            <div class="form-row align-items-right mt-3">
+                                                <div class="col-5">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text"><strong>Jawaban yg Benar</strong></div>
+                                                        <select class="form-control" name="jawabanBenar" id="jawabanBenar" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
+                                                            <option value=1 <?= $qc['jawaban_benar'] == 1 ? 'selected' : '' ?>>Option A</option>
+                                                            <option value=2 <?= $qc['jawaban_benar'] == 2 ? 'selected' : '' ?>>Option B</option>
+                                                            <option value=2 <?= $qc['jawaban_benar'] == 3 ? 'selected' : '' ?>>Option C</option>
+                                                            <option value=2 <?= $qc['jawaban_benar'] == 4 ? 'selected' : '' ?>>Option D</option>
+                                                            <option value=2 <?= $qc['jawaban_benar'] == 5 ? 'selected' : '' ?>>Option E</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
+                                        <?php endforeach ?>
                                         </div>
                                     </div>
-                                </div>
                             </div>
 
                             <div class="form-row align-items-right mt-5">
                                 <div class="col-4">
                                     <div class="input-group-prepend">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="isChoosen" id="isChoosen">
+                                            <input class="form-check-input" type="checkbox" name="isChoosen" id="isChoosen" <?= $s['is_choosen'] == 1 ? 'checked' : '' ?>>
                                             <label class="form-check-label" for="isChoosen">
                                                 Soal ini dipilih masuk ke latihan ujian
                                             </label>
