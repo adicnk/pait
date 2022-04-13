@@ -113,6 +113,7 @@
 
                 <?php endforeach ?>
                 </form>
+                <a href=<?= $url == 'admin' ? '../../admin/user' : '../../admin/mahasiswa' ?> class="btn btn-lg btn-danger btn-block mt-3 mb-4">CANCEL</a>
             </div>
         </div>
     </div>

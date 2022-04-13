@@ -17,7 +17,7 @@ class Edit extends BaseController
 
     public function user($id)
     {
-        // d($this->request->getVar('url'));
+        // dd($this->request->getVar('url'));
         $data = [
             'title'   => "Form User Administrator / Mahasiswa",
             'url' => $this->request->getVar('url'),
