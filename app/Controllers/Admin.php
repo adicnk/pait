@@ -100,7 +100,7 @@ class Admin extends BaseController
     public function user()
     {
         $keyword = $this->request->getVar('keyword');
-        $user = $this->userModel->searchMahasiswa($keyword);
+        $user = $this->userModel->searchAdmin($keyword);
         if ($keyword) {
             $title = 'Admin Name Search : "' . $keyword . '"';
         } else {
@@ -119,7 +119,7 @@ class Admin extends BaseController
     public function mahasiswa()
     {
         $keyword = $this->request->getVar('keyword');
-        $user = $this->userModel->searchAdmin($keyword);
+        $user = $this->userModel->searchMahasiswa($keyword);
         if ($keyword) {
             $title = 'Mahasiswa Name Search : "' . $keyword . '"';
         } else {
@@ -132,6 +132,6 @@ class Admin extends BaseController
             'pager' => $this->userModel->pager,
             'currentPage' => $currentPage
         ];
-        return view('admin/administrator', $data);
+        return view('admin/mahasiswa', $data);
     }
 }
