@@ -32,7 +32,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $totalAdmin; ?></div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-graduation-cap fa-2x text-gray-300"></i>
+                            <i class="fas fa-lock fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $totalMahasiswa; ?></div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-list fa-2x text-gray-300"></i>
+                            <i class="fas fa-graduation-cap fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800"> <?= $totalStaff; ?></div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-lock fa-2x text-gray-300"></i>
+                            <i class="fas fa-user-circle fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800"> <?= $totalSoal; ?></div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-lock fa-2x text-gray-300"></i>
+                            <i class="fas fa-list fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
