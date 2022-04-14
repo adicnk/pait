@@ -29,9 +29,10 @@ class SoalMDL extends Model
         return $this->findAll();
     }
 
-    public function countKategori1()
+    public function getJumlahSoal($id)
     {
-        $this->where(['kategori_soal_id' => 1]);
+        $this->where(['kategori_soal_id' => $id]);
+        $this->join('kategori_soal', 'soal.kategori_soal_id = kategori_soal.id');
         return $this->countAllResults();
     }
 }

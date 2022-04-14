@@ -113,9 +113,12 @@ class Submit extends BaseController
         $db      = \Config\Database::connect();
         $lastID = $db->insertID();
 
-        $totalKategori1 = $this->soalModel->countKategori1(); //Pemeriksaan Ekstrimitas
+        for ($x = 1; $x <= 5; $x++) {
+            $val = $this->soalModel->getJumlahSoal($x);
+            $this->kategoriModel->saveJumlah($x, $val);
+        }
 
-        $$this->soalModel->save([
+        $this->soalModel->save([
             'id' => $lastID,
             'idx' => $lastID
         ]);

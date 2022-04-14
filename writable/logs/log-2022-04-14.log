@@ -1,0 +1,318 @@
+CRITICAL - 2022-04-14 07:12:59 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 33554440 bytes)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-04-14 07:13:57 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 33554440 bytes)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-04-14 07:15:29 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 33554440 bytes)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-04-14 07:25:06 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 20971520 bytes)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-04-14 07:30:26 --> CodeIgniter\Database\BaseBuilder::get(): Argument #1 ($limit) must be of type ?int, string given, called in C:\xampp\htdocs\pait\system\Model.php on line 728
+#0 C:\xampp\htdocs\pait\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get('jumlah_soal')
+#1 C:\xampp\htdocs\pait\app\Models\KategoriMDL.php(24): CodeIgniter\Model->__call('get', Array)
+#2 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\KategoriMDL->saveJumlah(5)
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#5 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-14 07:32:45 --> CodeIgniter\Database\BaseBuilder::get(): Argument #1 ($limit) must be of type ?int, string given, called in C:\xampp\htdocs\pait\system\Model.php on line 728
+#0 C:\xampp\htdocs\pait\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get('jumlah_soal')
+#1 C:\xampp\htdocs\pait\app\Models\KategoriMDL.php(25): CodeIgniter\Model->__call('get', Array)
+#2 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\KategoriMDL->saveJumlah(5)
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#5 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-14 07:32:55 --> CodeIgniter\Database\BaseBuilder::get(): Argument #1 ($limit) must be of type ?int, string given, called in C:\xampp\htdocs\pait\system\Model.php on line 728
+#0 C:\xampp\htdocs\pait\system\Model.php(728): CodeIgniter\Database\BaseBuilder->get('jumlah_soal')
+#1 C:\xampp\htdocs\pait\app\Models\KategoriMDL.php(25): CodeIgniter\Model->__call('get', Array)
+#2 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\KategoriMDL->saveJumlah(5)
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#5 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-14 07:34:34 --> CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in C:\xampp\htdocs\pait\system\Model.php on line 184
+#0 C:\xampp\htdocs\pait\system\Model.php(184): CodeIgniter\Database\BaseResult->getResult(NULL)
+#1 C:\xampp\htdocs\pait\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#2 C:\xampp\htdocs\pait\app\Models\KategoriMDL.php(26): CodeIgniter\BaseModel->findAll()
+#3 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\KategoriMDL->saveJumlah(5)
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#5 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#6 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+ERROR - 2022-04-14 07:38:56 --> Unknown column 'jumlah_soal' in 'field list'
+CRITICAL - 2022-04-14 07:38:56 --> Unknown column 'jumlah_soal' in 'field list'
+#0 C:\xampp\htdocs\pait\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `jumlah_...', 0)
+#1 C:\xampp\htdocs\pait\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jumlah_...')
+#2 C:\xampp\htdocs\pait\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jumlah_...')
+#3 C:\xampp\htdocs\pait\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `jumlah_...', Array, false)
+#4 C:\xampp\htdocs\pait\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pait\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\pait\app\Models\KategoriMDL.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\KategoriMDL->saveJumlah(5)
+#8 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#9 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#10 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-04-14 07:39:49 --> CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in C:\xampp\htdocs\pait\system\Model.php on line 184
+#0 C:\xampp\htdocs\pait\system\Model.php(184): CodeIgniter\Database\BaseResult->getResult(NULL)
+#1 C:\xampp\htdocs\pait\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#2 C:\xampp\htdocs\pait\app\Models\KategoriMDL.php(25): CodeIgniter\BaseModel->findAll()
+#3 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\KategoriMDL->saveJumlah(5)
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#5 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#6 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+ERROR - 2022-04-14 07:42:18 --> Table 'pait.kategori' doesn't exist
+CRITICAL - 2022-04-14 07:42:18 --> Table 'pait.kategori' doesn't exist
+#0 C:\xampp\htdocs\pait\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\pait\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\pait\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\pait\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\pait\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pait\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\pait\app\Models\KategoriMDL.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\KategoriMDL->saveJumlah(5)
+#8 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#9 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#10 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-04-14 07:49:29 --> Unsupported operand types: string + int
+#0 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\KategoriMDL->saveJumlah(5)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-14 07:50:14 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\pait\app\Models\KategoriMDL.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 20)
+#1 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\KategoriMDL->saveJumlah(5)
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-14 07:52:11 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\pait\app\Models\KategoriMDL.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 24)
+#1 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\KategoriMDL->saveJumlah(5)
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-14 07:54:53 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\pait\app\Models\KategoriMDL.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 20)
+#1 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\KategoriMDL->saveJumlah(5)
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-14 07:58:07 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\pait\app\Models\KategoriMDL.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 20)
+#1 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\KategoriMDL->saveJumlah(5)
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-14 07:58:37 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\pait\app\Models\KategoriMDL.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 20)
+#1 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\KategoriMDL->saveJumlah(5)
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-14 08:01:30 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-04-14 08:02:37 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-04-14 08:05:01 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-04-14 08:06:21 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-04-14 08:07:49 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-04-14 08:14:34 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\pait\app\Models\SoalMDL.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\SoalMDL->getJumlahSoal(5)
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-14 08:15:15 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\pait\app\Models\SoalMDL.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\SoalMDL->getJumlahSoal(5)
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-14 08:17:28 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\pait\app\Models\SoalMDL.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 37)
+#1 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\SoalMDL->getJumlahSoal(5)
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-14 08:18:31 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\pait\app\Models\SoalMDL.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 37)
+#1 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\SoalMDL->getJumlahSoal(5)
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2022-04-14 08:23:05 --> Column 'id' in where clause is ambiguous
+CRITICAL - 2022-04-14 08:23:05 --> Column 'id' in where clause is ambiguous
+#0 C:\xampp\htdocs\pait\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\pait\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\pait\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\pait\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\pait\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pait\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\pait\app\Models\SoalMDL.php(36): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\SoalMDL->getJumlahSoal(5)
+#8 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#9 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#10 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2022-04-14 08:23:38 --> Unknown column 'kategory_soal_id' in 'where clause'
+CRITICAL - 2022-04-14 08:23:38 --> Unknown column 'kategory_soal_id' in 'where clause'
+#0 C:\xampp\htdocs\pait\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\pait\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\pait\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\pait\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\pait\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pait\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\pait\app\Models\SoalMDL.php(36): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\SoalMDL->getJumlahSoal(5)
+#8 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#9 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#10 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-04-14 08:24:11 --> Undefined variable $total
+#0 C:\xampp\htdocs\pait\app\Models\SoalMDL.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40)
+#1 C:\xampp\htdocs\pait\app\Controllers\Submit.php(118): App\Models\SoalMDL->getJumlahSoal(5)
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-14 08:37:43 --> Object of class App\Controllers\Submit could not be converted to string
+#0 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-14 08:38:47 --> Object of class App\Controllers\Submit could not be converted to string
+#0 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-14 08:40:47 --> Object of class App\Controllers\Submit could not be converted to string
+#0 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-14 08:41:26 --> Object of class App\Controllers\Submit could not be converted to string
+#0 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-14 08:42:07 --> Object of class App\Controllers\Submit could not be converted to string
+#0 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-14 08:42:21 --> Object of class App\Controllers\Submit could not be converted to string
+#0 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-14 08:44:43 --> Object of class App\Controllers\Submit could not be converted to string
+#0 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-14 08:47:30 --> Object of class App\Controllers\Submit could not be converted to string
+#0 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-14 08:48:07 --> Object of class App\Controllers\Submit could not be converted to string
+#0 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-14 08:48:14 --> Object of class App\Controllers\Submit could not be converted to string
+#0 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-14 08:48:44 --> Object of class App\Controllers\Submit could not be converted to string
+#0 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
