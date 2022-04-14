@@ -28,4 +28,10 @@ class SoalMDL extends Model
         $this->where(['id' => $id]);
         return $this->findAll();
     }
+
+    public function countKategori1()
+    {
+        $this->where(['kategori_soal_id' => 1]);
+        return $this->countAllResults();
+    }
 }

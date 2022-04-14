@@ -6,10 +6,11 @@ use App\Models\UserMDL;
 use App\Models\LoginMDL;
 use App\Models\SoalMDL;
 use App\Models\JawabanMDL;
+use App\Models\KategoriMDL;
 
 class Submit extends BaseController
 {
-    protected $userModel, $loginModel, $soalModel, $jawabanModel;
+    protected $userModel, $loginModel, $soalModel, $jawabanModel, $kategoriModel;
 
     public function __construct()
     {
@@ -17,6 +18,7 @@ class Submit extends BaseController
         $this->loginModel = new LoginMDL();
         $this->soalModel = new SoalMDL();
         $this->jawabanModel = new JawabanMDL();
+        $this->kategoriModel = new KategoriMDL();
     }
 
     public function admin()
@@ -111,7 +113,9 @@ class Submit extends BaseController
         $db      = \Config\Database::connect();
         $lastID = $db->insertID();
 
-        $this->soalModel->save([
+        $totalKategori1 = $this->soalModel->countKategori1(); //Pemeriksaan Ekstrimitas
+
+        $$this->soalModel->save([
             'id' => $lastID,
             'idx' => $lastID
         ]);

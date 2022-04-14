@@ -5,16 +5,18 @@ namespace App\Controllers;
 use App\Models\UserMDL;
 use App\Models\SoalMDL;
 use App\Models\ChartPieMDL;
+use App\Models\ConfigMDL;
 
 class Admin extends BaseController
 {
-    protected $userModel, $chartPieModel, $soalModel;
+    protected $userModel, $chartPieModel, $soalModel, $configModel;
 
     public function __construct()
     {
         $this->userModel = new UserMDL();
         $this->soalModel = new SoalMDL();
         $this->chartPieModel = new ChartPieMDL();
+        $this->configModel = new ConfigMDL();
     }
 
     public function index($links = false)
@@ -87,6 +89,10 @@ class Admin extends BaseController
         } else {
             $data = [
                 'title'   => "Dashboard",
+                'totalAdmin' => $this->userModel->countAdmin(),
+                'totalMahasiswa' => $this->userModel->countMahasiswa(),
+                'totalStaff' => $this->userModel->countStaff(),
+                'totalSoal' => $this->soalModel->countAll(),
                 'chartValueData' => $this->chartPieModel->getTotalSoal(),
                 'chartLabelData' => $this->chartPieModel->getLabelSoal()
             ];

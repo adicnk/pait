@@ -53,4 +53,28 @@ class UserMDL extends Model
     {
         $this->delete(['id' => $id]);
     }
+
+    public function countAdmin()
+    {
+        $this->table('user');
+        $this->where(['role_id' => 1]);
+        // dd($this->findAll());
+        return $this->countAll();
+    }
+
+    public function countMahasiswa()
+    {
+        $this->table('user');
+        $this->where(['status_id' => 1]);
+        // dd($this->countAllResults());
+        return $this->countAllResults();
+    }
+
+    public function countStaff()
+    {
+        $this->table('user');
+        $this->where(['status_id' => 2]);
+        // dd($this->countAllResults());
+        return $this->countAllResults();
+    }
 }
