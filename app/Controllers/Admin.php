@@ -159,4 +159,9 @@ class Admin extends BaseController
         ];
         return view('admin/soal', $data);
     }
+
+    public function login()
+    {
+        dd($this->request->getVar());
+    }
 }
