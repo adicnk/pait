@@ -31,6 +31,7 @@ $routes->setAutoRoute(true);
 
 // For Exercise Route
 $routes->get('/', 'Exercise::index');
+$routes->get('/admin', 'Login::admin');
 
 $routes->get('/admin/(:segment)', 'Admin::index/$1');
 
