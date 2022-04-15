@@ -46,6 +46,7 @@ $routes->get('submit/soal', 'Submit::soal');
 $routes->get('submitedit/soal/(:num)', 'Submit::soal/$1');
 
 $routes->get('delete/admin/(:num)', 'Delete::user/$1');
+$routes->get('delete/soal/(:num)', 'Delete::soal/$1');
 
 /*
  * --------------------------------------------------------------------

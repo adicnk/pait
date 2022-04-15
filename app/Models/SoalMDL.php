@@ -35,4 +35,9 @@ class SoalMDL extends Model
         $this->join('kategori_soal', 'soal.kategori_soal_id = kategori_soal.id');
         return $this->countAllResults();
     }
+
+    public function delSoal($id)
+    {
+        $this->delete(['id' => $id]);
+    }
 }

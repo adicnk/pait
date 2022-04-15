@@ -4,15 +4,19 @@ namespace App\Controllers;
 
 use App\Models\UserMDL;
 use App\Models\LoginMDL;
+use App\Models\SoalMDL;
+use App\Models\JawabanMDL;
 
 class Delete extends BaseController
 {
-    protected $userModel, $login;
+    protected $userModel, $loginModel, $soalModel, $jawabanModel;
 
     public function __construct()
     {
         $this->userModel = new UserMDL();
         $this->loginModel = new LoginMDL();
+        $this->soalModel = new SoalMDL();
+        $this->jawabanModel = new JawabanMDL();
     }
 
     public function user($id)
@@ -23,8 +27,6 @@ class Delete extends BaseController
             $this->userModel->delUser($id);
             $this->loginModel->delAdmin($id);
 
-            $user = $this->userModel->searchAdmin();
-            $currentPage = $this->request->getVar('page_user') ? $this->request->getVar('page_user') : 1;
             $data = [
                 'title' => "Data " . $url . " berhasil di Delete",
                 'url' => $url
@@ -41,5 +43,17 @@ class Delete extends BaseController
             ];
         }
         return view('form/delete-user', $data);
+    }
+
+    public function soal($id)
+    {
+        $this->soalModel->delSoal($id);
+        $this->jawabanModel->delJawaban($id);
+
+        $data = [
+            'title' => "Data soal berhasil di Delete",
+            'url' => 'soal'
+        ];
+        return view('form/delete-soal', $data);
     }
 }

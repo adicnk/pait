@@ -20,4 +20,9 @@ class JawabanMDL extends Model
             return $jw['id'];
         endforeach;
     }
+
+    public function delJawaban($id)
+    {
+        $this->delete(['soal_id' => $id]);
+    }
 }
