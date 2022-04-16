@@ -67,7 +67,7 @@
             </tbody>
         </table>
     </div>
-    <?= $pager->links('user', 'custom_pagination') ?>
+    <?= $pager->links('soal', 'custom_pagination') ?>
 </div>
 <!-- /.container-fluid -->
 

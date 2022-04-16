@@ -150,10 +150,10 @@ class Admin extends BaseController
         } else {
             $title = 'Soal List : All';
         }
-        $currentPage = $this->request->getVar('page_user') ? $this->request->getVar('page_user') : 1;
+        $currentPage = $this->request->getVar('page_soal') ? $this->request->getVar('page_soal') : 1;
         $data = [
             'title' => $title,
-            'soal'  => $this->soalModel->paginate(5, 'user'),
+            'soal'  => $this->soalModel->paginate(5, 'soal'),
             'pager' => $this->soalModel->pager,
             'currentPage' => $currentPage
         ];
