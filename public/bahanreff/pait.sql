@@ -17,6 +17,19 @@
 CREATE DATABASE IF NOT EXISTS `pait` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `pait`;
 
+-- Dumping structure for table pait.config
+CREATE TABLE IF NOT EXISTS `config` (
+  `total_soal` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table pait.config: ~0 rows (approximately)
+/*!40000 ALTER TABLE `config` DISABLE KEYS */;
+INSERT INTO `config` (`total_soal`, `created_at`, `updated_at`) VALUES
+	(2, '2022-04-14 08:20:48', '2022-04-14 08:20:49');
+/*!40000 ALTER TABLE `config` ENABLE KEYS */;
+
 -- Dumping structure for table pait.jawaban
 CREATE TABLE IF NOT EXISTS `jawaban` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -30,14 +43,10 @@ CREATE TABLE IF NOT EXISTS `jawaban` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table pait.jawaban: ~2 rows (approximately)
+-- Dumping data for table pait.jawaban: ~6 rows (approximately)
 /*!40000 ALTER TABLE `jawaban` DISABLE KEYS */;
-INSERT INTO `jawaban` (`id`, `soal_id`, `jawabanA`, `jawabanB`, `jawabanC`, `jawabanD`, `jawabanE`, `jawaban_benar`, `created_at`, `updated_at`) VALUES
-	(1, 1, NULL, NULL, NULL, NULL, NULL, 3, '2022-04-13 18:25:55', '2022-04-13 18:33:58'),
-	(2, 2, NULL, NULL, NULL, NULL, NULL, 1, '2022-04-13 18:31:27', '2022-04-13 18:31:27'),
-	(3, 3, NULL, NULL, NULL, NULL, NULL, 1, '2022-04-13 18:32:20', '2022-04-13 18:32:20');
 /*!40000 ALTER TABLE `jawaban` ENABLE KEYS */;
 
 -- Dumping structure for table pait.jurusan
@@ -66,14 +75,14 @@ CREATE TABLE IF NOT EXISTS `kategori_soal` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table pait.kategori_soal: ~5 rows (approximately)
+-- Dumping data for table pait.kategori_soal: ~4 rows (approximately)
 /*!40000 ALTER TABLE `kategori_soal` DISABLE KEYS */;
 INSERT INTO `kategori_soal` (`id`, `kname`, `jumlah_soal`, `created_at`, `updated_at`) VALUES
-	(1, 'Pemeriksaan Ekstrimitas', 20, '2022-04-04 23:12:55', '2022-04-04 23:12:58'),
-	(2, 'Pemeriksaan Kepala dan Leher', 35, '2022-04-04 23:13:53', '2022-04-04 23:13:55'),
-	(3, 'Pemeriksaan Dada', 41, '2022-04-04 23:14:37', '2022-04-04 23:14:39'),
-	(4, 'Pemeriksaan Perut', 13, '2022-04-04 23:15:10', '2022-04-04 23:15:11'),
-	(5, 'Pemeriksaan Genitalia & Rectum', 40, '2022-04-05 18:41:35', '2022-04-05 18:41:36');
+	(1, 'Pemeriksaan Ekstremitas', 1, '2022-04-14 09:11:00', '2022-04-14 21:23:37'),
+	(2, 'Pemeriksaan Kepala dan Leher', 0, '2022-04-14 09:11:58', '2022-04-14 21:23:37'),
+	(3, 'Pemeriksaan Dada', 0, '2022-04-14 09:12:00', '2022-04-14 21:23:37'),
+	(4, 'Pemeriksaan Perut', 0, '2022-04-14 09:12:18', '2022-04-14 21:23:37'),
+	(5, 'Pemeriksaan Genitalia dan Rectum', 0, '2022-04-14 09:12:45', '2022-04-14 21:23:37');
 /*!40000 ALTER TABLE `kategori_soal` ENABLE KEYS */;
 
 -- Dumping structure for table pait.login
@@ -88,26 +97,26 @@ CREATE TABLE IF NOT EXISTS `login` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table pait.login: ~1 rows (approximately)
+-- Dumping data for table pait.login: ~3 rows (approximately)
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` (`id`, `role_id`, `user_id`, `username`, `password`, `is_active`, `is_start`, `created_at`, `updated_at`) VALUES
-	(3, 1, 3, '', '', 1, NULL, '2022-04-13 11:43:43', '2022-04-13 11:43:43');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 
 -- Dumping structure for table pait.role
 CREATE TABLE IF NOT EXISTS `role` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table pait.role: ~2 rows (approximately)
 /*!40000 ALTER TABLE `role` DISABLE KEYS */;
-INSERT INTO `role` (`id`, `name`) VALUES
-	(1, 'Administrator'),
-	(2, 'Member');
+INSERT INTO `role` (`id`, `name`, `created_at`, `updated_at`) VALUES
+	(1, 'Administrator', '2022-04-14 08:19:35', '2022-04-14 08:19:36'),
+	(2, 'Member', '2022-04-14 08:19:38', '2022-04-14 08:19:39');
 /*!40000 ALTER TABLE `role` ENABLE KEYS */;
 
 -- Dumping structure for table pait.soal
@@ -124,14 +133,10 @@ CREATE TABLE IF NOT EXISTS `soal` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table pait.soal: ~3 rows (approximately)
+-- Dumping data for table pait.soal: ~6 rows (approximately)
 /*!40000 ALTER TABLE `soal` DISABLE KEYS */;
-INSERT INTO `soal` (`id`, `idx`, `kategori_soal_id`, `name`, `is_picture`, `picture_url`, `is_audio`, `audio_url`, `is_choosen`, `created_at`, `updated_at`) VALUES
-	(1, 1, 5, '', 1, '', 1, '', NULL, '2022-04-13 18:25:55', '2022-04-13 18:33:58'),
-	(2, 2, 2, '', 1, '.viminfo', 1, '.lesshst', NULL, '2022-04-13 18:31:27', '2022-04-13 18:31:27'),
-	(3, 3, 1, '', 1, '.gitconfig', 1, '.gitconfig', NULL, '2022-04-13 18:32:19', '2022-04-13 18:32:20');
 /*!40000 ALTER TABLE `soal` ENABLE KEYS */;
 
 -- Dumping structure for table pait.status
@@ -165,9 +170,9 @@ CREATE TABLE IF NOT EXISTS `user` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table pait.user: ~0 rows (approximately)
+-- Dumping data for table pait.user: ~3 rows (approximately)
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 

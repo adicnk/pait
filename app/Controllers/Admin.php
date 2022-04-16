@@ -163,5 +163,13 @@ class Admin extends BaseController
     public function login()
     {
         dd($this->request->getVar());
+        $status = $this->userModel->statusLogin($this->request->getVar('email'), $this->request->getVar('password'));
+        $data = [
+            'title' => 'Login Status'
+        ];
+
+        if ($status) {
+            return view('admin/dashboard', $data);
+        }
     }
 }

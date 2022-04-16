@@ -195,6 +195,7 @@
                         <button class="btn btn-lg btn-primary btn-block mt-3 mb-4" type="submit">SIMPAN</button>
                     </form>
                 <?php endforeach ?>
+                <a href="../../admin/soal" class="btn btn-lg btn-danger btn-block mt-3 mb-4">CANCEL</a>
             </div>
         </div>
     </div>
