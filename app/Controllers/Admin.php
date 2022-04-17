@@ -6,10 +6,11 @@ use App\Models\UserMDL;
 use App\Models\SoalMDL;
 use App\Models\ChartPieMDL;
 use App\Models\ConfigMDL;
+use App\Models\LoginMDL;
 
 class Admin extends BaseController
 {
-    protected $userModel, $chartPieModel, $soalModel, $configModel;
+    protected $userModel, $chartPieModel, $soalModel, $configModel, $loginModel;
 
     public function __construct()
     {
@@ -17,6 +18,7 @@ class Admin extends BaseController
         $this->soalModel = new SoalMDL();
         $this->chartPieModel = new ChartPieMDL();
         $this->configModel = new ConfigMDL();
+        $this->loginModel = new LoginMDL();
     }
 
     public function index($links = false)
@@ -162,14 +164,26 @@ class Admin extends BaseController
 
     public function login()
     {
-        dd($this->request->getVar());
-        $status = $this->userModel->statusLogin($this->request->getVar('email'), $this->request->getVar('password'));
-        $data = [
-            'title' => 'Login Status'
-        ];
+        $usr = $this->request->getVar('username');
+        $pwd = $this->request->getVar('password');
 
-        if ($status) {
-            return view('admin/dashboard', $data);
+        if (!($usr or $pwd)) {
+            $data = [
+                'title' => 'Login Status',
+                'login' => $this->loginModel->index()
+            ];
+            return view('form/relogin', $data);
+        } else {
+            dd($usr . '-' . $pwd);
+            $loginStatus = $this->loginModel->statusLogin($usr, $pwd);
+            $data = [
+                'title' => 'Login Status',
+                'login' => $this->loginModel->index()
+            ];
+
+            if ($loginStatus) {
+                return view('admin/dashboard', $data);
+            }
         }
     }
 }

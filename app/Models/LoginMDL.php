@@ -32,7 +32,26 @@ class LoginMDL extends Model
         $this->where(['user_id' => $id]);
         $login =  $this->findAll();
         foreach ($login as $lg) :
-            return $lg['id'];
+            return true;
         endforeach;
+    }
+
+    public function statusLogin($username, $password)
+    {
+        $this->like('username', $username);
+        $this->like('password', $password);
+        $query = $this->findAll();
+        foreach ($query as $qry) {
+            if ($qry) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    public function index()
+    {
+        return $this->findAll();
     }
 }
