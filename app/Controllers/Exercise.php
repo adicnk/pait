@@ -25,35 +25,47 @@ class Exercise extends BaseController
 
     public function latihan()
     {
-        $totalSoal = $this->configModel->totalSoal();
         $soal = $this->soalModel->isChoosen();
-        $soalArr = array_fill(0, $totalSoal, null);
-        $soalTempArr = array_fill(0, $totalSoal, null);
+        $totalSoal = $this->configModel->totalSoal();
+        $no = $this->request->getVar('id');
 
-        for ($x = 0; $x < $totalSoal; $x++) {
-            $randID = $this->randomID($totalSoal);
-        }
+        if ($no) {
+            session()->set('noId', $no);
+            $soalArr = session()->get('soalArr');
+            // dd($soalArr);
+        } else {
+            $soalArr = array_fill(0, $totalSoal, null);
+            $soalTempArr = array_fill(0, $totalSoal, null);
 
-        $totalArr = count($soalTempArr) - 1;
-        for ($x = 0; $x < $totalSoal; $x++) {
-            $soalArr[$x] = $x + 1;
-            $soalTempArr[$x] = $x + 1;
-        }
-        while ($totalArr) {
-            for ($x = 0; $x <= $totalArr; $x++) {
-                $totalArr = $totalArr - $x;
-                $z = $soalArr[$totalArr];
-                $randID = $this->randomID($totalArr);
-                $p = $soalArr[$randID];
-                $soalArr[$randID] = $z;
-                $soalArr[$totalArr] =  $p;
+            for ($x = 0; $x < $totalSoal; $x++) {
+                $randID = $this->randomID($totalSoal);
             }
+
+            $totalArr = count($soalTempArr) - 1;
+            for ($x = 0; $x < $totalSoal; $x++) {
+                $soalArr[$x] = $x + 1;
+                $soalTempArr[$x] = $x + 1;
+            }
+            while ($totalArr) {
+                for ($x = 0; $x <= $totalArr; $x++) {
+                    $totalArr = $totalArr - $x;
+                    $z = $soalArr[$totalArr];
+                    $randID = $this->randomID($totalArr);
+                    $p = $soalArr[$randID];
+                    $soalArr[$randID] = $z;
+                    $soalArr[$totalArr] =  $p;
+                }
+            }
+            session()->set('noId', 1);
+            session()->set('soalArr', $soalArr);
         }
+
 
         $data = [
             'title' => "PAIT @ PPNI",
             'soalIdx' => $soalArr,
-            'soal' => $soal
+            'soal' => $soal,
+            'total' => $totalSoal
         ];
         return view('exercise/latihan', $data);
     }
@@ -61,5 +73,16 @@ class Exercise extends BaseController
     public function randomID($total)
     {
         return rand(1, $total);
+    }
+
+    public function selesai($part)
+    {
+        switch ($part) {
+            case 'selesai':
+                break;
+                
+            case 'score':
+                break
+        }
     }
 }
