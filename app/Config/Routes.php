@@ -31,7 +31,6 @@ $routes->setAutoRoute(true);
 
 // For Admin Route
 $routes->get('/admin', 'Login::admin');
-
 $routes->get('/admin/(:segment)', 'Admin::index/$1');
 
 $routes->get('form/admin', 'Form::admin');

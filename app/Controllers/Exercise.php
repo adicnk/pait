@@ -39,8 +39,6 @@ class Exercise extends BaseController
             $randID = $this->randomID($totalSoal);
         }
 
-        dd(session()->get('soalArr'));
-
         $data = [
             'title' => "PAIT @ PPNI",
             'soalIDX' => $soalArr

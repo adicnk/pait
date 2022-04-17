@@ -12,11 +12,11 @@
     <title>PAIT Administrator</title>
 
     <!-- Custom fonts for this template-->
-    <link href="../../admin_assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../../../admin_assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../../admin_assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../../../admin_assets/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -31,7 +31,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../../admin">
                 <div class="sidebar-brand-text mx-3">
-                    <img src="../../favicon.ico" alt="main_logo" style="width:20%">
+                    <img src="../../../favicon.ico" alt="main_logo" style="width:20%">
                     PAIT Admin
                 </div>
             </a>
@@ -41,7 +41,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="../../../admin">
+                <a class="nav-link" href="../../../admin/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -148,21 +148,21 @@
     </a>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="../../admin_assets/vendor/jquery/jquery.min.js"></script>
-    <script src="../../admin_assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../admin_assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../admin_assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="../../admin_assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../../../admin_assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="../../admin_assets/js/sb-admin-2.min.js"></script>
+    <script src="../../../admin_assets/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="../../admin_assets/vendor/chart.js/Chart.min.js"></script>
+    <script src="../../../admin_assets/vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
     <!-- <script src="admin_assets/js/demo/chart-area-demo.js"></script> -->
-    <script src="../../admin_assets/js/chart-pie-demo.php"></script>
+    <script src="../../../admin_assets/js/chart-pie-demo.php"></script>
 
 </body>
 
