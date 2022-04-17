@@ -11,8 +11,8 @@
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <!-- Nucleo Icons -->
-    <link href="./material_assets/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="./material_assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="../../../material_assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../../../material_assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- Material Icons -->
@@ -54,11 +54,11 @@
     </main>
 
     <!--   Core JS Files   -->
-    <script src="./material_assets/js/core/popper.min.js"></script>
-    <script src="./material_assets/js/core/bootstrap.min.js"></script>
-    <script src="./material_assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="./material_assets/js/plugins/smooth-scrollbar.min.js"></script>
-    <script src="./material_assets/js/plugins/chartjs.min.js"></script>
+    <script src="../../../material_assets/js/core/popper.min.js"></script>
+    <script src="../../../material_assets/js/core/bootstrap.min.js"></script>
+    <script src="../../../material_assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../../../material_assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="../../../material_assets/js/plugins/chartjs.min.js"></script>
 
     <script>
         var win = navigator.platform.indexOf('Win') > -1;
@@ -72,7 +72,29 @@
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="./material_assets/js/material-dashboard.min.js?v=3.0.2"></script>
+    <script src="../../../material_assets/js/material-dashboard.min.js?v=3.0.2"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+    <script type="text/javascript" src="../../../material_assets/js/kuma-gauge.jquery.js"></script>
+
+    <script>
+        $(document).ready(
+            function scored() {
+                $('.but').trigger('click');
+
+                $('.js-score').kumaGauge({
+                    // value: Math.floor((Math.random() * 99) + 1)
+                    value: <?= 50 ?>
+                });
+
+                if (<?= 50 ?> < <?= 60 ?>) {
+                    $("#score-desc").html("ANDA TIDAK LULUS");
+                } else {
+                    $("#score-desc").html("ANDA LULUS");
+                }
+            }
+        );
+    </script>
 
 </body>
 

@@ -79,6 +79,7 @@ class Exercise extends BaseController
     {
         switch ($part) {
             case 'selesai':
+                return view('exercise/selesai');
                 break;
 
             case 'score':
