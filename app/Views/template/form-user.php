@@ -178,6 +178,20 @@
     <script src="../../admin_assets/js/chart-pie-demo.php"></script>
     <script src="../../admin_assets/js/keystroke.js"></script>
 
+    <script>
+        function myStatusOption() {
+            var textbox = document.getElementById("statusUser");
+            var jurusan = document.getElementById("jurusanUser");
+            var selectedValue = textbox.options[textbox.selectedIndex].value;
+            // alert(selectedValue);
+            if (selectedValue == 2) {
+                jurusan.disabled = true;
+            } else {
+                jurusan.disabled = false;
+            }
+
+        }
+    </script>
 </body>
 
 </html>

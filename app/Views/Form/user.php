@@ -42,14 +42,14 @@
                             <div class="col-5">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><strong>Status di Kampus</strong></div>
-                                    <select class="form-control" name="statusUser" id="statusUser" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
+                                    <select class="form-control" name="statusUser" id="statusUser" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onchange="myStatusOption()">
                                         <option value=1>Mahasiswa</option>
                                         <option value=2>Staff</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-row align-items-right mt-3">
+                        <div class=" form-row align-items-right mt-3">
                             <div class="col-7">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><strong>Nama</strong></div>
