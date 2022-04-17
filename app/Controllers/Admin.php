@@ -174,15 +174,26 @@ class Admin extends BaseController
             ];
             return view('form/relogin', $data);
         } else {
-            dd($usr . '-' . $pwd);
             $loginStatus = $this->loginModel->statusLogin($usr, $pwd);
             $data = [
-                'title' => 'Login Status',
-                'login' => $this->loginModel->index()
+                'title'   => "Dashboard",
+                'totalAdmin' => $this->userModel->countAdmin(),
+                'totalMahasiswa' => $this->userModel->countMahasiswa(),
+                'totalStaff' => $this->userModel->countStaff(),
+                'totalSoal' => $this->soalModel->countAll(),
+                'chartValueData' => $this->chartPieModel->getTotalSoal(),
+                'chartLabelData' => $this->chartPieModel->getLabelSoal()
             ];
+            return view('admin/dashboard', $data);
 
             if ($loginStatus) {
                 return view('admin/dashboard', $data);
+            } else {
+                $data = [
+                    'title' => 'Login Status',
+                    'login' => $this->loginModel->index()
+                ];
+                return view('form/relogin', $data);
             }
         }
     }

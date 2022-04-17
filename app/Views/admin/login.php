@@ -46,7 +46,8 @@
                                     <hr>
                                     <form method="post" action="admin/login" class="user">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                                            <!-- <input type="email" class="form-control form-control-user" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter Email Address..."> -->
+                                            <input type="text" class="form-control form-control-user" name="username" id="email" aria-describedby="emailHelp" placeholder="Enter Email Address...">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user" name="password" id="password" placeholder="Password">
