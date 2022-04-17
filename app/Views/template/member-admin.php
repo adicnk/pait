@@ -101,7 +101,7 @@
 
             <!-- Nav Item - Sign Out -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="../../../admin">
                     <i class="fas fa-fw fa-stop-circle"></i>
                     <span>Logout</span></a>
             </li>

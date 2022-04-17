@@ -40,4 +40,11 @@ class SoalMDL extends Model
     {
         $this->delete(['id' => $id]);
     }
+
+    public function isChoosen()
+    {
+        $this->where(['is_choosen' => 1]);
+        $this->join('jawaban', 'jawaban.soal_id = soal.id');
+        return $this->findAll();
+    }
 }

@@ -29,7 +29,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../../../admin">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../../../admin/dashboard">
                 <div class="sidebar-brand-text mx-3">
                     <img src="../../favicon.ico" alt="main_logo" style="width:20%">
                     PAIT Admin
@@ -41,7 +41,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="../../../../admin">
+                <a class="nav-link" href="../../../../admin/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -113,7 +113,7 @@
 
             <!-- Nav Item - Sign Out -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="../../../admin">
                     <i class="fas fa-fw fa-stop-circle"></i>
                     <span>Logout</span></a>
             </li>

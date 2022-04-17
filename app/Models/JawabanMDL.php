@@ -25,4 +25,10 @@ class JawabanMDL extends Model
     {
         $this->delete(['soal_id' => $id]);
     }
+
+    public function search($id)
+    {
+        $this->where(['soal_id' => $id]);
+        return  $this->findAll();
+    }
 }

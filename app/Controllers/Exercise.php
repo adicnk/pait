@@ -28,26 +28,38 @@ class Exercise extends BaseController
         $totalSoal = $this->configModel->totalSoal();
         $soal = $this->soalModel->isChoosen();
         $soalArr = array_fill(0, $totalSoal, null);
-        $jawabArr = array_fill(0, $totalSoal, null);
+        $soalTempArr = array_fill(0, $totalSoal, null);
 
-        $status = true;
-        $idx = 1;
-
-        session()->set('soalArr', $soalArr);
-
-        while ($status) {
+        for ($x = 0; $x < $totalSoal; $x++) {
             $randID = $this->randomID($totalSoal);
+        }
+
+        $totalArr = count($soalTempArr) - 1;
+        for ($x = 0; $x < $totalSoal; $x++) {
+            $soalArr[$x] = $x + 1;
+            $soalTempArr[$x] = $x + 1;
+        }
+        while ($totalArr) {
+            for ($x = 0; $x <= $totalArr; $x++) {
+                $totalArr = $totalArr - $x;
+                $z = $soalArr[$totalArr];
+                $randID = $this->randomID($totalArr);
+                $p = $soalArr[$randID];
+                $soalArr[$randID] = $z;
+                $soalArr[$totalArr] =  $p;
+            }
         }
 
         $data = [
             'title' => "PAIT @ PPNI",
-            'soalIDX' => $soalArr
+            'soalIdx' => $soalArr,
+            'soal' => $soal
         ];
-        return view('exercise/latihan');
+        return view('exercise/latihan', $data);
     }
 
-    public function randomID($totalSoal)
+    public function randomID($total)
     {
-        return rand(1, $totalSoal);
+        return rand(1, $total);
     }
 }
