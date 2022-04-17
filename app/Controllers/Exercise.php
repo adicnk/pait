@@ -80,9 +80,9 @@ class Exercise extends BaseController
         switch ($part) {
             case 'selesai':
                 break;
-                
+
             case 'score':
-                break
+                break;
         }
     }
 }
