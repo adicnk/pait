@@ -167,7 +167,7 @@ class Admin extends BaseController
         $usr = $this->request->getVar('username');
         $pwd = $this->request->getVar('password');
 
-        if (!($usr or $pwd)) {
+        if (!$usr or !$pwd) {
             $data = [
                 'title' => 'Login Status',
                 'login' => $this->loginModel->index()
