@@ -91,13 +91,9 @@
 
                         </ul>
 
-                        <input type="hidden" id="noRight" name="noRight" value="<?= $noID +  1 ?>">
-                        <input type="hidden" id="noRight" name="noRight" value="<?= $noID - 1 ?>">
-                        <input type="hidden" id="noId" name="Id" value="<?= $noID +  1 ?>">
-
                         <?php if ($noID == $total) { ?>
                             <button type="submit" class="btn btn-primary mt-3"><i class="material-icons opacity-10">chevron_left</i>Soal No. <?= $noID - 1 ?></button>
-                            <button type="submit" class="btn btn-primary mt-3">Selesai <i class="material-icons opacity-10">chevron_right</i></button>
+                            <button type="submit" class="btn btn-primary mt-3">Selesai <i class="material-icons opacity-10" onclick="urlBrowserChange()">chevron_right</i></button>
                         <?php } ?>
                         <?php if ($noID == 1) { ?>
                             <button type="submit" class="btn btn-primary mt-3">Soal No. 2 <i class="material-icons opacity-10">chevron_right</i></button>

@@ -54,7 +54,11 @@ class Latihan extends BaseController
         session()->set('jawabanArr', $answer);
 
         // $no == $totalSoal + 1 ? dd(session()->get('jawabanArr')) : "";
-        if ($totalSoal + 1) {
+        if ($no == $totalSoal + 1) {
+            $idx = 0;
+            foreach ($soalArr as $s) {
+                $this->soalModel->searchJawabanBenar($s[$idx]);
+            }
             return view('exercise/selesai');
         }
 
