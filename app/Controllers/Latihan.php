@@ -23,8 +23,6 @@ class Latihan extends BaseController
         $soal = $this->soalModel->isChoosen();
         $totalSoal = $this->configModel->totalSoal();
 
-        $no = $this->request->getVar('id');
-        session()->set('noId', $no);
         $soalArr = session()->get('soalArr');
 
         $pilihanA = $this->request->getVar('jawabanA');
@@ -33,6 +31,7 @@ class Latihan extends BaseController
         $pilihanD = $this->request->getVar('jawabanD');
         $pilihanE = $this->request->getVar('jawabanE');
 
+        $no = $this->request->getVar('id');
         $answer = session()->get('jawabanArr');
 
         if ($pilihanA) {
@@ -51,9 +50,13 @@ class Latihan extends BaseController
             $answer[$no - 2] = $pilihanE ? 5 : null;
         }
 
+        session()->set('noId', $no);
         session()->set('jawabanArr', $answer);
 
-        $no == 5 ? d(session()->get('jawabanArr')) : "";
+        // $no == $totalSoal + 1 ? dd(session()->get('jawabanArr')) : "";
+        if ($totalSoal + 1) {
+            return view('exercise/selesai');
+        }
 
         $data = [
             'title' => "Latihan Soal PAiT",

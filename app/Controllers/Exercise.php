@@ -74,6 +74,49 @@ class Exercise extends BaseController
 
     public function selesai($part)
     {
+        $soal = $this->soalModel->isChoosen();
+        $totalSoal = $this->configModel->totalSoal();
+
+        session()->set('noId', $totalSoal);
+        $soalArr = session()->get('soalArr');
+
+        dd($this->request->getVar());
+
+        $pilihanA = $this->request->getVar('jawabanA');
+        $pilihanB = $this->request->getVar('jawabanB');
+        $pilihanC = $this->request->getVar('jawabanC');
+        $pilihanD = $this->request->getVar('jawabanD');
+        $pilihanE = $this->request->getVar('jawabanE');
+
+        $answer = session()->get('jawabanArr');
+
+        if ($pilihanA) {
+            $answer[0] = $pilihanA ? 1 : null;
+        }
+        if ($pilihanB) {
+            $answer[0] = $pilihanB ? 2 : null;
+        }
+        if ($pilihanC) {
+            $answer[0] = $pilihanC ? 3 : null;
+        }
+        if ($pilihanD) {
+            $answer[0] = $pilihanD ? 4 : null;
+        }
+        if ($pilihanE) {
+            $answer[0] = $pilihanE ? 5 : null;
+        }
+
+        session()->set('jawabanArr', $answer);
+        // $totalSoal == 5 ? dd(session()->get('jawabanArr')) : "";
+
+        $data = [
+            'title' => "Latihan Soal PAiT",
+            'soalIdx' => $soalArr,
+            'soal' => $soal,
+            'total' => $totalSoal
+        ];
+        return view('exercise/latihan', $data);
+
         switch ($part) {
             case 'selesai':
                 return view('exercise/selesai');

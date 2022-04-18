@@ -29,3 +29,27 @@ CRITICAL - 2022-04-18 03:56:54 --> Undefined array key 5
 #8 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #10 {main}
+CRITICAL - 2022-04-18 15:59:05 --> Undefined array key 5
+#0 C:\xampp\htdocs\pait\app\Views\exercise\latihan.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 13)
+#1 C:\xampp\htdocs\pait\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\pait\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\pait\system\Common.php(1089): CodeIgniter\View\View->render('exercise/latiha...', Array, true)
+#4 C:\xampp\htdocs\pait\app\Controllers\Latihan.php(64): view('exercise/latiha...', Array)
+#5 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Latihan->index()
+#6 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#7 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-04-18 16:01:00 --> Undefined array key 5
+#0 C:\xampp\htdocs\pait\app\Views\exercise\latihan.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 13)
+#1 C:\xampp\htdocs\pait\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\pait\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\pait\system\Common.php(1089): CodeIgniter\View\View->render('exercise/latiha...', Array, true)
+#4 C:\xampp\htdocs\pait\app\Controllers\Latihan.php(64): view('exercise/latiha...', Array)
+#5 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Latihan->index()
+#6 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#7 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
