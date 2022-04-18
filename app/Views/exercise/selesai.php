@@ -42,7 +42,7 @@
                         <i class="material-icons opacity-10">bookmark_added</i>
                     </div>
                     <div class="text-end pt-1">
-                        <p class="text-sm mb-0 text-capitalize">Jawaban Diisi</p>
+                        <p class="text-sm mb-0 text-capitalize">Soal Dijawab</p>
                         <h4 class="mb-0">72</h4>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
 
             <div class="row mt-3 mb-3">
                 <div class="col md-6">
-                    <a href="logout" class="btn btn-success mt-3 ml-4 font-weight-bolder">Keluar</a>
+                    <a href="../../" class="btn btn-success mt-3 ml-4 font-weight-bolder">Kembali ke Dashboard</a>
                 </div>
             </div>
         </div>

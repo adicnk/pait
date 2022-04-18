@@ -249,3 +249,23 @@ CRITICAL - 2022-04-17 09:47:07 --> Undefined variable $event
 #8 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #10 {main}
+CRITICAL - 2022-04-17 19:14:52 --> Undefined variable $jawabanArr
+#0 C:\xampp\htdocs\pait\app\Controllers\Exercise.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 98)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Exercise->latihan()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Exercise))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-17 20:38:57 --> Array to string conversion
+#0 C:\xampp\htdocs\pait\app\Views\exercise\latihan.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 55)
+#1 C:\xampp\htdocs\pait\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\pait\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\pait\system\Common.php(1089): CodeIgniter\View\View->render('exercise/latiha...', Array, true)
+#4 C:\xampp\htdocs\pait\app\Controllers\Exercise.php(96): view('exercise/latiha...', Array)
+#5 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Exercise->soal()
+#6 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Exercise))
+#7 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}

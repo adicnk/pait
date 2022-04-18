@@ -14,7 +14,7 @@ class Exercise extends BaseController
     public function __construct()
     {
         $this->soalModel = new SoalMDL();
-        $this->jawabanModel = new SoalMDL();
+        $this->jawabanModel = new JawabanMDL();
         $this->configModel = new ConfigMDL();
     }
 
@@ -23,50 +23,47 @@ class Exercise extends BaseController
         return view('exercise/dashboard');
     }
 
-    public function latihan()
+    public function soal()
     {
         $soal = $this->soalModel->isChoosen();
         $totalSoal = $this->configModel->totalSoal();
         $no = $this->request->getVar('id');
 
-        if ($no) {
-            session()->set('noId', $no);
-            $soalArr = session()->get('soalArr');
-            // dd($soalArr);
-        } else {
-            $soalArr = array_fill(0, $totalSoal, null);
-            $soalTempArr = array_fill(0, $totalSoal, null);
+        $soalArr = array_fill(0, $totalSoal, null);
+        $soalTempArr = array_fill(0, $totalSoal, null);
+        $jawabanArr = array_fill(0, $totalSoal, null);
 
-            for ($x = 0; $x < $totalSoal; $x++) {
-                $randID = $this->randomID($totalSoal);
-            }
-
-            $totalArr = count($soalTempArr) - 1;
-            for ($x = 0; $x < $totalSoal; $x++) {
-                $soalArr[$x] = $x + 1;
-                $soalTempArr[$x] = $x + 1;
-            }
-            while ($totalArr) {
-                for ($x = 0; $x <= $totalArr; $x++) {
-                    $totalArr = $totalArr - $x;
-                    $z = $soalArr[$totalArr];
-                    $randID = $this->randomID($totalArr);
-                    $p = $soalArr[$randID];
-                    $soalArr[$randID] = $z;
-                    $soalArr[$totalArr] =  $p;
-                }
-            }
-            session()->set('noId', 1);
-            session()->set('soalArr', $soalArr);
+        for ($x = 0; $x < $totalSoal; $x++) {
+            $randID = $this->randomID($totalSoal);
         }
 
+        $totalArr = count($soalTempArr) - 1;
+        for ($x = 0; $x < $totalSoal; $x++) {
+            $soalArr[$x] = $x + 1;
+            $soalTempArr[$x] = $x + 1;
+        }
+        while ($totalArr) {
+            for ($x = 0; $x <= $totalArr; $x++) {
+                $totalArr = $totalArr - $x;
+                $z = $soalArr[$totalArr];
+                $randID = $this->randomID($totalArr);
+                $p = $soalArr[$randID];
+                $soalArr[$randID] = $z;
+                $soalArr[$totalArr] =  $p;
+            }
+        }
+
+        session()->set('noId', 1);
+        session()->set('soalArr', $soalArr);
+        session()->set('jawabanArr', $jawabanArr);
 
         $data = [
-            'title' => "PAIT @ PPNI",
+            'title' => "Latihan Soal PAIT",
             'soalIdx' => $soalArr,
             'soal' => $soal,
             'total' => $totalSoal
         ];
+
         return view('exercise/latihan', $data);
     }
 

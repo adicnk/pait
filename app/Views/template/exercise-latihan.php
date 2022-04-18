@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="../favicon.ico">
     <title>
-        PAIT - PPNI
+        <?= $title ?>
     </title>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -74,6 +74,57 @@
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="./material_assets/js/material-dashboard.min.js?v=3.0.2"></script>
 
+    <script>
+        function pilihan(value) {
+            $option1 = document.getElementById("jawabanA");
+            $option2 = document.getElementById("jawabanB");
+            $option3 = document.getElementById("jawabanC");
+            $option4 = document.getElementById("jawabanD");
+            $option5 = document.getElementById("jawabanE");
+            switch (value) {
+                case 1:
+                    if ($option1.checked) {
+                        $option2.checked = false;
+                        $option3.checked = false;
+                        $option4.checked = false;
+                        $option5.checked = false;
+                    }
+                    break;
+                case 2:
+                    if ($option2.checked) {
+                        $option1.checked = false;
+                        $option3.checked = false;
+                        $option4.checked = false;
+                        $option5.checked = false;
+                    }
+                    break;
+                case 3:
+                    if ($option3.checked) {
+                        $option1.checked = false;
+                        $option2.checked = false;
+                        $option4.checked = false;
+                        $option5.checked = false;
+                    }
+                    break;
+                case 4:
+                    if ($option4.checked) {
+                        $option1.checked = false;
+                        $option2.checked = false;
+                        $option3.checked = false;
+                        $option5.checked = false;
+                    }
+                    break;
+                case 5:
+                    if ($option5.checked) {
+                        $option1.checked = false;
+                        $option2.checked = false;
+                        $option3.checked = false;
+                        $option4.checked = false;
+                    }
+                    break;
+            }
+        }
+    </script>
 </body>
 
 </html>
