@@ -1,0 +1,10 @@
+CRITICAL - 2022-04-19 13:38:26 --> syntax error, unexpected token "}", expecting ";"
+#0 C:\xampp\htdocs\pait\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\pait\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Soal...')
+#2 C:\xampp\htdocs\pait\app\Controllers\Exercise.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Soal...')
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(809): App\Controllers\Exercise->__construct()
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#5 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
