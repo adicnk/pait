@@ -84,10 +84,10 @@
 
                 $('.js-score').kumaGauge({
                     // value: Math.floor((Math.random() * 99) + 1)
-                    value: <?= 50 ?>
+                    value: <?= $score ?>
                 });
 
-                if (<?= 50 ?> < <?= 60 ?>) {
+                if (<?= $score ?> < <?= $nilaiMin ?>) {
                     $("#score-desc").html("ANDA TIDAK LULUS");
                 } else {
                     $("#score-desc").html("ANDA LULUS");

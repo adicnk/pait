@@ -20,4 +20,13 @@ class ConfigMDL extends Model
             return $q['total_soal'];
         }
     }
+
+    public function nilaiMinimum()
+    {
+        $this->where(['id' => 1]);
+        $query = $this->findAll();
+        foreach ($query as $q) {
+            return $q['nilai_min'];
+        }
+    }
 }

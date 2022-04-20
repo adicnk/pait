@@ -22,6 +22,7 @@ class Latihan extends BaseController
     {
         $soal = $this->soalModel->isChoosen();
         $totalSoal = $this->configModel->totalSoal();
+        $nilaiMin = $this->configModel->nilaiMinimum();
 
         $soalArr = session()->get('soalArr');
 
@@ -65,14 +66,14 @@ class Latihan extends BaseController
                 $answer[$x] == null ? $kosong++ : $diisi++;
             }
             $score = $benar / $totalSoal * 100;
-            d($score);
             $data = [
                 'title' => "Score Latihan Soal PAiT",
                 'benar' => $benar,
                 'salah' => $salah,
                 'diisi' => $diisi,
                 'kosong' => $kosong,
-                'score' => $score
+                'score' => $score,
+                'nilaiMin' => $nilaiMin
             ];
             return view('exercise/selesai', $data);
         }
