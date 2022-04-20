@@ -5,17 +5,19 @@ namespace App\Controllers;
 use App\Models\ConfigMDL;
 use App\Models\SoalMDL;
 use App\Models\JawabanMDL;
+use App\Models\LatihanMDL;
 
 class Latihan extends BaseController
 {
 
-    protected $soalModel, $configModel, $jawabanModel;
+    protected $soalModel, $configModel, $jawabanModel, $latihanModel;
 
     public function __construct()
     {
         $this->soalModel = new SoalMDL();
         $this->jawabanModel = new JawabanMDL();
         $this->configModel = new ConfigMDL();
+        $this->latihanModel = new LatihanMDL();
     }
 
     public function index()
@@ -66,6 +68,13 @@ class Latihan extends BaseController
                 $answer[$x] == null ? $kosong++ : $diisi++;
             }
             $score = $benar / $totalSoal * 100;
+
+            $latihanID = session()->get('latihanID');
+            $this->latihanModel->save([
+                'id' => $latihanID,
+                'score' => $score
+            ]);
+
             $data = [
                 'title' => "Score Latihan Soal PAiT",
                 'benar' => $benar,

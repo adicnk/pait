@@ -5,26 +5,43 @@ namespace App\Controllers;
 use App\Models\ConfigMDL;
 use App\Models\SoalMDL;
 use App\Models\JawabanMDL;
+use App\Models\LatihanMDL;
+
+use CodeIgniter\I18n\Time;
 
 class Exercise extends BaseController
 {
 
-    protected $soalModel, $configModel, $jawabanModel;
+    protected $soalModel, $configModel, $jawabanModel, $latihanModel;
 
     public function __construct()
     {
         $this->soalModel = new SoalMDL();
         $this->jawabanModel = new JawabanMDL();
         $this->configModel = new ConfigMDL();
+        $this->latihanModel = new LatihanMDL();
     }
 
     public function index()
     {
+        $data = [
+            'title' => "Dashboard PAIT",
+        ];
+
         return view('exercise/dashboard');
     }
 
     public function soal()
     {
+        //for dashboard exercise
+        $this->latihanModel->save([
+            'date' =>  new Time('now', 'Asia/Jakarta')
+        ]);
+        //ID terakhir yg di buat di tabel soal
+        $db      = \Config\Database::connect();
+        $latihanID = $db->insertID();
+        session()->set('latihanID', $latihanID);
+
         $soal = $this->soalModel->isChoosen();
         $totalSoal = $this->configModel->totalSoal();
         $no = $this->request->getVar('id');

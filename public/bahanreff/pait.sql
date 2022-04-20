@@ -21,6 +21,7 @@ USE `pait`;
 CREATE TABLE IF NOT EXISTS `config` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `total_soal` int(11) DEFAULT NULL,
+  `nilai_min` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -28,8 +29,8 @@ CREATE TABLE IF NOT EXISTS `config` (
 
 -- Dumping data for table pait.config: ~1 rows (approximately)
 /*!40000 ALTER TABLE `config` DISABLE KEYS */;
-INSERT INTO `config` (`id`, `total_soal`, `created_at`, `updated_at`) VALUES
-	(1, 5, '2022-04-14 08:20:48', '2022-04-14 08:20:49');
+INSERT INTO `config` (`id`, `total_soal`, `nilai_min`, `created_at`, `updated_at`) VALUES
+	(1, 5, 60, '2022-04-14 08:20:48', '2022-04-14 08:20:49');
 /*!40000 ALTER TABLE `config` ENABLE KEYS */;
 
 -- Dumping structure for table pait.jawaban
@@ -95,6 +96,23 @@ INSERT INTO `kategori_soal` (`id`, `kname`, `jumlah_soal`, `created_at`, `update
 	(4, 'Pemeriksaan Perut', 2, '2022-04-14 09:12:18', '2022-04-16 18:14:36'),
 	(5, 'Pemeriksaan Genitalia dan Rectum', 1, '2022-04-14 09:12:45', '2022-04-16 18:14:36');
 /*!40000 ALTER TABLE `kategori_soal` ENABLE KEYS */;
+
+-- Dumping structure for table pait.latihan
+CREATE TABLE IF NOT EXISTS `latihan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
+  `score` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table pait.latihan: ~0 rows (approximately)
+/*!40000 ALTER TABLE `latihan` DISABLE KEYS */;
+INSERT INTO `latihan` (`id`, `user_id`, `date`, `score`, `created_at`, `updated_at`) VALUES
+	(1, 1, '2022-04-20 13:18:03', 40, '2022-04-20 13:18:03', '2022-04-20 13:18:31');
+/*!40000 ALTER TABLE `latihan` ENABLE KEYS */;
 
 -- Dumping structure for table pait.login
 CREATE TABLE IF NOT EXISTS `login` (
