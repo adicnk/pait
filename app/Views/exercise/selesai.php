@@ -13,7 +13,7 @@
                     </div>
                     <div class="text-end pt-1">
                         <p class="text-sm mb-0 text-capitalize">Jawaban Benar</p>
-                        <h4 class="mb-0">2</h4>
+                        <h4 class="mb-0"><?= $benar; ?></h4>
                     </div>
                 </div>
                 <div class="card-footer p-3">
@@ -27,8 +27,8 @@
                         <i class="material-icons opacity-10">highlight_off</i>
                     </div>
                     <div class="text-end pt-1">
-                        <p class="text-sm mb-0 text-capitalize"> Jawaban Salah</p>
-                        <h4 class="mb-0">44</h4>
+                        <p class="text-sm mb-0 text-capitalize">Jawaban Salah</p>
+                        <h4 class="mb-0"><?= $salah ?></h4>
                     </div>
                 </div>
                 <div class="card-footer p-3">
@@ -43,7 +43,7 @@
                     </div>
                     <div class="text-end pt-1">
                         <p class="text-sm mb-0 text-capitalize">Soal Dijawab</p>
-                        <h4 class="mb-0">72</h4>
+                        <h4 class="mb-0"> <?= $diisi ?></h4>
                     </div>
                 </div>
                 <div class="card-footer p-3">
@@ -58,7 +58,7 @@
                     </div>
                     <div class="text-end pt-1">
                         <p class="text-sm mb-0 text-capitalize">Jawaban Kosong</p>
-                        <h4 class="mb-0">68</h4>
+                        <h4 class="mb-0"> <?= $kosong ?></h4>
                     </div>
                 </div>
                 <div class="card-footer p-3">

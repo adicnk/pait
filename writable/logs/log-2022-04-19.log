@@ -8,3 +8,127 @@ CRITICAL - 2022-04-19 13:38:26 --> syntax error, unexpected token "}", expecting
 #6 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #7 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #8 {main}
+CRITICAL - 2022-04-19 13:42:22 --> Trying to access array offset on value of type int
+#0 C:\xampp\htdocs\pait\app\Controllers\Latihan.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 60)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Latihan->index()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-19 13:54:57 --> Trying to access array offset on value of type int
+#0 C:\xampp\htdocs\pait\app\Controllers\Latihan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 65)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Latihan->index()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-19 13:58:19 --> Trying to access array offset on value of type int
+#0 C:\xampp\htdocs\pait\app\Controllers\Latihan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 65)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Latihan->index()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-19 13:59:03 --> Trying to access array offset on value of type int
+#0 C:\xampp\htdocs\pait\app\Controllers\Latihan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 65)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Latihan->index()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-19 13:59:43 --> Trying to access array offset on value of type int
+#0 C:\xampp\htdocs\pait\app\Controllers\Latihan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 65)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Latihan->index()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-19 14:00:08 --> syntax error, unexpected token ")"
+#0 C:\xampp\htdocs\pait\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('latihan')
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('latihan')
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-19 14:04:27 --> Trying to access array offset on value of type int
+#0 C:\xampp\htdocs\pait\app\Controllers\Latihan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 65)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Latihan->index()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-19 14:05:05 --> Trying to access array offset on value of type int
+#0 C:\xampp\htdocs\pait\app\Controllers\Latihan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 65)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Latihan->index()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-04-19 14:08:01 --> Column 'id' in where clause is ambiguous
+CRITICAL - 2022-04-19 14:08:01 --> Column 'id' in where clause is ambiguous
+#0 C:\xampp\htdocs\pait\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\pait\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\pait\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\pait\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\pait\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pait\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\pait\app\Models\SoalMDL.php(55): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\pait\app\Controllers\Latihan.php(65): App\Models\SoalMDL->searchJawabanBenar('5', 5)
+#8 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Latihan->index()
+#9 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#10 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-04-19 23:10:09 --> Undefined variable $benar
+#0 C:\xampp\htdocs\pait\app\Views\exercise\selesai.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 15)
+#1 C:\xampp\htdocs\pait\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\pait\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\pait\system\Common.php(1089): CodeIgniter\View\View->render('exercise/selesa...', Array, true)
+#4 C:\xampp\htdocs\pait\app\Controllers\Latihan.php(75): view('exercise/selesa...')
+#5 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Latihan->index()
+#6 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#7 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-04-19 23:21:19 --> Trying to access array offset on value of type int
+#0 C:\xampp\htdocs\pait\app\Controllers\Latihan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 65)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Latihan->index()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-19 23:22:20 --> Trying to access array offset on value of type int
+#0 C:\xampp\htdocs\pait\app\Controllers\Latihan.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 66)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Latihan->index()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-19 23:22:41 --> Trying to access array offset on value of type int
+#0 C:\xampp\htdocs\pait\app\Controllers\Latihan.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 66)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Latihan->index()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-19 23:23:21 --> Trying to access array offset on value of type int
+#0 C:\xampp\htdocs\pait\app\Controllers\Latihan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 65)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Latihan->index()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

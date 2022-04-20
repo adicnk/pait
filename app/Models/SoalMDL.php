@@ -50,7 +50,7 @@ class SoalMDL extends Model
 
     public function searchJawabanBenar($id, $value)
     {
-        $this->where(['id' => $id]);
+        $this->where(['idx' => $id]);
         $this->join('jawaban', 'jawaban.soal_id = soal.id');
         $query =  $this->findAll();
         foreach ($query as $q) {

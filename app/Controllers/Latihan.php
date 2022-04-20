@@ -55,11 +55,26 @@ class Latihan extends BaseController
 
         // $no == $totalSoal + 1 ? dd(session()->get('jawabanArr')) : "";
         if ($no == $totalSoal + 1) {
-            $idx = 0;
-            foreach ($soalArr as $s) {
-                $this->soalModel->searchJawabanBenar($s[$idx]);
+            $answer = session()->get('jawabanArr');
+            $benar = 0;
+            $salah = 0;
+            $diisi = 0;
+            $kosong = 0;
+            for ($x = 0; $x < $totalSoal; $x++) {
+                $this->soalModel->searchJawabanBenar($soalArr[$x], $answer[$x]) ? $benar++ : $salah++;
+                $answer[$x] == null ? $kosong++ : $diisi++;
             }
-            return view('exercise/selesai');
+            $score = $benar / $totalSoal * 100;
+            d($score);
+            $data = [
+                'title' => "Score Latihan Soal PAiT",
+                'benar' => $benar,
+                'salah' => $salah,
+                'diisi' => $diisi,
+                'kosong' => $kosong,
+                'score' => $score
+            ];
+            return view('exercise/selesai', $data);
         }
 
         $data = [
