@@ -25,10 +25,10 @@ class Exercise extends BaseController
     public function index()
     {
         $data = [
-            'title' => "Dashboard PAIT",
+            'title' => "Dashboard PAIT"
         ];
 
-        return view('exercise/dashboard');
+        return view('exercise/dashboard', $data);
     }
 
     public function soal()
