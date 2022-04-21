@@ -102,16 +102,22 @@ CREATE TABLE IF NOT EXISTS `latihan` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
   `date` datetime DEFAULT NULL,
+  `benar` int(11) DEFAULT NULL,
+  `salah` int(11) DEFAULT NULL,
   `score` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table pait.latihan: ~0 rows (approximately)
 /*!40000 ALTER TABLE `latihan` DISABLE KEYS */;
-INSERT INTO `latihan` (`id`, `user_id`, `date`, `score`, `created_at`, `updated_at`) VALUES
-	(1, 1, '2022-04-20 13:18:03', 40, '2022-04-20 13:18:03', '2022-04-20 13:18:31');
+INSERT INTO `latihan` (`id`, `user_id`, `date`, `benar`, `salah`, `score`, `created_at`, `updated_at`) VALUES
+	(1, 1, '2022-04-21 21:59:34', 5, 0, 100, '2022-04-21 21:59:34', '2022-04-21 22:00:00'),
+	(2, 1, '2022-04-21 22:00:33', 4, 1, 80, '2022-04-21 22:00:33', '2022-04-21 22:01:02'),
+	(3, 1, '2022-04-21 23:31:22', 5, 0, 100, '2022-04-21 23:31:22', '2022-04-21 23:31:54'),
+	(4, 1, '2022-04-21 23:47:55', 1, 4, 20, '2022-04-21 23:47:55', '2022-04-21 23:48:19'),
+	(5, 1, '2022-04-21 23:48:58', 0, 5, 0, '2022-04-21 23:48:58', '2022-04-21 23:49:13');
 /*!40000 ALTER TABLE `latihan` ENABLE KEYS */;
 
 -- Dumping structure for table pait.login
