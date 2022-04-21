@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `jawaban` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table pait.jawaban: ~5 rows (approximately)
 /*!40000 ALTER TABLE `jawaban` DISABLE KEYS */;
@@ -90,11 +90,11 @@ CREATE TABLE IF NOT EXISTS `kategori_soal` (
 -- Dumping data for table pait.kategori_soal: ~4 rows (approximately)
 /*!40000 ALTER TABLE `kategori_soal` DISABLE KEYS */;
 INSERT INTO `kategori_soal` (`id`, `kname`, `jumlah_soal`, `created_at`, `updated_at`) VALUES
-	(1, 'Pemeriksaan Ekstremitas', 2, '2022-04-14 09:11:00', '2022-04-16 18:14:36'),
-	(2, 'Pemeriksaan Kepala dan Leher', 1, '2022-04-14 09:11:58', '2022-04-16 18:14:36'),
-	(3, 'Pemeriksaan Dada', 1, '2022-04-14 09:12:00', '2022-04-16 18:14:36'),
-	(4, 'Pemeriksaan Perut', 2, '2022-04-14 09:12:18', '2022-04-16 18:14:36'),
-	(5, 'Pemeriksaan Genitalia dan Rectum', 1, '2022-04-14 09:12:45', '2022-04-16 18:14:36');
+	(1, 'Pemeriksaan Ekstremitas', 2, '2022-04-14 09:11:00', '2022-04-22 05:20:44'),
+	(2, 'Pemeriksaan Kepala dan Leher', 2, '2022-04-14 09:11:58', '2022-04-22 05:20:44'),
+	(3, 'Pemeriksaan Dada', 1, '2022-04-14 09:12:00', '2022-04-22 05:20:44'),
+	(4, 'Pemeriksaan Perut', 2, '2022-04-14 09:12:18', '2022-04-22 05:20:44'),
+	(5, 'Pemeriksaan Genitalia dan Rectum', 1, '2022-04-14 09:12:45', '2022-04-22 05:20:44');
 /*!40000 ALTER TABLE `kategori_soal` ENABLE KEYS */;
 
 -- Dumping structure for table pait.latihan
@@ -108,16 +108,10 @@ CREATE TABLE IF NOT EXISTS `latihan` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table pait.latihan: ~0 rows (approximately)
+-- Dumping data for table pait.latihan: ~6 rows (approximately)
 /*!40000 ALTER TABLE `latihan` DISABLE KEYS */;
-INSERT INTO `latihan` (`id`, `user_id`, `date`, `benar`, `salah`, `score`, `created_at`, `updated_at`) VALUES
-	(1, 1, '2022-04-21 21:59:34', 5, 0, 100, '2022-04-21 21:59:34', '2022-04-21 22:00:00'),
-	(2, 1, '2022-04-21 22:00:33', 4, 1, 80, '2022-04-21 22:00:33', '2022-04-21 22:01:02'),
-	(3, 1, '2022-04-21 23:31:22', 5, 0, 100, '2022-04-21 23:31:22', '2022-04-21 23:31:54'),
-	(4, 1, '2022-04-21 23:47:55', 1, 4, 20, '2022-04-21 23:47:55', '2022-04-21 23:48:19'),
-	(5, 1, '2022-04-21 23:48:58', 0, 5, 0, '2022-04-21 23:48:58', '2022-04-21 23:49:13');
 /*!40000 ALTER TABLE `latihan` ENABLE KEYS */;
 
 -- Dumping structure for table pait.login
@@ -170,7 +164,7 @@ CREATE TABLE IF NOT EXISTS `soal` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table pait.soal: ~6 rows (approximately)
 /*!40000 ALTER TABLE `soal` DISABLE KEYS */;
