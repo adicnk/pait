@@ -35,9 +35,11 @@ class Exercise extends BaseController
 
     public function soal()
     {
+        $newTime = new Time('now', 'Asia/Jakarta');
+
         //for dashboard exercise
         $this->latihanModel->save([
-            'date' =>  new Time('now', 'Asia/Jakarta'),
+            'date' => $newTime,
             'user_id' => session()->get('userID')
         ]);
         //ID terakhir yg di buat di tabel soal
@@ -140,6 +142,7 @@ class Exercise extends BaseController
         } else {
             $persenBenar = null;
             $persenSalah = null;
+            $persenScore = null;
         }
 
         $cRec = $this->latihanModel->findAllID($userID);
