@@ -23,7 +23,7 @@
         <div class="card-block mt-3">
             <div class="card-text text-center">
 
-                <form method="post" action="../submit/soal">
+                <form method="post" action="../submit/soal" enctype="multipart/form-data">
                     <?= csrf_field() ?>
 
                     <div class="form-group">

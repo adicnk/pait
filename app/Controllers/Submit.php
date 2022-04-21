@@ -92,20 +92,32 @@ class Submit extends BaseController
     public function soal()
     {
         $isPicture = $this->request->getVar('isPicture');
-        $fileGambar = $this->request->getVar('fileGambar');
+        $fileGambar = $this->request->getFile('fileGambar');
         $isAudio = $this->request->getVar('isAudio');
-        $fileAudio = $this->request->getVar('fileAudio');
+        $fileAudio = $this->request->getFile('fileAudio');
         $isChoosen = $this->request->getVar('isChoosen');
 
-        //dd($fileGambar . '  ' . $fileAudio);
+        $namaGambar = null;
+        $namaSuara = null;
+
+        if ($fileGambar) :
+            // Pindahkan file ke folder gambar
+            $fileGambar->move('img');
+            // Ambil nama file
+            $namaGambar = $fileGambar->getName();
+        endif;
+        if ($fileAudio) :
+            $fileAudio->move('aud');
+            $namaSuara = $fileAudio->getName();
+        endif;
 
         $this->soalModel->save([
             'kategori_soal_id' => $this->request->getVar('kategoriSoal'),
             'name' => $this->request->getVar('isiSoal'),
             'is_picture' => $isPicture == "on" ? 1 : null,
-            'picture_url' => $fileGambar,
+            'picture_url' => $namaGambar,
             'is_audio' => $isAudio == "on" ? 1 : null,
-            'audio_url' => $fileAudio,
+            'audio_url' => $namaSuara,
             'is_choosen' => $isChoosen == "on" ? 1 : null
         ]);
 

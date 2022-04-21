@@ -20,3 +20,18 @@ CRITICAL - 2022-04-22 04:33:44 --> Undefined variable $persenScore
 #4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+CRITICAL - 2022-04-22 05:15:29 --> Call to a member function move() on null
+#0 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-22 05:18:13 --> Undefined variable $namaSuara
+#0 C:\xampp\htdocs\pait\app\Controllers\Submit.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 117)
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Submit->soal()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Submit))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
