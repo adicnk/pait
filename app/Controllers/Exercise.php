@@ -132,14 +132,37 @@ class Exercise extends BaseController
 
         if ($totalLatihan > 1) {
             $benarBefore = $this->latihanModel->benarBefore($userID);
-            $persenBenar = ($benar - $benarBefore) / 100;
+            $persenBenar = ($benar - $benarBefore);
             $salahBefore = $this->latihanModel->salahBefore($userID);
-            $persenSalah = ($salah - $salahBefore) / 100;
+            $persenSalah = ($salah - $salahBefore);
             $scoreBefore = $this->latihanModel->scoreBefore($userID);
-            $persenScore = ($score - $scoreBefore) / 100;
+            $persenScore = ($score - $scoreBefore);
         } else {
             $persenBenar = null;
             $persenSalah = null;
+        }
+
+        $cRec = $this->latihanModel->findAllID($userID);
+        $cid = 1;
+        $labelChart = null;
+        $dataChart = null;
+        foreach ($cRec as $c) {
+            // $dataChart = $dataChart . "-" . $c['score'];
+            if ($cid == 1) {
+                $labelChart = '"' . substr($c['date'], 0, 10) . '",';
+                $dataChart = $c['score'] . ',';
+            }
+            if ($cid > 1) {
+                if ($cid == $totalLatihan) {
+                    $labelChart = $labelChart . '"' . substr($c['date'], 0, 10) . '"';
+                    $dataChart = $dataChart . $c['score'];
+                } else {
+                    $labelChart = $labelChart . '"' . substr($c['date'], 0, 10) . '",';
+                    $dataChart = $dataChart . $c['score'] . ",";
+                }
+            } else {
+            }
+            $cid++;
         }
 
         $data = [
@@ -148,10 +171,12 @@ class Exercise extends BaseController
             'lastLatihan' => $this->latihanModel->lastLatihan($userID),
             'benar' => $benar,
             'persenBenar' => $persenBenar,
+            'salah' => $this->latihanModel->lastSalah($userID),
             'persenSalah' => $persenSalah,
             'lastScore' => $score,
             'persenScore' => $persenScore,
-            'salah' => $this->latihanModel->lastSalah($userID)
+            'labelChart' => $labelChart,
+            'dataChart' => $dataChart
         ];
         return view('exercise/dashboard', $data);
     }

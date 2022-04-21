@@ -12,6 +12,12 @@ class LatihanMDL extends Model
     // Field yang boleh diisi waktu saving data ** harus didefinisikan dulu **
     protected $allowedFields = ['date', 'user_id', 'benar', 'salah', 'score'];
 
+    public function findAllID($id)
+    {
+        $this->where(['user_id' => $id]);
+        return $this->findAll();
+    }
+
     public function setDateLatihan($id, $value)
     {
         $this->where(['id' => $id]);

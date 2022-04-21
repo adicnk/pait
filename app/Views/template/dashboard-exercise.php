@@ -135,9 +135,9 @@
         new Chart(ctx2, {
             type: "line",
             data: {
-                labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                labels: [<?= $labelChart ?>],
                 datasets: [{
-                    label: "Mobile apps",
+                    label: "Nilai",
                     tension: 0,
                     borderWidth: 0,
                     pointRadius: 5,
@@ -148,7 +148,7 @@
                     borderWidth: 4,
                     backgroundColor: "transparent",
                     fill: true,
-                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                    data: [<?= $dataChart ?>],
                     maxBarThickness: 6
 
                 }],
