@@ -24,4 +24,13 @@ class Login extends BaseController
         ];
         return view('admin/login', $data);
     }
+
+    public function latihan()
+    {
+        $data = [
+            'title' => "Login PAIT @ PPNI",
+            'user' => $this->userModel->searchAdmin()
+        ];
+        return view('exercise/login', $data);
+    }
 }

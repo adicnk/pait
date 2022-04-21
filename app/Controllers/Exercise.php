@@ -28,7 +28,7 @@ class Exercise extends BaseController
             'title' => "Dashboard PAIT"
         ];
 
-        return view('exercise/dashboard', $data);
+        return view('exercise/login', $data);
     }
 
     public function soal()
