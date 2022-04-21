@@ -100,17 +100,6 @@ class Admin extends BaseController
                     return view('admin/dashboard', $data);
                     break;
             }
-        } else {
-            $data = [
-                'title'   => "Dashboard",
-                'totalAdmin' => $this->userModel->countAdmin(),
-                'totalMahasiswa' => $this->userModel->countMahasiswa(),
-                'totalStaff' => $this->userModel->countStaff(),
-                'totalSoal' => $this->soalModel->countAll(),
-                'chartValueData' => $this->chartPieModel->getTotalSoal(),
-                'chartLabelData' => $this->chartPieModel->getLabelSoal()
-            ];
-            return view('admin/dashboard', $data);
         }
     }
 
@@ -196,10 +185,9 @@ class Admin extends BaseController
                 'chartValueData' => $this->chartPieModel->getTotalSoal(),
                 'chartLabelData' => $this->chartPieModel->getLabelSoal()
             ];
-            return view('form/getdashboard', $data);
 
             if ($loginStatus) {
-                return view('admin/dashboard', $data);
+                return view('form/getdashboard', $data);
             } else {
                 $data = [
                     'title' => 'Login Status',

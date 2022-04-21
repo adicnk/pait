@@ -72,7 +72,9 @@ class Latihan extends BaseController
             $latihanID = session()->get('latihanID');
             $this->latihanModel->save([
                 'id' => $latihanID,
-                'score' => $score
+                'score' => $score,
+                'benar' => $benar,
+                'salah' => $salah
             ]);
 
             $data = [

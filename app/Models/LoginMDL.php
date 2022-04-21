@@ -50,6 +50,19 @@ class LoginMDL extends Model
         }
     }
 
+    public function userID($username, $password)
+    {
+        $this->like('username', $username);
+        $this->like('password', $password);
+        $query = $this->findAll();
+        foreach ($query as $qry) {
+            if ($qry) {
+                session()->set('userID', $qry['user_id']);
+            }
+            return;
+        }
+    }
+
     public function index()
     {
         return $this->findAll();

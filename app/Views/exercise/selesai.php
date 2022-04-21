@@ -68,7 +68,7 @@
     </div>
 
     <div class="card o-hidden border-0 shadow-lg text-center mt-5">
-        <h1 class="card-title mt-3">NILAI AKHIR</h1>
+        <h1 class="card-title mt-3">NILAI AKHIR <?= $score ?></h1>
         <h3 class="card-title">
         </h3>
         <div class="card-block mt-3 text-center">
@@ -80,7 +80,7 @@
 
             <div class="row mt-3 mb-3">
                 <div class="col md-6">
-                    <a href="../../" class="btn btn-success mt-3 ml-4 font-weight-bolder">Kembali ke Dashboard</a>
+                    <a href="../../dashboard" class="btn btn-success mt-3 ml-4 font-weight-bolder">Kembali ke Dashboard</a>
                 </div>
             </div>
         </div>

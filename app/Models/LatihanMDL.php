@@ -10,13 +10,117 @@ class LatihanMDL extends Model
     protected $useTimestamps = true;
 
     // Field yang boleh diisi waktu saving data ** harus didefinisikan dulu **
-    protected $allowedFields = ['date', 'score'];
+    protected $allowedFields = ['date', 'user_id', 'benar', 'salah', 'score'];
 
     public function setDateLatihan($id, $value)
     {
         $this->where(['id' => $id]);
         $this->set('date', $value);
         $this->update();
+        return;
+    }
+
+    public function countLatihan($id)
+    {
+        $this->where(['user_id' => $id]);
+        return $this->countAll();
+    }
+
+    public function lastLatihan($id)
+    {
+        $this->where(['user_id' => $id]);
+        $this->orderBy('id', 'DESC');
+        $query = $this->findAll();
+        foreach ($query as $q) {
+            if ($q['id'] == 1) {
+                return $q['date'];
+            }
+        }
+        return;
+    }
+
+    public function lastBenar($id)
+    {
+        $this->where(['user_id' => $id]);
+        $this->orderBy('id', 'DESC');
+        $query = $this->findAll();
+        $idx = 1;
+        foreach ($query as $q) {
+            if ($idx == 1) {
+                return $q['benar'];
+            }
+        }
+        return;
+    }
+    public function benarBefore($id)
+    {
+        $this->where(['user_id' => $id]);
+        $this->orderBy('id', 'DESC');
+        $query = $this->findAll();
+        // dd($query);
+        $idx = 1;
+        foreach ($query as $q) {
+            if ($idx == 2) {
+                return $q['benar'];
+            }
+            $idx++;
+        }
+        return;
+    }
+
+    public function lastSalah($id)
+    {
+        $this->where(['user_id' => $id]);
+        $this->orderBy('id', 'DESC');
+        $query = $this->findAll();
+        $idx = 1;
+        foreach ($query as $q) {
+            if ($idx == 1) {
+                return $q['salah'];
+            }
+        }
+        return;
+    }
+    public function salahBefore($id)
+    {
+        $this->where(['user_id' => $id]);
+        $this->orderBy('id', 'DESC');
+        $query = $this->findAll();
+        $idx = 1;
+        foreach ($query as $q) {
+            if ($idx == 2) {
+                return $q['salah'];
+            }
+            $idx++;
+        }
+        return;
+    }
+
+    public function lastScore($id)
+    {
+        $this->where(['user_id' => $id]);
+        $this->orderBy('id', 'DESC');
+        $query = $this->findAll();
+        $idx = 1;
+        foreach ($query as $q) {
+            if ($idx == 1) {
+                return $q['score'];
+            }
+        }
+        return;
+    }
+    public function scoreBefore($id)
+    {
+        $this->where(['user_id' => $id]);
+        $this->orderBy('id', 'DESC');
+        $query = $this->findAll();
+        $idx = 1;
+        foreach ($query as $q) {
+            if ($idx == 2) {
+                return $q['score'];
+            }
+            $idx++;
+        }
         return;
     }
 }

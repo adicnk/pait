@@ -6,13 +6,14 @@ use App\Models\ConfigMDL;
 use App\Models\SoalMDL;
 use App\Models\JawabanMDL;
 use App\Models\LatihanMDL;
+use App\Models\LoginMDL;
 
 use CodeIgniter\I18n\Time;
 
 class Exercise extends BaseController
 {
 
-    protected $soalModel, $configModel, $jawabanModel, $latihanModel;
+    protected $soalModel, $configModel, $jawabanModel, $latihanModel, $loginModel;
 
     public function __construct()
     {
@@ -20,12 +21,13 @@ class Exercise extends BaseController
         $this->jawabanModel = new JawabanMDL();
         $this->configModel = new ConfigMDL();
         $this->latihanModel = new LatihanMDL();
+        $this->loginModel = new LoginMDL();
     }
 
     public function index()
     {
         $data = [
-            'title' => "Dashboard PAIT"
+            'title' => "PAIT @ PPNI"
         ];
 
         return view('exercise/login', $data);
@@ -35,7 +37,8 @@ class Exercise extends BaseController
     {
         //for dashboard exercise
         $this->latihanModel->save([
-            'date' =>  new Time('now', 'Asia/Jakarta')
+            'date' =>  new Time('now', 'Asia/Jakarta'),
+            'user_id' => session()->get('userID')
         ]);
         //ID terakhir yg di buat di tabel soal
         $db      = \Config\Database::connect();
@@ -87,5 +90,69 @@ class Exercise extends BaseController
     public function randomID($total)
     {
         return rand(1, $total);
+    }
+
+    public function login()
+    {
+        $usr = $this->request->getVar('username');
+        $pwd = $this->request->getVar('password');
+
+        if (!$usr or !$pwd) {
+            $data = [
+                'title' => 'Login Status',
+                'login' => $this->loginModel->index()
+            ];
+            return view('exercise/relogin', $data);
+        } else {
+            $loginStatus = $this->loginModel->statusLogin($usr, $pwd);
+
+            if ($loginStatus) {
+                $this->loginModel->userID($usr, $pwd);
+                $data = [
+                    'title'   => "Dashboard"
+                ];
+                return view('exercise/getdashboard', $data);
+            } else {
+                $data = [
+                    'title' => 'Login Status',
+                    'login' => $this->loginModel->index()
+                ];
+                return view('exercise/relogin', $data);
+            }
+        }
+    }
+
+    public function dashboard()
+    {
+        $userID = session()->get('userID');
+        $totalLatihan = $this->latihanModel->countLatihan($userID);
+        $benar = $this->latihanModel->lastBenar($userID);
+        $salah = $this->latihanModel->lastSalah($userID);
+        $score = $this->latihanModel->lastScore($userID);
+
+        if ($totalLatihan > 1) {
+            $benarBefore = $this->latihanModel->benarBefore($userID);
+            $persenBenar = ($benar - $benarBefore) / 100;
+            $salahBefore = $this->latihanModel->salahBefore($userID);
+            $persenSalah = ($salah - $salahBefore) / 100;
+            $scoreBefore = $this->latihanModel->scoreBefore($userID);
+            $persenScore = ($score - $scoreBefore) / 100;
+        } else {
+            $persenBenar = null;
+            $persenSalah = null;
+        }
+
+        $data = [
+            'title' => "PAIT @ PPNI",
+            'totalLatihan' => $totalLatihan,
+            'lastLatihan' => $this->latihanModel->lastLatihan($userID),
+            'benar' => $benar,
+            'persenBenar' => $persenBenar,
+            'persenSalah' => $persenSalah,
+            'lastScore' => $score,
+            'persenScore' => $persenScore,
+            'salah' => $this->latihanModel->lastSalah($userID)
+        ];
+        return view('exercise/dashboard', $data);
     }
 }

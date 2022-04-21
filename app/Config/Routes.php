@@ -49,6 +49,7 @@ $routes->get('delete/soal/(:num)', 'Delete::soal/$1');
 
 // For Exercise Route
 $routes->get('/', 'Exercise::index');
+$routes->get('/dashboard', 'Exercise::dashboard');
 $routes->get('/latihan', 'Exercise::soal');
 $routes->get('/latihan/(:segment)', 'Exercise::selesai/$1');
 

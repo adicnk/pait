@@ -11,12 +11,16 @@
                 </div>
                 <div class="text-end pt-1">
                     <p class="text-sm mb-0 text-capitalize">Total Latihan</p>
-                    <h4 class="mb-0">2</h4>
+                    <?php if ($totalLatihan > 0) : ?>
+                        <h4 class="mb-0"> <?= $totalLatihan ?></h4>
+                    <?php endif ?>
                 </div>
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-3">
-                <p class="mb-0">terakhir latihan <span class="text-success text-sm font-weight-bolder">12/03/2022 </span></p>
+                <?php if ($totalLatihan > 0) : ?>
+                    <p class="mb-0">terakhir latihan <span class="text-success text-sm font-weight-bolder"> <?= substr($lastLatihan, 0, 10) ?></span></p>
+                <?php endif ?>
             </div>
         </div>
     </div>
@@ -28,12 +32,18 @@
                 </div>
                 <div class="text-end pt-1">
                     <p class="text-sm mb-0 text-capitalize"> Jawaban Benar</p>
-                    <h4 class="mb-0">44</h4>
+                    <h4 class="mb-0"> <?= $benar ?></h4>
                 </div>
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-3">
-                <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+3% </span>dari sebelumnya</p>
+                <?php if ($totalLatihan > 1) : ?>
+                    <?php if ($persenBenar < 1) { ?>
+                        <p class="mb-0"><span class="text-danger text-sm font-weight-bolder"> <?= $persenBenar . '%' ?></span> dari sebelumnya</p>
+                    <?php } else { ?>
+                        <p class="mb-0"><span class="text-success text-sm font-weight-bolder"> <?= $persenBenar . '%' ?></span>% dari sebelumnya</p>
+                    <?php } ?>
+                <?php endif ?>
             </div>
         </div>
     </div>
@@ -45,12 +55,18 @@
                 </div>
                 <div class="text-end pt-1">
                     <p class="text-sm mb-0 text-capitalize">Jawaban Salah</p>
-                    <h4 class="mb-0">72</h4>
+                    <h4 class="mb-0"> <?= $salah ?></h4>
                 </div>
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-3">
-                <p class="mb-0"><span class="text-danger text-sm font-weight-bolder">-2%</span> dari sebelumya</p>
+                <?php if ($totalLatihan > 1) : ?>
+                    <?php if ($persenSalah > 1) { ?>
+                        <p class="mb-0"><span class="text-danger text-sm font-weight-bolder"> <?= $persenSalah . '%' ?></span> dari sebelumnya</p>
+                    <?php } else { ?>
+                        <p class="mb-0"><span class="text-success text-sm font-weight-bolder"> +<?= $persenSalah . '%' ?></span>% dari sebelumnya</p>
+                    <?php } ?>
+                <?php endif ?>
             </div>
         </div>
     </div>
@@ -62,12 +78,18 @@
                 </div>
                 <div class="text-end pt-1">
                     <p class="text-sm mb-0 text-capitalize">Nilai</p>
-                    <h4 class="mb-0">68</h4>
+                    <h4 class="mb-0"> <?= $lastScore ?></h4>
                 </div>
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-3">
-                <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+15% </span>dari sebelumnya</p>
+                <?php if ($totalLatihan > 1) : ?>
+                    <?php if ($persenScore < 1) { ?>
+                        <p class="mb-0"><span class="text-success text-sm font-weight-bolder"> +<?= $persenScore . '%' ?></span>% dari sebelumnya</p>
+                    <?php } else { ?>
+                        <p class="mb-0"><span class="text-danger text-sm font-weight-bolder"> <?= $persenScore . '%' ?></span> dari sebelumnya</p>
+                    <?php } ?>
+                <?php endif ?>
             </div>
         </div>
     </div>
