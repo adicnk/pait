@@ -93,7 +93,7 @@ class Admin extends BaseController
                         'totalAdmin' => $this->userModel->countAdmin(),
                         'totalMahasiswa' => $this->userModel->countMahasiswa(),
                         'totalStaff' => $this->userModel->countStaff(),
-                        'totalSoal' => $this->soalModel->countAll(),
+                        'totalSoalUjian' => $this->soalModel->countAllUjian(),
                         'chartValueData' => $this->chartPieModel->getTotalSoal(),
                         'chartLabelData' => $this->chartPieModel->getLabelSoal()
                     ];

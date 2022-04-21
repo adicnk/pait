@@ -60,4 +60,10 @@ class SoalMDL extends Model
             return false;
         }
     }
+
+    public function countAllUjian()
+    {
+        $this->where(['is_choosen' => 1]);
+        return $this->countAllResults();
+    }
 }
