@@ -50,7 +50,7 @@
                 <tr>
                     <td style="text-align: center"><?= $index ?></td>
                     <td><?= substr($s['name'], 0, 110) . ' .....' ?></td>
-                    <td style="text-align: center"><input type="checkbox" <?= $s['is_choosen'] == 1 ? 'checked' : ''; ?>></td>
+                    <td style="text-align: center"><?= $s['is_choosen'] == 1 ? '<img src="../../icon/check.png" class="mr-2" />' : '<img src="../../icon/not_available.png" class="mr-2" />'; ?></td>
                     <td><?= $s['kategori_soal_id'] ? $s['kname'] : '-' ?></td>
                     <td style="text-align: center"><?= $s['is_picture'] == 1 ? '<img src="../../icon/check.png" class="mr-2" />' : '<img src="../../icon/not_available.png" class="mr-2" />' ?></td>
                     <td style="text-align: center"> <?= $s['is_audio'] == 1 ? '<img src="../../icon/check.png" class="mr-2" />' : '<img src="../../icon/not_available.png" class="mr-2" />'; ?></td>
