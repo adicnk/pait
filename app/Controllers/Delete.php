@@ -47,6 +47,16 @@ class Delete extends BaseController
 
     public function soal($id)
     {
+        $query = $this->soalModel->searchSoalID($id);
+
+        // Delete the file from folder
+        foreach ($query as $q) {
+            $fileGambar = $q['picture_url'];
+            $fileGambar ? unlink('img/' . $fileGambar) : '';
+            $fileSuara = $q['audio_url'];
+            $fileSuara ? unlink('aud/' . $fileSuara) : '';
+        }
+
         $this->soalModel->delSoal($id);
         $this->jawabanModel->delJawaban($id);
 
