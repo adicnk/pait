@@ -56,6 +56,9 @@ $routes->get('/latihan/(:segment)', 'Exercise::selesai/$1');
 //For Pembelajaran Route
 $routes->get('/belajar', 'Belajar::index');
 
+//For Profile Route
+$routes->get('/profile', 'Profile::index');
+
 
 /*
  * --------------------------------------------------------------------

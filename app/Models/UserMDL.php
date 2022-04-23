@@ -44,7 +44,8 @@ class UserMDL extends Model
     public function searhAdminID($id)
     {
         $this->table('user');
-        $this->where(['id' => $id]);
+        $this->where(['idx' => $id]);
+        $this->join('jurusan', 'jurusan.id = user.jurusan_id');
         // dd($this->findAll());
         return  $this->findAll();
     }

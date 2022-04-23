@@ -18,6 +18,21 @@ class LatihanMDL extends Model
         return $this->findAll();
     }
 
+    public function nilaiRatarata($id)
+    {
+        $this->where(['user_id' => $id]);
+        $bagi = $this->countAll();
+
+        $this->selectSum('score');
+        $scoreSum = $this->findAll();
+        foreach ($scoreSum as $q) {
+            if ($scoreSum) {
+                return $q['score'] / $bagi;
+            }
+            return;
+        }
+    }
+
     public function setDateLatihan($id, $value)
     {
         $this->where(['id' => $id]);
