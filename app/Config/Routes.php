@@ -53,6 +53,9 @@ $routes->get('/dashboard', 'Exercise::dashboard');
 $routes->get('/latihan', 'Exercise::soal');
 $routes->get('/latihan/(:segment)', 'Exercise::selesai/$1');
 
+//For Pembelajaran Route
+$routes->get('/belajar', 'Belajar::index');
+
 
 /*
  * --------------------------------------------------------------------
