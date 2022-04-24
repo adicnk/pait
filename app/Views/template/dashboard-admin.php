@@ -163,7 +163,7 @@
 
     <!-- Page level custom scripts -->
     <!-- <script src="admin_assets/js/demo/chart-area-demo.js"></script> -->
-    <script src="../admin_assets/js/chart-pie-demo.php"></script>
+    <script src="../admin_assets/js/chart-pie-demo.js"></script>
 
     <script type="text/javascript">
         var currentSessionValue = 1;

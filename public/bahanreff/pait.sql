@@ -108,10 +108,13 @@ CREATE TABLE IF NOT EXISTS `latihan` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table pait.latihan: ~0 rows (approximately)
 /*!40000 ALTER TABLE `latihan` DISABLE KEYS */;
+INSERT INTO `latihan` (`id`, `user_id`, `date`, `benar`, `salah`, `score`, `created_at`, `updated_at`) VALUES
+	(1, 1, '2022-04-24 01:44:14', 1, 4, 20, '2022-04-24 01:44:14', '2022-04-24 01:44:33'),
+	(2, 1, '2022-04-24 01:50:42', 2, 3, 40, '2022-04-24 01:50:42', '2022-04-24 01:51:13');
 /*!40000 ALTER TABLE `latihan` ENABLE KEYS */;
 
 -- Dumping structure for table pait.login
@@ -214,7 +217,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Dumping data for table pait.user: ~1 rows (approximately)
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` (`id`, `idx`, `role_id`, `status_id`, `jurusan_id`, `name`, `slug`, `email`, `nim`, `nip`, `created_at`, `updated_at`) VALUES
-	(1, 1, 1, 2, 1, 'admin', 'admin', '', NULL, '', '2022-04-16 20:02:37', '2022-04-16 20:02:37');
+	(1, 1, 1, 2, 2, 'Administrator', 'admin', 'admin@ppni.ac.id', NULL, '', '2022-04-16 20:02:37', '2022-04-16 20:02:37');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

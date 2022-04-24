@@ -24,7 +24,7 @@
             <div class="card-text text-center">
 
                 <?php foreach ($user as $usr) : ?>
-                    <form method="post" action="../../submitedit/admin/<?= $usr['idx'] ?>?url=<?= $url ?>">
+                    <form method="post" action="../../submitEdit/admin/<?= $usr['idx'] ?>?url=<?= $url ?>">
                         <?= csrf_field() ?>
 
                         <div class="form-group">
