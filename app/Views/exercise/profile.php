@@ -1,4 +1,4 @@
-<?= $this->extend('template/dashboard-belajar') ?>
+<?= $this->extend('template/dashboard-profile') ?>
 <?= $this->section('content') ?>
 
 <?php foreach ($user as $usr) { ?>

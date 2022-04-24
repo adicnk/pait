@@ -7,13 +7,14 @@ use App\Models\SoalMDL;
 use App\Models\JawabanMDL;
 use App\Models\LatihanMDL;
 use App\Models\LoginMDL;
+use App\Models\UserMDL;
 
 use CodeIgniter\I18n\Time;
 
 class Exercise extends BaseController
 {
 
-    protected $soalModel, $configModel, $jawabanModel, $latihanModel, $loginModel;
+    protected $soalModel, $configModel, $jawabanModel, $latihanModel, $loginModel, $userModel;
 
     public function __construct()
     {
@@ -22,6 +23,7 @@ class Exercise extends BaseController
         $this->configModel = new ConfigMDL();
         $this->latihanModel = new LatihanMDL();
         $this->loginModel = new LoginMDL();
+        $this->userModel = new UserMDL();
     }
 
     public function index()
@@ -182,5 +184,23 @@ class Exercise extends BaseController
             'dataChart' => $dataChart
         ];
         return view('exercise/dashboard', $data);
+    }
+
+    public function belajar()
+    {
+        $data = [
+            'title' => "PAIT @ PPNI"
+        ];
+        return view('exercise/belajar', $data);
+    }
+
+    public function profile()
+    {
+        $data = [
+            'title' => "PAIT @ PPNI",
+            'user' => $this->userModel->searhAdminID(session()->get('userID')),
+            'nilai_ratarata' => $this->latihanModel->nilaiRatarata(session()->get('userID'))
+        ];
+        return view('exercise/profile', $data);
     }
 }
