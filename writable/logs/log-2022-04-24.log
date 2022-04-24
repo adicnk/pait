@@ -59,3 +59,35 @@ CRITICAL - 2022-04-24 12:35:44 --> whereIn() expects $values to be of type array
 #9 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #10 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #11 {main}
+CRITICAL - 2022-04-24 13:38:59 --> Division by zero
+#0 C:\xampp\htdocs\pait\app\Controllers\Exercise.php(202): App\Models\LatihanMDL->nilaiRatarata('4')
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Exercise->profile()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Exercise))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-24 13:40:58 --> Division by zero
+#0 C:\xampp\htdocs\pait\app\Controllers\Exercise.php(202): App\Models\LatihanMDL->nilaiRatarata('4')
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Exercise->profile()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Exercise))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-24 13:41:09 --> Division by zero
+#0 C:\xampp\htdocs\pait\app\Controllers\Exercise.php(202): App\Models\LatihanMDL->nilaiRatarata('4')
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Exercise->profile()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Exercise))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-24 13:44:10 --> Call to undefined function App\Models\findAll()
+#0 C:\xampp\htdocs\pait\app\Controllers\Exercise.php(202): App\Models\LatihanMDL->nilaiRatarata('4')
+#1 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Exercise->profile()
+#2 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Exercise))
+#3 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

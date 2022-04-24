@@ -21,15 +21,17 @@ class LatihanMDL extends Model
     public function nilaiRatarata($id)
     {
         $this->where(['user_id' => $id]);
+        $userID = $this->findAll();
         $bagi = $this->countAll();
 
         $this->selectSum('score');
         $scoreSum = $this->findAll();
-        foreach ($scoreSum as $q) {
-            if ($scoreSum) {
+        // dd($userID);
+        if ($userID) {
+            foreach ($scoreSum as $q) {
                 return $q['score'] / $bagi;
+                return;
             }
-            return;
         }
     }
 
