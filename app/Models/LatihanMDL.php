@@ -144,4 +144,17 @@ class LatihanMDL extends Model
         }
         return;
     }
+
+    public function delLatihan($id)
+    {
+        $this->where(['user_id' => $id]);
+        $query = $this->findAll();
+
+        d($query);
+
+        if ($query) {
+            $this->delete(['user_id' => $id]);
+        }
+        return;
+    }
 }

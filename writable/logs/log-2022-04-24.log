@@ -46,3 +46,16 @@ CRITICAL - 2022-04-24 01:47:40 --> Unsupported operand types: CodeIgniter\Databa
 #4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+CRITICAL - 2022-04-24 12:35:44 --> whereIn() expects $values to be of type array or closure
+#0 C:\xampp\htdocs\pait\system\Database\BaseBuilder.php(731): CodeIgniter\Database\BaseBuilder->_whereIn('login.id', true, false, 'AND ', NULL)
+#1 C:\xampp\htdocs\pait\system\Model.php(290): CodeIgniter\Database\BaseBuilder->whereIn('login.id', true)
+#2 C:\xampp\htdocs\pait\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(true, Array)
+#3 C:\xampp\htdocs\pait\system\Model.php(651): CodeIgniter\BaseModel->update(true, Array)
+#4 C:\xampp\htdocs\pait\system\BaseModel.php(656): CodeIgniter\Model->update(true, Array)
+#5 C:\xampp\htdocs\pait\app\Controllers\SubmitEdit.php(51): CodeIgniter\BaseModel->save(Array)
+#6 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\SubmitEdit->admin('1')
+#7 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubmitEdit))
+#8 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}

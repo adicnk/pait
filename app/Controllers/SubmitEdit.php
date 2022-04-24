@@ -43,7 +43,7 @@ class SubmitEdit extends BaseController
 
         if ($this->loginModel->searchID($id)) {
             $this->loginModel->save([
-                'id' => $this->loginModel->searchID($id),
+                'id' => $id,
                 'role_id' => $roleID,
                 'user_id' => $id,
                 'username' => $this->request->getVar('usernameUser'),
