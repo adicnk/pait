@@ -203,4 +203,9 @@ class Exercise extends BaseController
         ];
         return view('exercise/profile', $data);
     }
+
+    public function about()
+    {
+        return view('exercise/about');
+    }
 }

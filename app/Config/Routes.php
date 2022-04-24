@@ -53,11 +53,10 @@ $routes->get('/dashboard', 'Exercise::dashboard');
 $routes->get('/latihan', 'Exercise::soal');
 $routes->get('/latihan/(:segment)', 'Exercise::selesai/$1');
 
-//For Pembelajaran Route
+//For Pembelajaran Links
 $routes->get('/belajar', 'Exercise::belajar');
-
-//For Profile Route
 $routes->get('/profile', 'Exercise::profile');
+$routes->get('/about', 'Exercise::about');
 
 
 /*
