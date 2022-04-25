@@ -33,11 +33,11 @@ class UserMDL extends Model
         if ($keyword == false) {
             $this->table('user');
             $this->join('jurusan', 'jurusan.id = user.jurusan_id');
-            return  $this->where(['status_id' => 1]); // User is Mahasiswa
+            return  $this->where(['status_id' => 2]); // User is Mahasiswa
         }
         $this->table('user');
         $this->join('jurusan', 'jurusan.id = user.jurusan_id');
-        $this->where(['role_id' => 1]);
+        $this->where(['role_id' => 2]);
         return  $this->like('name', $keyword);
     }
 
@@ -45,8 +45,22 @@ class UserMDL extends Model
     {
         $this->table('user');
         $this->where(['idx' => $id]);
-        // $this->join('jurusan', 'jurusan.id = user.jurusan_id', 'left');
+        $this->join('jurusan', 'jurusan.id = user.jurusan_id', 'left');
         return  $this->findAll();
+    }
+
+    public function statusLogin($username, $password)
+    {
+        $this->like('username', $username);
+        $this->like('password', $password);
+        $query = $this->findAll();
+        foreach ($query as $qry) {
+            if ($qry) {
+                return $qry['id'];
+            } else {
+                return false;
+            }
+        }
     }
 
     public function delUser($id)

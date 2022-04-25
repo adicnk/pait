@@ -9,6 +9,7 @@
     // foreach ($query->getResult('array') as $q) :
     $noID = session()->get('noId');
     $jawaban = session()->get('jawabanArr');
+    // d($jawaban);
     foreach ($soal as $s) :
         if ($s['idx'] == $soalIdx[$noID - 1]) :
     ?>

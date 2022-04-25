@@ -108,10 +108,11 @@ class Exercise extends BaseController
             ];
             return view('exercise/relogin', $data);
         } else {
-            $loginStatus = $this->loginModel->statusLogin($usr, $pwd);
+            $loginStatus = $this->userModel->statusLogin($usr, $pwd);
+
 
             if ($loginStatus) {
-                $this->loginModel->userID($usr, $pwd);
+                session()->set('userID', $loginStatus);
                 $data = [
                     'title'   => "Dashboard"
                 ];

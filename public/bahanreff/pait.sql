@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `jawaban` (
 -- Dumping data for table pait.jawaban: ~7 rows (approximately)
 /*!40000 ALTER TABLE `jawaban` DISABLE KEYS */;
 INSERT INTO `jawaban` (`id`, `soal_id`, `jawabanA`, `jawabanB`, `jawabanC`, `jawabanD`, `jawabanE`, `jawaban_benar`, `pilihan`, `created_at`, `updated_at`) VALUES
-	(1, 1, 'Kaji tanda-tanda dehidrasi', 'Ukur intake dan output ', 'Beri banyak minum', 'Beri antiemetik sesuai terapi', 'Berikan cairan parenteral sesuai program', 5, NULL, '2022-04-16 02:25:05', '2022-04-16 15:43:32'),
+	(1, 1, 'Kaji tanda-tanda dehidrasi', 'Ukur intake dan output ', 'Beri banyak minum', 'Beri antiemetik sesuai terapi', 'Berikan cairan parenteral sesuai program', 5, NULL, '2022-04-16 02:25:05', '2022-04-25 09:57:27'),
 	(2, 2, '24%', '44%', '30%', '60%', '40%', 1, NULL, '2022-04-16 15:42:29', '2022-04-16 15:42:29'),
 	(3, 3, 'Retensi air dan Natrium', 'Sekresi ADH dan Aldosteron', 'Hipoalbuminemia akibat proteiuria ', 'Penurunan Tekanan osmotik koloid', 'Peningkatan Permeabilitas membran glomerolus', 3, NULL, '2022-04-16 15:59:19', '2022-04-16 15:59:19'),
 	(4, 4, 'Beri diet sesuai usia', 'Sendawakan dengan sering', 'Dorong ibu untuk menyusui sesegera mungkin', 'Gunakan alat makan khusus', 'Pantau berat badan bayi', 4, NULL, '2022-04-16 16:04:14', '2022-04-16 16:04:14'),
@@ -108,13 +108,10 @@ CREATE TABLE IF NOT EXISTS `latihan` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table pait.latihan: ~0 rows (approximately)
 /*!40000 ALTER TABLE `latihan` DISABLE KEYS */;
-INSERT INTO `latihan` (`id`, `user_id`, `date`, `benar`, `salah`, `score`, `created_at`, `updated_at`) VALUES
-	(1, 1, '2022-04-24 01:44:14', 1, 4, 20, '2022-04-24 01:44:14', '2022-04-24 01:44:33'),
-	(2, 1, '2022-04-24 01:50:42', 2, 3, 40, '2022-04-24 01:50:42', '2022-04-24 01:51:13');
 /*!40000 ALTER TABLE `latihan` ENABLE KEYS */;
 
 -- Dumping structure for table pait.login
@@ -129,12 +126,12 @@ CREATE TABLE IF NOT EXISTS `login` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table pait.login: ~2 rows (approximately)
+-- Dumping data for table pait.login: ~1 rows (approximately)
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
 INSERT INTO `login` (`id`, `role_id`, `user_id`, `username`, `password`, `is_active`, `is_start`, `created_at`, `updated_at`) VALUES
-	(1, 1, 1, 'admin', 'admin', 1, NULL, '2022-04-16 20:02:37', '2022-04-16 20:02:37');
+	(1, 1, 1, 'admin', 'admin', 1, NULL, '2022-04-25 08:22:31', '2022-04-25 08:22:31');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 
 -- Dumping structure for table pait.role
@@ -172,7 +169,7 @@ CREATE TABLE IF NOT EXISTS `soal` (
 -- Dumping data for table pait.soal: ~7 rows (approximately)
 /*!40000 ALTER TABLE `soal` DISABLE KEYS */;
 INSERT INTO `soal` (`id`, `idx`, `kategori_soal_id`, `name`, `is_picture`, `picture_url`, `is_audio`, `audio_url`, `is_choosen`, `created_at`, `updated_at`) VALUES
-	(1, 1, 1, 'Seorang anak perempuan umur  4 tahundi antar orang tuanya ke UGD  karena  panas sudah 3 hari dan muntah-muntah .  Hasil pengkajian didapatkan data :  pasien tampak lemas, mukosa bibir kering, turgor kulit kurang elastis. Akral dingin, nadi 100 kali permenit, suhu tubuh 38,6°C, pernafasan 28 kali permenit, petikie pada ektremitas .Trombosit 87.000 /mm3 , Hematokrit 40 %. \r\nManakah  rencana tindakan yang  utama untuk memperbaiki status  cairan pada anak tersebut ?', NULL, NULL, NULL, NULL, 1, '2022-04-16 02:25:05', '2022-04-16 15:43:32'),
+	(1, 1, 1, 'Seorang anak perempuan umur  4 tahundi antar orang tuanya ke UGD  karena  panas sudah 3 hari dan muntah-muntah .  Hasil pengkajian didapatkan data :  pasien tampak lemas, mukosa bibir kering, turgor kulit kurang elastis. Akral dingin, nadi 100 kali permenit, suhu tubuh 38,6°C, pernafasan 28 kali permenit, petikie pada ektremitas .Trombosit 87.000 /mm3 , Hematokrit 40 %. \r\nManakah  rencana tindakan yang  utama untuk memperbaiki status  cairan pada anak tersebut ?', NULL, NULL, NULL, NULL, NULL, '2022-04-16 02:25:05', '2022-04-25 09:57:27'),
 	(2, 2, 3, 'Seorang anak  laki-laki  umur  2 tahun di rawat. Menurut ibu klien anaknya sesak dan batuk –batuk , panas, rewel .  Hasil pengkajian didapatkan bayi didapatkan sesak, batuk , retraksi dada, pernafasan 30 kali permenit nadi 100 kali permenit, suhu tubuh 38°C, terdapat ronkhi, terpasang O2 1liter/menit dengan nasal kanul\r\nBerapakah konsentrasi oksigen yang di dapatkan?\r\n', 1, NULL, NULL, NULL, 1, '2022-04-16 15:42:28', '2022-04-16 15:42:29'),
 	(3, 3, 2, 'Seorang anak laki-laki umur 4 tahun dirawat dirumah sakit. Ibu klien mengatakan badan anaknya bengkak sejak 2 bulan.  Hasil pemeriksaan fisik : edema pada wajah, abdomen, dan ekstremitas, tekanan darah 140/90 mmHg, nadi 88 x/menit, pernafasan 28 x/menit,suhu 36.8°C', NULL, NULL, NULL, NULL, 1, '2022-04-16 15:59:18', '2022-04-16 15:59:19'),
 	(4, 4, 4, 'Seorang bayi laki-laki berusia 1 bulan dibawa oleh ibunya  dengan Labiopalatozkisis dengan keluhan kesulitan  menyusu dan berat badan menurun. Berdasarkan kasus tersebut, diharapkan bayi  akan mengkonsumsi nutrisi secara adekuat.\r\nApa tindakan keperawatan prioritas utama yang diberikan untuk mencapai tujuan yang diharapkan?\r\n', 1, NULL, NULL, NULL, 1, '2022-04-16 16:04:14', '2022-04-16 16:04:14'),
@@ -209,15 +206,18 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(100) DEFAULT NULL,
   `nim` varchar(50) DEFAULT NULL,
   `nip` varchar(50) DEFAULT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table pait.user: ~1 rows (approximately)
+-- Dumping data for table pait.user: ~2 rows (approximately)
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` (`id`, `idx`, `role_id`, `status_id`, `jurusan_id`, `name`, `slug`, `email`, `nim`, `nip`, `created_at`, `updated_at`) VALUES
-	(1, 1, 1, 2, 2, 'Administrator', 'admin', 'admin@ppni.ac.id', NULL, '', '2022-04-16 20:02:37', '2022-04-16 20:02:37');
+INSERT INTO `user` (`id`, `idx`, `role_id`, `status_id`, `jurusan_id`, `name`, `slug`, `email`, `nim`, `nip`, `username`, `password`, `created_at`, `updated_at`) VALUES
+	(1, 1, 1, 2, NULL, 'Administrator', 'administrator', 'admin@stikep-ppnijabar.ac.id', NULL, '', NULL, NULL, '2022-04-25 08:22:31', '2022-04-25 08:22:31'),
+	(2, 2, 2, 1, 1, 'Donni', 'donni', 'donni@stikep-ppnijabar.ac.id', '84567589', '84567589', 'donni', 'donni', '2022-04-25 08:35:39', '2022-04-25 08:58:22');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

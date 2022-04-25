@@ -29,7 +29,7 @@ class Login extends BaseController
     {
         $data = [
             'title' => "Login PAIT @ PPNI",
-            'user' => $this->userModel->searchAdmin()
+            'user' => $this->userModel->searchMahasiswaAdmin()
         ];
         return view('exercise/login', $data);
     }
