@@ -46,7 +46,7 @@ class UserMDL extends Model
         $this->table('user');
         $this->where(['idx' => $id]);
         $this->join('jurusan', 'jurusan.id = user.jurusan_id');
-        // dd($this->findAll());
+        $this->findAll();
         return  $this->findAll();
     }
 
