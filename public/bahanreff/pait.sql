@@ -126,12 +126,13 @@ CREATE TABLE IF NOT EXISTS `login` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table pait.login: ~1 rows (approximately)
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
 INSERT INTO `login` (`id`, `role_id`, `user_id`, `username`, `password`, `is_active`, `is_start`, `created_at`, `updated_at`) VALUES
-	(1, 1, 1, 'admin', 'admin', 1, NULL, '2022-04-25 08:22:31', '2022-04-25 08:22:31');
+	(1, 1, 1, 'admin', 'admin', 1, NULL, '2022-04-25 08:22:31', '2022-04-25 08:22:31'),
+	(2, 1, 3, 'bella', 'bella', 1, NULL, '2022-04-25 16:38:29', '2022-04-25 16:38:29');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 
 -- Dumping structure for table pait.role
@@ -211,13 +212,14 @@ CREATE TABLE IF NOT EXISTS `user` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table pait.user: ~2 rows (approximately)
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` (`id`, `idx`, `role_id`, `status_id`, `jurusan_id`, `name`, `slug`, `email`, `nim`, `nip`, `username`, `password`, `created_at`, `updated_at`) VALUES
 	(1, 1, 1, 2, NULL, 'Administrator', 'administrator', 'admin@stikep-ppnijabar.ac.id', NULL, '', NULL, NULL, '2022-04-25 08:22:31', '2022-04-25 08:22:31'),
-	(2, 2, 2, 1, 1, 'Donni', 'donni', 'donni@stikep-ppnijabar.ac.id', '84567589', '84567589', 'donni', 'donni', '2022-04-25 08:35:39', '2022-04-25 08:58:22');
+	(2, 2, 2, 1, 1, 'Donni', 'donni', 'donni@stikep-ppnijabar.ac.id', '84567589', '84567589', 'donni', 'donni', '2022-04-25 08:35:39', '2022-04-25 08:58:22'),
+	(3, 3, 1, 1, 1, 'Bella', 'bella', '', '', NULL, NULL, NULL, '2022-04-25 16:38:26', '2022-04-25 16:38:27');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

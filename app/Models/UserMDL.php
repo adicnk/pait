@@ -22,8 +22,8 @@ class UserMDL extends Model
             return $this->where(['role_id' => 1]); // User is Administrator
         }
         $this->table('user');
-        $this->join('status', 'status.id = user.status_id');
         $this->join('jurusan', 'jurusan.id = user.jurusan_id');
+        $this->join('status', 'status.id = user.status_id', 'right');
         $this->where(['role_id' => 1]);
         return  $this->like('name', $keyword);
     }
@@ -33,11 +33,10 @@ class UserMDL extends Model
         if ($keyword == false) {
             $this->table('user');
             $this->join('jurusan', 'jurusan.id = user.jurusan_id');
-            return  $this->where(['status_id' => 2]); // User is Mahasiswa
+            return  $this->where(['status_id' => 1]); // User is Mahasiswa
         }
         $this->table('user');
         $this->join('jurusan', 'jurusan.id = user.jurusan_id');
-        $this->where(['role_id' => 2]);
         return  $this->like('name', $keyword);
     }
 
@@ -73,7 +72,7 @@ class UserMDL extends Model
         $this->table('user');
         $this->where(['role_id' => 1]);
         // dd($this->findAll());
-        return $this->countAll();
+        return $this->countAllResults();
     }
 
     public function countMahasiswa()
