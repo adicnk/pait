@@ -10,7 +10,7 @@ class UserMDL extends Model
     protected $useTimestamps = true;
 
     // Field yang boleh diisi waktu saving data ** harus didefinisikan dulu **
-    protected $allowedFields = ['name', 'idx', 'slug', 'status_id',  'email', 'nip', 'nim', 'role_id', 'jurusan_id'];
+    protected $allowedFields = ['name', 'idx', 'slug', 'status_id',  'email', 'nip', 'nim', 'role_id', 'jurusan_id', 'username', 'password'];
 
     public function searchAdmin($keyword = false)
     {
@@ -41,12 +41,11 @@ class UserMDL extends Model
         return  $this->like('name', $keyword);
     }
 
-    public function searhAdminID($id)
+    public function searhAdminID($id, $ops = false)
     {
         $this->table('user');
         $this->where(['idx' => $id]);
-        $this->join('jurusan', 'jurusan.id = user.jurusan_id');
-        $this->findAll();
+        // $this->join('jurusan', 'jurusan.id = user.jurusan_id', 'left');
         return  $this->findAll();
     }
 

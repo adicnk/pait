@@ -71,13 +71,17 @@ class Submit extends BaseController
                 $this->userModel->save([
                     'id' => $lastID,
                     'idx' => $lastID,
-                    'nim' => $this->request->getVar('nimnipUser')
+                    'nim' => $this->request->getVar('nimnipUser'),
+                    'username' => $this->request->getVar('usernameUser'),
+                    'password' => $this->request->getVar('passwordUser')
                 ]);
             } else {
                 $this->userModel->save([
                     'id' => $lastID,
                     'idx' => $lastID,
-                    'nip' => $this->request->getVar('nimnipUser')
+                    'nip' => $this->request->getVar('nimnipUser'),
+                    'username' => $this->request->getVar('usernameUser'),
+                    'password' => $this->request->getVar('passwordUser')
                 ]);
             }
         }
@@ -104,11 +108,19 @@ class Submit extends BaseController
             // Pindahkan file ke folder gambar
             $fileGambar->move('img');
             // Ambil nama file
-            $namaGambar = $fileGambar->getName();
+            if ($isPicture) {
+                $namaGambar = $fileGambar->getName();
+            } else {
+                $namaGambar = null;
+            }
         endif;
         if ($fileAudio) :
             $fileAudio->move('aud');
-            $namaSuara = $fileAudio->getName();
+            if ($isAudio) {
+                $namaSuara = $fileAudio->getName();
+            } else {
+                $namaSuara = null;
+            }
         endif;
 
         $this->soalModel->save([

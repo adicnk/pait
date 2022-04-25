@@ -85,15 +85,34 @@
                                     </div>
                                 </div>
                             </div>
+                            <?php if ($url == 'admin') {  ?>
+                                <?php $queryClass = $db->table('login')->getWhere(['user_id' => $usr['idx']]);
+                                foreach ($queryClass->getResult('array') as $qcls) : ?>
 
-                            <?php $queryClass = $db->table('login')->getWhere(['user_id' => $usr['idx']]);
-                            foreach ($queryClass->getResult('array') as $qcls) : ?>
+                                    <div class="form-row align-items-right mt-3">
+                                        <div class="col-5">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><strong>Username</strong></div>
+                                                <input type="text" name="usernameUser" id="usernameUser" value="<?= $qcls['username'] ?>" class="form-control" placeholder="Masukkan Username untuk Login ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return alphaOnly(event);">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row align-items-right mt-3">
+                                        <div class="col-5">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><strong>Password</strong></div>
+                                                <input type="password" name="passwordUser" id="passwordUser" value="<?= $qcls['password'] ?>" class="form-control" placeholder="Masukkan Password untuk Login ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
+                                            </div>
+                                        </div>
+                                    </div>
 
+                                <?php endforeach ?>
+                            <?php } else { ?>
                                 <div class="form-row align-items-right mt-3">
                                     <div class="col-5">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><strong>Username</strong></div>
-                                            <input type="text" name="usernameUser" id="usernameUser" value="<?= $qcls['username'] ?>" class="form-control" placeholder="Masukkan Username untuk Login ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return alphaOnly(event);">
+                                            <input type="text" name="usernameUser" id="usernameUser" value="<?= $usr['username'] ?>" class="form-control" placeholder="Masukkan Username untuk Login ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)" onkeypress="return alphaOnly(event);">
                                         </div>
                                     </div>
                                 </div>
@@ -101,15 +120,14 @@
                                     <div class="col-5">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><strong>Password</strong></div>
-                                            <input type="password" name="passwordUser" id="passwordUser" value="<?= $qcls['password'] ?>" class="form-control" placeholder="Masukkan Password untuk Login ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
+                                            <input type="password" name="passwordUser" id="passwordUser" value="<?= $usr['password'] ?>" class="form-control" placeholder="Masukkan Password untuk Login ......" onfocusin="yellowin(this);" onfocusout="whiteout(this)">
                                         </div>
                                     </div>
                                 </div>
+                            <?php } ?>
                         </div>
 
-                    <?php endforeach ?>
-
-                    <button class="btn btn-lg btn-primary btn-block mt-3 mb-4" type="submit">SIMPAN</button>
+                        <button class="btn btn-lg btn-primary btn-block mt-3 mb-4" type="submit">SIMPAN</button>
 
                     </form>
                 <?php endforeach ?>
