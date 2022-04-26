@@ -39,6 +39,8 @@ class Delete extends BaseController
                 $this->loginModel->delAdmin($id);
             };
 
+            $this->latihanModel->delLatihan($id);
+
             $data = [
                 'title' => "Data " . $url . " berhasil di Delete",
                 'url' => $url

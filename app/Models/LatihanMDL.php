@@ -151,11 +151,9 @@ class LatihanMDL extends Model
     {
         $this->where(['user_id' => $id]);
         $query = $this->findAll();
-
-        d($query);
-
         if ($query) {
-            $this->delete(['user_id' => $id]);
+            $this->where(['user_id' => $id]);
+            $this->delete();
         }
         return;
     }

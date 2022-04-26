@@ -30,3 +30,26 @@ CRITICAL - 2022-04-26 22:30:45 --> Undefined property: App\Controllers\Latihan::
 #4 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+CRITICAL - 2022-04-26 23:32:54 --> There is no data to update.
+#0 C:\xampp\htdocs\pait\system\BaseModel.php(1574): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\pait\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 C:\xampp\htdocs\pait\system\Model.php(651): CodeIgniter\BaseModel->update(NULL, NULL)
+#3 C:\xampp\htdocs\pait\app\Models\LatihanMDL.php(156): CodeIgniter\Model->update()
+#4 C:\xampp\htdocs\pait\app\Controllers\Delete.php(42): App\Models\LatihanMDL->delLatihan('3')
+#5 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Delete->user('3')
+#6 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Delete))
+#7 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-04-26 23:35:37 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+#0 C:\xampp\htdocs\pait\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#1 C:\xampp\htdocs\pait\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#2 C:\xampp\htdocs\pait\app\Models\LatihanMDL.php(155): CodeIgniter\BaseModel->delete()
+#3 C:\xampp\htdocs\pait\app\Controllers\Delete.php(42): App\Models\LatihanMDL->delLatihan('3')
+#4 C:\xampp\htdocs\pait\system\CodeIgniter.php(832): App\Controllers\Delete->user('3')
+#5 C:\xampp\htdocs\pait\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Delete))
+#6 C:\xampp\htdocs\pait\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\pait\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\pait\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
