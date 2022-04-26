@@ -19,6 +19,9 @@
                 <div class="card-footer">
                     <p>Nilai Latihan Rata-rata : <?= $nilai_ratarata ?></p>
                 </div>
+                <div class="card-footer">
+                    <a href="/dashboard" class="btn btn-primary">DASHBOARD</a>
+                </div>
             </div>
         </div>
     </div>

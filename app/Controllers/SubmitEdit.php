@@ -28,6 +28,7 @@ class SubmitEdit extends BaseController
         $slug = url_title($this->request->getVar('namaUser'), '-', true);
         $statusID = $this->request->getVar('statusUser');
 
+
         $this->userModel->save([
             'id' => $id,
             'idx' => $id,
@@ -40,10 +41,9 @@ class SubmitEdit extends BaseController
             'nim' => $nimnip,
             'nip' => $nimnip
         ]);
-
         if ($this->loginModel->searchID($id)) {
             $this->loginModel->save([
-                'id' => $id,
+                'id' => $this->loginModel->searchID($id),
                 'role_id' => $roleID,
                 'user_id' => $id,
                 'username' => $this->request->getVar('usernameUser'),
@@ -51,6 +51,14 @@ class SubmitEdit extends BaseController
                 'is_active' => 1
             ]);
         }
+        if ($url == "mahasiswa") {
+            $this->userModel->save([
+                'id' => $id,
+                'username' => $this->request->getVar('usernameUser'),
+                'password' => $this->request->getVar('passwordUser')
+            ]);
+        }
+
         // dd($url);
         if ($url == 'admin') {
             return redirect()->to('../../admin/user');

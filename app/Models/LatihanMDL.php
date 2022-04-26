@@ -46,7 +46,7 @@ class LatihanMDL extends Model
     public function countLatihan($id)
     {
         $this->where(['user_id' => $id]);
-        return $this->countAll();
+        return $this->countAllResults();
     }
 
     public function lastLatihan($id)

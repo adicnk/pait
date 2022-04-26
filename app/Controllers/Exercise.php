@@ -9,8 +9,6 @@ use App\Models\LatihanMDL;
 use App\Models\LoginMDL;
 use App\Models\UserMDL;
 
-use CodeIgniter\I18n\Time;
-
 class Exercise extends BaseController
 {
 
@@ -37,18 +35,6 @@ class Exercise extends BaseController
 
     public function soal()
     {
-        $newTime = new Time('now', 'Asia/Jakarta');
-
-        //for dashboard exercise
-        $this->latihanModel->save([
-            'date' => $newTime,
-            'user_id' => session()->get('userID')
-        ]);
-        //ID terakhir yg di buat di tabel soal
-        $db      = \Config\Database::connect();
-        $latihanID = $db->insertID();
-        session()->set('latihanID', $latihanID);
-
         $soal = $this->soalModel->isChoosen();
         $totalSoal = $this->configModel->totalSoal();
         $no = $this->request->getVar('id');
@@ -87,7 +73,6 @@ class Exercise extends BaseController
             'soal' => $soal,
             'total' => $totalSoal
         ];
-
         return view('exercise/latihan', $data);
     }
 
@@ -130,6 +115,7 @@ class Exercise extends BaseController
     public function dashboard()
     {
         $userID = session()->get('userID');
+        session()->set('isFinish', false);
         $totalLatihan = $this->latihanModel->countLatihan($userID);
         $benar = $this->latihanModel->lastBenar($userID);
         $salah = $this->latihanModel->lastSalah($userID);

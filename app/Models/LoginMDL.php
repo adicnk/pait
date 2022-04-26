@@ -32,7 +32,7 @@ class LoginMDL extends Model
         $this->where(['user_id' => $id]);
         $login =  $this->findAll();
         foreach ($login as $lg) :
-            return true;
+            return $lg['id'];
         endforeach;
     }
 

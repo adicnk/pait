@@ -9,9 +9,9 @@
     // foreach ($query->getResult('array') as $q) :
     $noID = session()->get('noId');
     $jawaban = session()->get('jawabanArr');
-    // d($jawaban);
+    $x = 1;
     foreach ($soal as $s) :
-        if ($s['idx'] == $soalIdx[$noID - 1]) :
+        if ($soalIdx[$noID - 1] == $x) :
     ?>
             <!-- Navbar -->
             <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
@@ -109,7 +109,8 @@
             </div>
         <?php
             break;
-        endif ?>
+        endif;
+        $x++; ?>
     <?php endforeach ?>
 </div>
 
