@@ -9,7 +9,7 @@
                 <h4 class="text-center">Pembelajaran tentang Tubuh Manusia</h4>
             </div> -->
             <div class="card-body">
-                <iframe src="https://materi-pait.devinc.website/tubuh" width="100%" height="430px"></iframe>
+                <iframe src="https://materi-pait.devinc.website/tubuh" width="100%" height="500px"></iframe>
             </div>
             <div class="card-footer">
             </div>
