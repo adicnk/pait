@@ -35,6 +35,7 @@ class Exercise extends BaseController
 
     public function soal()
     {
+        session()->set('isFinish', false);
         $soal = $this->soalModel->isChoosen();
         $totalSoal = $this->configModel->totalSoal();
         $no = $this->request->getVar('id');
