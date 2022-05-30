@@ -10,6 +10,7 @@
     $noID = session()->get('noId');
     $jawaban = session()->get('jawabanArr');
     $x = 1;
+
     foreach ($soal as $s) :
         if ($soalIdx[$noID - 1] == $x) :
     ?>

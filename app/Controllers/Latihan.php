@@ -24,7 +24,9 @@ class Latihan extends BaseController
 
     public function index()
     {
-        if (session()->get('isFinish')) {
+        
+        if (!session()->get('isFinish')) {                    
+
             $soal = $this->soalModel->isChoosen();
             $totalSoal = $this->configModel->totalSoal();
             $nilaiMin = $this->configModel->nilaiMinimum();
