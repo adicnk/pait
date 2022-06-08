@@ -15,6 +15,8 @@ Pembelajaran praktek membutuhkan media pembelajaran yang efektif sehingga menimb
 
 ## Dokumentasi
 
+Menggunakan CodeIgniter v4.2x kebawah dan PHP v8.x kebawah
+
 Informasi lebih lanjut [official site](http://pait.devinc.website).
 
 Dalam repositori ini hanya untuk pengembangan applikasi PAIT dengan menggunakan versi terbaru dari CodeIgniter. Kami berusaha memperbaiki tampilan dan fungsi sehingga lebih user friendly dan berfungsi seperti yang dibutuhkan.
