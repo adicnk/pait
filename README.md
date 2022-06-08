@@ -15,7 +15,7 @@ Pembelajaran praktek membutuhkan media pembelajaran yang efektif sehingga menimb
 
 ## Dokumentasi
 
-Menggunakan CodeIgniter v4.2x kebawah dan PHP v8.x kebawah
+Menggunakan CodeIgniter v4.20 dan PHP v8.14
 
 Informasi lebih lanjut [official site](http://pait.devinc.website).
 
