@@ -7,21 +7,21 @@
 [![GitHub stars](https://img.shields.io/github/stars/codeigniter4/CodeIgniter4)](https://pait.devinc.website)
 [![GitHub license](https://img.shields.io/github/license/codeigniter4/CodeIgniter4)](https://pait.devinc.website)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://pait.devinc.website)
-<br>
+
 
 ## Apa itu PAIT (Physical Assesment Based On interactive Technology)
 
 Pembelajaran praktek membutuhkan media pembelajaran yang efektif sehingga menimbulkansemangat dan ketertarikan mahasiswa dengan penggunaan teknologi yang lebih efektif dengan memperkecil faktor resiko.
 
+
 ## Dokumentasi
-
-Menggunakan CodeIgniter v4.20 dan PHP v8.14
-
 Informasi lebih lanjut [official site](http://pait.devinc.website).
 
-Dalam repositori ini hanya untuk pengembangan applikasi PAIT dengan menggunakan versi terbaru dari CodeIgniter. Kami berusaha memperbaiki tampilan dan fungsi sehingga lebih user friendly dan berfungsi seperti yang dibutuhkan.
 
-Perkembangan **terakhir** dari applikasi ini dapat dilihat di [progress](http://pait.devinc.website).
+## Aplikasi Pendukung
+
+Dibuat dalam framework **CodeIgniter v4.20** yang berjalan di **PHP v8.1**
+
 
 ## Perubahan yang terjadi pada modul-modul aplikasi
 
